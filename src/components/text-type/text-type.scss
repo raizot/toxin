@@ -1,0 +1,98 @@
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+
+}
+.text-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 427px;
+    width: 403px;
+    height: 321px;
+
+    .text-type {
+        display: flex;
+        flex-direction: row;
+        text-align: right;
+
+        &__tag {
+            font-family: 'Montserrat Regular';
+            color: rgba(31, 32, 65, 0.25);
+            line-height: 29px;
+            text-align: right;
+            text-align: top;
+        }
+
+        &__tag-h1 {
+            font-size: 24px;
+            margin-bottom: 77px;
+            margin-top: 3px;
+        }
+
+        &__tag-h2 {
+            font-size: 19px;
+            margin-bottom: 65px;
+        }
+
+        &__tag-h3 {
+            font-size: 12px;
+            margin-bottom: 38px;
+        }
+
+        &__tag-body {
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        &__example {
+            margin-bottom: 50px;
+        }
+
+        &__example-h1 {
+            font-size: 24px;
+            font-family: 'Quicksand Bold';
+            width: 336px;
+            height: 60px;
+        }
+
+        &__example-h2 {
+            font-size: 19px;
+            font-family: 'Quicksand Bold';
+            width: 282px;
+            height: 48px;
+            line-height: 24px;
+            margin-bottom: 51px;
+        }
+
+        &__example-h3 {
+            font-size: 12px;
+            font-family: 'Montserrat Bold';
+            width: 186px;
+            height: 15px;
+            text-transform: uppercase;
+            line-height: 15px;
+            margin-bottom: 48px;
+        }
+
+        &__example-body {
+            font-size: 14px;
+            font-family: 'Montserrat Regular';
+            width: 301px;
+            height: 48px;
+            line-height: 24px;
+        }
+    }
+}
+
+.example-type {
+    margin-left: 30px;
+}
+
+.tag-type {
+    width: 37px;
+    height: 297px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
