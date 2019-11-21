@@ -1,0 +1,18 @@
+include ../../src/components/color/color.pug
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title ui-kit
+    body
+        section.color-type
+            .color-container
+                    +color-example('color__rectangle-ds-100','Dark Shade 100%',  '#1F2041')
+                    +color-example('color__rectangle-ds-75','Dark Shade 75%',   '#1F2041')
+                    +color-example('color__rectangle-ds-50','Dark Shade 50%',   '#1F2041')
+                    +color-example('color__rectangle-ds-25','Dark Shade 25%',   '#1F2041')
+                    +color-example('color__rectangle-ds-05','Dark Shade 5%',    '#1F2041')
+                    +color-example('color__rectangle-ds-25','Dark Shade 25%',   '#1F2041')
+                    +color-example('color__rectangle-ds-25','Dark Shade 25%',   '#1F2041')
