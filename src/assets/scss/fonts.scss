@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Open Sans Bold';
+    font-display: swap;
+    src: url('./../assets/fonts/Open_Sans/opensans-bold.eot');
+    src: url('./../assets/fonts/Open_Sans/opensans-bold.eot?#iefix') format('embedded-opentype'),
+        url('./../assets/fonts/Open_Sans/opensans-bold.woff') format('woff'),
+        url('./../assets/fonts/Open_Sans/opensans-bold.ttf') format('truetype'),
+        url('./../assets/fonts/Open_Sans/opensans-bold.svg#open_sansbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans Regular';
+    font-display: swap;
+    src: url('./../assets/fonts/Open_Sans/opensans-regular.eot');
+    src: url('./../assets/fonts/Open_Sans/opensans-regular.eot?#iefix') format('embedded-opentype'),
+        url('./../assets/fonts/Open_Sans/opensans-regular.woff') format('woff'),
+        url('./../assets/fonts/Open_Sans/opensans-regular.ttf') format('truetype'),
+        url('./../assets/fonts/Open_Sans/opensans-regular.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat Bold';
+    font-display: swap;
+    src: url('./../assets/fonts/Montserrat/montserrat-bold.eot');
+    src: url('./../assets/fonts/Montserrat/montserrat-bold.eot?#iefix') format('embedded-opentype'),
+        url('./../assets/fonts/Montserrat/montserrat-bold.woff') format('woff'),
+        url('./../assets/fonts/Montserrat/montserrat-bold.ttf') format('truetype'),
+        url('./../assets/fonts/Montserrat/montserrat-bold.svg#montserratbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat Regular';
+    font-display: swap;
+    src: url('./../assets/fonts/Montserrat/montserrat-regular.eot');
+    src: url('./../assets/fonts/Montserrat/montserrat-regular.eot?#iefix') format('embedded-opentype'),
+        url('./../assets/fonts/Montserrat/montserrat-regular.woff') format('woff'),
+        url('./../assets/fonts/Montserrat/montserrat-regular.ttf') format('truetype'),
+        url('./../assets/fonts/Montserrat/montserrat-regular.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,5 +1,5 @@
 @import '../../assets/scss/variables';
-
+@import '../../assets/scss/fonts';
 /* Box sizing rules */
 *,
 *::before,
@@ -29,6 +29,7 @@ blockquote,
 dl,
 dd {
     margin: 0;
+    font-family: 'Open Sans Regular';
 }
 
 /* Set core body defaults */
