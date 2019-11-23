@@ -1,13 +1,6 @@
-
-.text-container {
-    display: flex;
-    flex-direction: column;
-
-}
 .text-container {
     display: flex;
     flex-direction: row;
-    margin-left: 427px;
     width: 403px;
     height: 321px;
 
@@ -25,23 +18,23 @@
         }
 
         &__tag-h1 {
-            font-size: 24px;
+            font-size: 1.5rem;
             margin-bottom: 77px;
             margin-top: 3px;
         }
 
         &__tag-h2 {
-            font-size: 19px;
+            font-size: 1.1875rem;
             margin-bottom: 65px;
         }
 
         &__tag-h3 {
-            font-size: 12px;
+            font-size: 0.75rem;
             margin-bottom: 38px;
         }
 
         &__tag-body {
-            font-size: 14px;
+            font-size: 0.875rem;
             line-height: 24px;
         }
 
@@ -50,14 +43,14 @@
         }
 
         &__example-h1 {
-            font-size: 24px;
+            font-size: 1.5rem;
             font-family: 'Quicksand Bold';
             width: 336px;
             height: 60px;
         }
 
         &__example-h2 {
-            font-size: 19px;
+            font-size: 1.1875rem;
             font-family: 'Quicksand Bold';
             width: 282px;
             height: 48px;
@@ -66,7 +59,7 @@
         }
 
         &__example-h3 {
-            font-size: 12px;
+            font-size: 0.75rem;
             font-family: 'Montserrat Bold';
             width: 186px;
             height: 15px;
@@ -76,7 +69,7 @@
         }
 
         &__example-body {
-            font-size: 14px;
+            font-size: 0.875rem;
             font-family: 'Montserrat Regular';
             width: 301px;
             height: 48px;

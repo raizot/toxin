@@ -58,10 +58,10 @@
 @font-face {
     font-family: 'Quicksand Bold';
     font-display: swap;
-    src: url('/assets/fonts/Quicksand-Bold.eot');
-    src: url('/assets/fonts/Quicksand-Bold.eot') format('embedded-opentype'),
+    src: url('/assets/fonts/Quicksand-Bold.ttf') format('truetype');
+    src: url('/assets/fonts/Quicksand-Bold.eot'),
         url('/assets/fonts/Quicksand-Bold.woff') format('woff'),
-        url('/assets/fonts/Quicksand-Bold.ttf') format('truetype'),
+        url('/assets/fonts/Quicksand-Bold.eot') format('embedded-opentype'),
         url('/assets/fonts/Quicksand-Bold.svg') format('svg');
     font-weight: bold;
     font-style: normal;

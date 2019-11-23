@@ -3,8 +3,13 @@
 @import '../../assets/scss/default';
 @import '../../components/color-type/color-type';
 @import '../../components/text-type/text-type';
+@import '../../components/text-field-email/text-field-email';
 
 .color-type {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding-left: 9.3588rem;
+    padding-right: 11.9375rem;
+    flex-wrap:wrap;
 }

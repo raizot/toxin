@@ -10,7 +10,7 @@ const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
   assets: 'assets/'
-}
+};
 
 module.exports = {
 
@@ -130,11 +130,11 @@ module.exports = {
        inject: true,
        collapseWhitespace: false
      }),
-      new HtmlWebpackPlugin({
-        template: './src/pages/home/home.pug',
-        filename: 'home.html',
-        inject: true,
-        collapseWhitespace: false
-      }),
+      // new HtmlWebpackPlugin({
+      //   template: './src/pages/form-elements/form-elements.pug',
+      //   filename: 'home.html',
+      //   inject: true,
+      //   collapseWhitespace: false
+      // }),
   ],
 }

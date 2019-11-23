@@ -10,7 +10,10 @@ ul[class],
 ol[class] {
     padding: 0;
 }
-
+html {
+    font-family: 'Montserrat Regular';
+    font-size: 16px;
+}
 /* Remove default margin */
 body,
 h1,
@@ -75,4 +78,5 @@ section {
     max-width: 1440px;
     margin: 0 auto;
     background-color: white;
+    margin-bottom: 30px;
 }
