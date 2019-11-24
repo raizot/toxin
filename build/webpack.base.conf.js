@@ -18,13 +18,13 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    app: PATHS.src,
+    "ui-kit": './src/js/ui-kit.js',
 
   },
   output: {
-    filename: `${PATHS.assets}js/[name].[hash].js`,
+    filename: `${PATHS.assets}js/[name].js`,
     path: PATHS.dist,
-    publicPath: '/'
+    publicPath: ''
   },
   optimization: {
     splitChunks: {
@@ -48,7 +48,12 @@ module.exports = {
         },
 
         {
-          use: ['pug-loader']
+          use: [{
+            loader: 'pug-loader',
+            options: {
+              pretty: true
+            }
+          }]
         }
       ]
     }, {
@@ -79,7 +84,12 @@ module.exports = {
       test: /\.scss$/,
       use: [
         'style-loader',
-        MiniCssExtractPlugin.loader,
+        {
+          loader: MiniCssExtractPlugin.loader,
+          options: {
+               publicPath: '/'
+          }
+        },
         {
           loader: 'css-loader',
           options: { sourceMap: true }
@@ -116,7 +126,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[hash].css`,
+      filename: 'css/[name].css',
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
@@ -127,8 +137,9 @@ module.exports = {
      new HtmlWebpackPlugin({
        template: './src/pages/ui-kit/ui-kit.pug',
        filename: 'ui-kit.html',
-       inject: true,
-       collapseWhitespace: false
+        inject: true,
+       collapseWhitespace: true,
+        
      }),
       // new HtmlWebpackPlugin({
       //   template: './src/pages/form-elements/form-elements.pug',
