@@ -2,6 +2,7 @@ include ../../../src/components/color-type/color-type.pug
 include ../../../src/components/text-type/text-type.pug
 include ../../../src/components/text-type/example-type.pug
 include ../../../src/components/text-field-email/text-field-email.pug
+include ../../../src/components/block-container/block-container.pug
 doctype html
 html(lang="en")
     head
@@ -31,5 +32,12 @@ html(lang="en")
                     +text-example('This is a label or CTA text','text-type__example-h3')
                     +text-example('This is the body text which is used for most of the design, like paragraphs, lists, etc.','text-type__example-body')
         section.form-elements
-            +input('email','Email','text-field__email')
-            +input('email','This is pretty awesome','text-field__email text-field__email-hover')           
+            .form-elements__container
+                .block-container
+                    +block-container('Text Field','Default')
+                    +input('email','Email','text-field__email')
+                .block-container
+                    +block-container('Text Field','Hover / Focus')
+                    +input('email','This is pretty awesome','text-field__email  text-field__email-hover')           
+                .block-container
+                

@@ -1,0 +1,24 @@
+.block-container {
+    display: inline-flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    &__description {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        font-size: 0.75rem;
+        line-height: 15px;
+        text-transform: uppercase;
+
+        &-name {
+            font-family: 'Montserrat Bold';
+            color: #1F2041;
+        }
+
+        &-condition {
+            font-family: 'Montserrat Regular';
+            color: rgba(31, 32, 65, 0.5);
+        }
+    }
+}
