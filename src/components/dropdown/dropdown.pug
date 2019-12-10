@@ -1,0 +1,13 @@
+mixin dropdown-item(...items)
+    .dropdown
+        button.dropbtn
+            p Сколько гостей
+            i.material-icons expand_more
+    .dropdown-content
+        each item in items
+            .dropdown-content__line
+                p= item
+                .dropdown-content__box-button
+                    button.plus -
+                    p.number 2
+                    button.minus +

@@ -3,6 +3,7 @@ include ../../../src/components/text-type/text-type.pug
 include ../../../src/components/text-type/example-type.pug
 include ../../../src/components/text-field-email/text-field-email.pug
 include ../../../src/components/block-container/block-container.pug
+include ../../../src/components/dropdown/dropdown.pug
 doctype html
 html(lang="en")
     head
@@ -10,6 +11,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title ui-kit
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
     body
         section.color-type
             .color-container
@@ -40,4 +42,5 @@ html(lang="en")
                     +block-container('Text Field','Hover / Focus')
                     +input('email','This is pretty awesome','text-field__email  text-field__email-hover')           
                 .block-container
-                
+                    +block-container('Dropdown','Default')
+                    +dropdown-item('Взрослые','Дети','Младенцы')
