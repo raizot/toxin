@@ -1,10 +1,11 @@
-const path = require('path')
-const fs = require('fs')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { VueLoaderPlugin } = require('vue-loader')
+const path = require('path');
+const webpack = require('webpack');
+// const fs = require('fs');
+// const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { VueLoaderPlugin } = require('vue-loader');
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -18,7 +19,7 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    "ui-kit": './src/js/ui-kit.js',
+    "ui-kit":`${PATHS.src}/pages/ui-kit/ui-kit.js`,
 
   },
   output: {
@@ -123,7 +124,11 @@ module.exports = {
     }
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin(),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',

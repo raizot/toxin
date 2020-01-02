@@ -4,6 +4,7 @@ include ../../../src/components/text-type/example-type.pug
 include ../../../src/components/text-field-email/text-field-email.pug
 include ../../../src/components/block-container/block-container.pug
 include ../../../src/components/dropdown/dropdown.pug
+include ../../../src/components/dropdown/dropdownBtn.pug
 doctype html
 html(lang="en")
     head
@@ -43,4 +44,9 @@ html(lang="en")
                     +input('email','This is pretty awesome','text-field__email  text-field__email-hover')           
                 .block-container
                     +block-container('Dropdown','Default')
-                    +dropdown-item('Взрослые','Дети','Младенцы')
+                    +dropdown-item("Сколько гостей")
+                        +Btn("Взрослые","adult")
+                        +Btn("Дети","child")
+                        +Btn("Младенцы","baby")
+                    
+                

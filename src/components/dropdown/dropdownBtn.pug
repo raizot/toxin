@@ -1,0 +1,7 @@
+mixin Btn(btnName,inputClass)
+    .dropdown-content__line
+        p=btnName
+        .dropdown-content__box-button
+            button.minus -
+            input(type="text" value="0" class=inputClass disabled)
+            button.plus +

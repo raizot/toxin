@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ui-kit</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="css/ui-kit.css" rel="stylesheet"></head>
+  <body>
+    <section class="color-type">
+      <div class="color-container">
+        <div class="color">
+          <div class="color__rectangle color__rectangle-ds-100"></div>
+          <div class="color__description">
+            <div class="color__description-title">Dark Shade 100%</div>
+            <div class="color__description-hex">#1F2041</div>
+          </div>
+        </div>
+        <div class="color">
+          <div class="color__rectangle color__rectangle-ds-75"></div>
+          <div class="color__description">
+            <div class="color__description-title">Dark Shade 75%</div>
+            <div class="color__description-hex">#1F2041</div>
+          </div>
+        </div>
+        <div class="color">
+          <div class="color__rectangle color__rectangle-ds-50"></div>
+          <div class="color__description">
+            <div class="color__description-title">Dark Shade 50%</div>
+            <div class="color__description-hex">#1F2041</div>
+          </div>
+        </div>
+        <div class="color">
+          <div class="color__rectangle color__rectangle-ds-25"></div>
+          <div class="color__description">
+            <div class="color__description-title">Dark Shade 25%</div>
+            <div class="color__description-hex">#1F2041</div>
+          </div>
+        </div>
+        <div class="color">
+          <div class="color__rectangle color__rectangle-ds-05"></div>
+          <div class="color__description">
+            <div class="color__description-title">Dark Shade 5%</div>
+            <div class="color__description-hex">#1F2041</div>
+          </div>
+        </div>
+        <div class="color">
+          <div class="color__rectangle color__rectangle-purple"></div>
+          <div class="color__description">
+            <div class="color__description-title">Purple</div>
+            <div class="color__description-hex">#BC9CFF</div>
+          </div>
+        </div>
+        <div class="color">
+          <div class="color__rectangle color__rectangle-green"></div>
+          <div class="color__description">
+            <div class="color__description-title">Green</div>
+            <div class="color__description-hex">#6FCF97</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-container">
+        <div class="tag-type">
+          <p class="text-type__tag text-type__tag-h1">H1</p>
+          <p class="text-type__tag text-type__tag-h2">H2</p>
+          <p class="text-type__tag text-type__tag-h3">H3</p>
+          <p class="text-type__tag text-type__tag-body">Body</p>
+        </div>
+        <div class="example-type">
+          <p class="text-type__example text-type__example-h1">This one is the sub-section or widget title</p>
+          <p class="text-type__example text-type__example-h2">Next one is the item title inside widgets</p>
+          <p class="text-type__example text-type__example-h3">This is a label or CTA text</p>
+          <p class="text-type__example text-type__example-body">This is the body text which is used for most of the design, like paragraphs, lists, etc.</p>
+        </div>
+      </div>
+    </section>
+    <section class="form-elements">
+      <div class="form-elements__container">
+        <div class="block-container">
+          <div class="block-container__description">
+            <p class="block-container__description-name">Text Field</p>
+            <p class="block-container__description-condition">Default</p>
+          </div>
+          <form action="">
+            <input class="text-field__email" type="email" placeholder="Email">
+          </form>
+        </div>
+        <div class="block-container">
+          <div class="block-container__description">
+            <p class="block-container__description-name">Text Field</p>
+            <p class="block-container__description-condition">Hover / Focus</p>
+          </div>
+          <form action="">
+            <input class="text-field__email  text-field__email-hover" type="email" placeholder="This is pretty awesome">
+          </form>
+        </div>
+        <div class="block-container">
+          <div class="block-container__description">
+            <p class="block-container__description-name">Dropdown</p>
+            <p class="block-container__description-condition">Default</p>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">
+              <p>Сколько гостей</p><i class="material-icons">expand_more</i>
+            </button>
+            <div class="dropdown-content">
+              <div class="dropdown-content__line">
+                <p>Взрослые</p>
+                <div class="dropdown-content__box-button">
+                  <button class="minus">-</button>
+                  <input class="adult" type="text" value="0" disabled>
+                  <button class="plus">+</button>
+                </div>
+              </div>
+              <div class="dropdown-content__line">
+                <p>Дети</p>
+                <div class="dropdown-content__box-button">
+                  <button class="minus">-</button>
+                  <input class="child" type="text" value="0" disabled>
+                  <button class="plus">+</button>
+                </div>
+              </div>
+              <div class="dropdown-content__line">
+                <p>Младенцы</p>
+                <div class="dropdown-content__box-button">
+                  <button class="minus">-</button>
+                  <input class="baby" type="text" value="0" disabled>
+                  <button class="plus">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <script type="text/javascript" src="assets/js/vendors.js"></script><script type="text/javascript" src="assets/js/ui-kit.js"></script></body>
+</html>
