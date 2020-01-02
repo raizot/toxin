@@ -5,6 +5,7 @@ include ../../../src/components/text-field-email/text-field-email.pug
 include ../../../src/components/block-container/block-container.pug
 include ../../../src/components/dropdown/dropdown.pug
 include ../../../src/components/dropdown/dropdownBtn.pug
+include ../../../src/components/date-mask/date-mask.pug
 doctype html
 html(lang="en")
     head
@@ -51,4 +52,6 @@ html(lang="en")
                         .form-elements__btn-container
                             button.clear очистить
                             button.submit применить
-                
+                .block-container
+                    +block-container('masked text field','Default')
+                    +date-mask

@@ -1,0 +1,11 @@
+.date-mask {
+    width: 320px;
+    height: 44px;
+    border-color:$color__dark-shade25;
+    font-family: 'Montserrat Regular';
+    font-size: 14px;
+    padding-left: 15px;
+    &::placeholder {
+        color:$color__dark-shade25;
+    }
+}
