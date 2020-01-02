@@ -22,7 +22,7 @@ $(document).ready(function () {
             let child = $('.child').val();
             let adult = $('.adult').val();
             let baby = $('.baby').val();
-            let summ = parseInt(child) + parseInt(adult) + parseInt(baby);
+            var summ = parseInt(child) + parseInt(adult) + parseInt(baby);
             $('.dropbtn p').text(summ + ' ' + declOfNum(summ, ['гость', 'гостя', 'гостей']));
             if(summ === 0){
                 $('.dropbtn p').text('Сколько гостей');
@@ -43,4 +43,15 @@ $(document).ready(function () {
         let content = $('.dropdown-content');
         content.toggle();
     });
+    //buttons
+    $('.form-elements__btn-container .clear').click(function () {
+        $('.dropbtn p').text('Сколько гостей');
+        $('.child').val(0);
+        $('.adult').val(0);
+        $('.baby').val(0);
+    
+    });
+    $('.form-elements__btn-container .submit').click(function () {
+        $('.dropdown-content').css("display","none");
+     });
 });

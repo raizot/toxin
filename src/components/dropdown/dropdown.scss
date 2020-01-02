@@ -55,12 +55,34 @@
         align-items: center;
         justify-content: flex-end;
         input{
-            border: blanchedalmond;
+            border:none;
             text-align:center;
             width: 35px;
+            background-color: white;
+
         }
         .number{
             margin: 0 12px 0 12px;
         }
+    }
+}
+.form-elements__btn-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 19px;
+    .clear,.submit{
+        border:none;
+        text-transform: uppercase;
+        background-color:transparent;
+        font-family: 'Montserrat Bold';
+        font-size: 12px;
+    }
+    .clear{
+        color:$color__dark-shade50;
+        padding-left: 0px;
+    }
+    .submit {
+        color:$color__purple;
+        padding-right: 0px;
     }
 }
