@@ -7,6 +7,8 @@
 @import '../../components/block-container/block-container';
 @import '../../components/dropdown/dropdown';
 @import '../../components/date-mask/date-mask';
+@import '../../components/date-dropdown/date-dropdown';
+@import '../../components/dropdown-btn/dropdown-btn';
 .color-type {
     display: flex;
     flex-direction: row;
@@ -18,4 +20,17 @@
 .form-elements__container {
    display: inline-flex;
    flex-direction: column;
+   width: 320px;
+}
+.date-dropdown{
+    &__container,
+    &__component {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap:nowrap;
+    }
+    &__component{
+        
+    }
 }

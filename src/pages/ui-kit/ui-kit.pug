@@ -6,6 +6,7 @@ include ../../../src/components/block-container/block-container.pug
 include ../../../src/components/dropdown/dropdown.pug
 include ../../../src/components/dropdown/dropdownBtn.pug
 include ../../../src/components/date-mask/date-mask.pug
+include ../../../src/components/dropdown-btn/dropdown-btn.pug
 doctype html
 html(lang="en")
     head
@@ -54,7 +55,15 @@ html(lang="en")
                             button.submit применить
                 .block-container
                     +block-container('masked text field','Default')
-                    +date-mask
-                .block-container
-                    +block-container('date Dropdown','')
-                    +block-container('date Dropdown','')
+                    +date-mask("date-mask")
+                .block-container.date-dropdown__container
+                    .date-dropdown__first
+                        +block-container('date dropdown','')
+                        .date-dropdown__component
+                            +date-mask("date-mask date-dropdown")
+                            +dropdown-btn("dropdown-btn")
+                    .date-dropdown__second
+                        +block-container('date dropdown','')
+                        .date-dropdown__component
+                            +date-mask("date-mask date-dropdown")
+                            +dropdown-btn("dropdown-btn")
