@@ -1,0 +1,11 @@
+.date-dropdown {
+    width: 106px;
+    border-radius: 4px 0px 0px 4px ;
+    border-right: none;
+    &::placeholder{
+    color:$color__dark-shade75;
+    }
+    &__second{
+        margin-left: 20px;
+    }
+}
