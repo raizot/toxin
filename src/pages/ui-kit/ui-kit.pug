@@ -1,7 +1,7 @@
 include ../../../src/components/color-type/color-type.pug
 include ../../../src/components/text-type/text-type.pug
 include ../../../src/components/text-type/example-type.pug
-include ../../../src/components/text-field-email/text-field-email.pug
+include ../../../src/components/input/input.pug
 include ../../../src/components/block-container/block-container.pug
 include ../../../src/components/dropdown/dropdown.pug
 include ../../../src/components/dropdown/dropdownBtn.pug
@@ -41,10 +41,10 @@ html(lang="en")
             .form-elements__container
                 .block-container
                     +block-container('Text Field','Default')
-                    +input('email','Email','text-field__email')
+                    +input('email','Email','input__email')
                 .block-container
                     +block-container('Text Field','Hover / Focus')
-                    +input('email','This is pretty awesome','text-field__email  text-field__email-hover')           
+                    +input('email','This is pretty awesome','input__email  input__email-hover')           
                 .block-container
                     +block-container('Dropdown','Default')
                     +dropdown-item("Сколько гостей")
@@ -62,14 +62,17 @@ html(lang="en")
                         +block-container('date dropdown','')
                         .date-dropdown__component
                             +date-mask("date-mask date-dropdown start","start")
-                            +dropdown-btn("dropdown-btn")
+                            +dropdown-btn("dropdown-btn","expand_more","material-icons")
                     .date-dropdown__second
                         +block-container('date dropdown','')
                         .date-dropdown__component
                             +date-mask("date-mask date-dropdown end","end")
-                            +dropdown-btn("dropdown-btn")
+                            +dropdown-btn("dropdown-btn","expand_more","material-icons")
                 .block-container
                     +block-container('subscription text field','')
+                        .input__component
+                            +input('email','Email','input__email input__email-arrow-right')
+                            +dropdown-btn("dropdown-btn dropdown-btn__arrow_forward","arrow_forward","material-icons arrow_forward-icon","arrow_forward")
         section
             .form-elements__container
                 .block-container

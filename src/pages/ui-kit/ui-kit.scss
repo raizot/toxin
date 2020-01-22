@@ -3,7 +3,7 @@
 @import '../../assets/scss/default';
 @import '../../components/color-type/color-type';
 @import '../../components/text-type/text-type';
-@import '../../components/text-field-email/text-field-email';
+@import '../../components/input/input';
 @import '../../components/block-container/block-container';
 @import '../../components/dropdown/dropdown';
 @import '../../components/date-mask/date-mask';
@@ -25,12 +25,11 @@
    flex-direction: column;
    width: 320px;
 }
-.date-dropdown{
+.date-dropdown,.input{
     &__container,
     &__component {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap:nowrap;
     }
 }

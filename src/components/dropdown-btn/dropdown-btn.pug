@@ -1,3 +1,5 @@
-mixin dropdown-btn(name)
+mixin dropdown-btn(name,icon,iconClass,idIcon)
     button(class=name)
-      i.material-icons expand_more  
+      i(class=iconClass,id=idIcon)=icon  
+
+       

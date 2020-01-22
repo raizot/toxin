@@ -1,7 +1,7 @@
-.text-field__email{
+.input__email{
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
-    width: 320px;
+    width: 100%;
     height: 44px;
     padding-left: 15px;
     cursor: pointer;
@@ -23,5 +23,10 @@
         &::placeholder {
         color: rgba(31, 32, 65, 0.75);
     }
+    }
+    &-arrow-right{
+       width: 223px;
+       border-radius: 4px 0px 0px 4px;
+       border-right: none;
     }
 }
