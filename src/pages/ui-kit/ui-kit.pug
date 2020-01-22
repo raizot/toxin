@@ -7,6 +7,7 @@ include ../../../src/components/dropdown/dropdown.pug
 include ../../../src/components/dropdown/dropdownBtn.pug
 include ../../../src/components/date-mask/date-mask.pug
 include ../../../src/components/dropdown-btn/dropdown-btn.pug
+include ../../../src/components/calculator/calculator.pug
 doctype html
 html(lang="en")
     head
@@ -60,10 +61,17 @@ html(lang="en")
                     .date-dropdown__first
                         +block-container('date dropdown','')
                         .date-dropdown__component
-                            +date-mask("date-mask date-dropdown")
+                            +date-mask("date-mask date-dropdown start","start")
                             +dropdown-btn("dropdown-btn")
                     .date-dropdown__second
                         +block-container('date dropdown','')
                         .date-dropdown__component
-                            +date-mask("date-mask date-dropdown")
+                            +date-mask("date-mask date-dropdown end","end")
                             +dropdown-btn("dropdown-btn")
+                .block-container
+                    +block-container('subscription text field','')
+        section
+            .form-elements__container
+                .block-container
+                        +block-container('calculator','')
+                        +calculator        

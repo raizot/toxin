@@ -1,0 +1,23 @@
+mixin calculator
+    .calc-wrapper
+        input(type="text" id="display" class="input-calc" placeholder="0" value="0" disabled)
+        .calc-buttons
+            .calc-buttons__table
+                    button(type="button"  class="calc-btn ce clear_btn" id="ce") ce
+                    button(type="button"  class="calc-btn btn-center clear_btn" id="c") c
+                    button(type="button"  class="calc-btn btn-center operation") /
+                    button(type="button"  class="calc-btn btn-end operation") *
+                    button(type="button"  class="number calc-btn") 7
+                    button(type="button"  class="number calc-btn btn-center") 8
+                    button(type="button"  class="number calc-btn btn-center") 9
+                    button(type="button"  class="calc-btn btn-end operation") -
+                    button(type="button"  class="number calc-btn") 4
+                    button(type="button"  class="number calc-btn btn-center") 5
+                    button(type="button"  class="number calc-btn btn-center") 6
+                    button(type="button"  class="calc-btn operation") +
+                    button(type="button"  class="number calc-btn btn-end") 1
+                    button(type="button"  class="number calc-btn") 2
+                    button(type="button"  class="number calc-btn btn-center") 3
+                    button(type="button"  class="number calc-btn btn-center btn-null") 0
+                    button(type="button"  class="operation calc-btn btn-end btn-equally " id="result") =
+                    button(type="button"  class="calc-btn btn-dot decimal" id="decimal") .

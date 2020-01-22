@@ -2,7 +2,7 @@ $color__dark-shade100: #1F2041;
 $color__dark-shade75: rgba($color__dark-shade100, .75);
 $color__dark-shade50: rgba($color__dark-shade100, .50);
 $color__dark-shade25: rgba($color__dark-shade100, .25);
-$color__dark-shade5: rgba($color__dark-shade100, .5);
+$color__dark-shade5: rgba($color__dark-shade100, .05);
 
 $color__purple: #BC9CFF;
 $color__purple-second-grad: #8BA4F9;
@@ -14,6 +14,7 @@ $gradient__primary: linear-gradient(180deg, #BC9CFF 100%, #8BA4F9 100%);
 $gradient__secondary: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 $gradient__orange: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
 $gradient__dark: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+$gradient__calc: linear-gradient(180deg, #BC9CFF 0%, #3D4975 100%);
 
 
 

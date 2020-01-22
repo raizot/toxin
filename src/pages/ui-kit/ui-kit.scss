@@ -9,6 +9,9 @@
 @import '../../components/date-mask/date-mask';
 @import '../../components/date-dropdown/date-dropdown';
 @import '../../components/dropdown-btn/dropdown-btn';
+@import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
+@import '../../components/datepicker/datepicker';
+@import '../../components/calculator/calculator';
 .color-type {
     display: flex;
     flex-direction: row;
@@ -29,8 +32,5 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap:nowrap;
-    }
-    &__component{
-        
     }
 }

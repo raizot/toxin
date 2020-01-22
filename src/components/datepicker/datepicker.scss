@@ -1,0 +1,50 @@
+.datepicker {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    border: 0px;
+    &--nav-title{
+    font-family: 'Open Sans Bold';
+    font-size: 19px;
+    line-height: 24px;
+    color: $color__dark-shade100;
+        i{
+            color: $color__dark-shade100;
+            }
+    }
+    &--days-names{
+       display: flex;
+       justify-content: center;
+       margin: 0;
+    }
+    &--day-name {
+
+        font-family: 'Montserrat Bold';
+        color: $color__purple;
+        font-size: 12px;
+        height: 40px;
+        margin-top: 30px;
+    }
+    &--content{
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+    }
+    &--body{
+
+        margin: 0;
+    }
+    &--cells{
+        width: 280px;
+    }
+    &--cell{
+        width: 40px;
+        height: 40px;
+        align-content: center;
+        &-day{
+        font-family: 'Montserrat Regular';
+        font-size: 12px;
+    }
+    
+    }
+}

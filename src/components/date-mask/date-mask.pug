@@ -1,5 +1,5 @@
-mixin date-mask(className)
-    input(type="text" class=className data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ")
+mixin date-mask(className,id,position)
+    input(type="text" id=id class=className data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="1" maxlenth="8"  data-position=position)
     
         
             
