@@ -12,6 +12,8 @@
 @import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
 @import '../../components/datepicker/datepicker';
 @import '../../components/calculator/calculator';
+@import '../../components/checkbox-list/checkbox-list';
+@import '../../components/checkbox-button/checkbox-button';
 .color-type {
     display: flex;
     flex-direction: row;
@@ -32,4 +34,16 @@
     flex-direction: row;
     flex-wrap:nowrap;
     }
+}
+.input{
+    &__component{
+        width: 266px;
+    }
+}
+.title {
+    font-family: 'Montserrat Bold';
+    color:$color__dark-shade100;
+    font-size: 0.75rem;
+    line-height: 15px;
+    text-transform: uppercase;
 }

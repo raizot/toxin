@@ -619,3 +619,31 @@ $(".end").click(function func() {
 // 	}
 // }
 // document.querySelector('.www').innerHTML = '!!!';
+
+// let obj = {
+//     year: 2025,
+//     month: 12,
+//     day
+// };
+
+// let { year, month, day } = obj;
+
+// console.log(year);  // выведет 2025
+// console.log(month); // выведет 12
+// console.log(day);
+
+// let arr = [1, 2, 3, 4, 5];
+
+// let j=arr.map(function (elem) {
+//     for (let i = j.length; i > 0;i--){
+//         console.log(j[i]);
+//     }
+// })
+
+// let arr = [1, 2, 3, 4, 5];
+
+
+// function func(num1, num2, num3, num4, num5) {
+//     return num1 + num2 + num3 + num4 + num5;
+// }
+// console.log(func(...arr));

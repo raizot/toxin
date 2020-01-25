@@ -1,0 +1,12 @@
+mixin checkbox-button(parameters)
+    -let {title,description,id,checked=false}= parameters;
+        .input-box
+            input(type="checkbox" class="checkbox__input" id=id checked=checked)
+            
+            if description !== undefined
+                .input-box__description
+                    label(for=id class="title")=title
+                    p.description=description
+            else 
+                .input-box__description
+                    label(for=id class="title defaultTitle")=title

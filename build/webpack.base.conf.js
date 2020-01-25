@@ -49,12 +49,12 @@ module.exports = {
         },
 
         {
-          use: [{
+          use: {
             loader: 'pug-loader',
             options: {
               pretty: true
             }
-          }]
+          }
         }
       ]
     }, {

@@ -8,6 +8,9 @@ include ../../../src/components/dropdown/dropdownBtn.pug
 include ../../../src/components/date-mask/date-mask.pug
 include ../../../src/components/dropdown-btn/dropdown-btn.pug
 include ../../../src/components/calculator/calculator.pug
+include ../../../src/components/checkbox-list/checkbox-list.pug
+include ../../../src/components/checkbox-button/checkbox-button.pug
+
 doctype html
 html(lang="en")
     head
@@ -62,17 +65,35 @@ html(lang="en")
                         +block-container('date dropdown','')
                         .date-dropdown__component
                             +date-mask("date-mask date-dropdown start","start")
-                            +dropdown-btn("dropdown-btn","expand_more","material-icons")
+                            +dropdown-btn({iconClass:'material-icons',icon:'expand_more',btnClass:'dropdown-btn dropdown-btn__arrow_forward'})
                     .date-dropdown__second
                         +block-container('date dropdown','')
                         .date-dropdown__component
                             +date-mask("date-mask date-dropdown end","end")
-                            +dropdown-btn("dropdown-btn","expand_more","material-icons")
+                            +dropdown-btn({iconClass:'material-icons',icon:'expand_more',btnClass:'dropdown-btn dropdown-btn__arrow_forward'})
                 .block-container
-                    +block-container('subscription text field','')
+                    +block-container('subscription text field')
                         .input__component
                             +input('email','Email','input__email input__email-arrow-right')
-                            +dropdown-btn("dropdown-btn dropdown-btn__arrow_forward","arrow_forward","material-icons arrow_forward-icon","arrow_forward")
+                            +dropdown-btn({iconClass:'material-icons arrow_forward-icon',icon:'arrow_forward',btnClass:'dropdown-btn dropdown-btn__arrow_forward',idIcon:'arrow_forward'})
+                .block-container
+                    +checkbox-list([{title:"Завтрак",id:"breakfast"},
+                                    {title:"Письменный стол",id:"table",checked:true},
+                                    {title:"Стул для кормления",id:"chair",checked:true},
+                                    {title:"Кроватка",id:"cot",checked:true},
+                                    {title:"Телевизор",id:"tv"},
+                                    {title:"Шампунь",id:"shampoo1"},])
+                    +checkbox-list([
+                                    {title:"Завтрак",id:"breakfast"},
+                                    {title:"Письменный стол",id:"table",checked:true},
+                                    {title:"Стул для кормления",id:"chair",checked:true},
+                                    {title:"Кроватка",id:"cot",checked:true},
+                                    {title:"Телевизор",id:"tv"},
+                                    {title:"Шампунь",id:"shampoo1"},
+                                    {title:"Телевизор",id:"tv2"},
+                                    {title:"Шампунь",id:"shampoo2"}
+                                    ],"showList")
+                        
         section
             .form-elements__container
                 .block-container

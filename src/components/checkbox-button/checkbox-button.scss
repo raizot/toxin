@@ -1,0 +1,73 @@
+.input-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    &__description{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-top: 4px;
+        .title {
+                color: $color__dark-shade75;
+            }
+        .title.defaultTitle {
+            font-family: 'Montserrat Regular';
+            text-transform: none;
+            font-size: 14px;
+            color: $color__dark-shade50;
+
+        }
+        .description{
+            font-family: 'Montserrat Regular';
+            font-size: 12px;
+             color: $color__dark-shade50;
+        }
+    }
+}
+
+.input-box{
+    position: relative;
+    label.title:before{
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: #FFFF;
+        border: 1px solid #BC9CFF;
+        box-sizing: border-box;
+        border-radius: 4px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        
+    }
+     .input-box__description>label.title:after {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: url(/assets/img/checked.svg) no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 2px;
+        left: 4px;
+        z-index: 2;
+        opacity: 0;
+     }
+    &__description{
+        padding-left: 25px;
+    }
+}
+.checkbox__input {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+label.title{
+    cursor: pointer;
+}
+.checkbox__input:checked+.input-box__description>label.title:after {
+       opacity: 1;  
+}
