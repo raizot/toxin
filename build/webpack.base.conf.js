@@ -5,7 +5,9 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { VueLoaderPlugin } = require('vue-loader');
+const {
+  VueLoaderPlugin
+} = require('vue-loader');
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -19,7 +21,7 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    "ui-kit":`${PATHS.src}/pages/ui-kit/ui-kit.js`,
+    "ui-kit": `${PATHS.src}/pages/ui-kit/ui-kit.js`,
 
   },
   output: {
@@ -41,8 +43,7 @@ module.exports = {
   module: {
     rules: [{
       test: /\.pug$/,
-      oneOf: [
-        {
+      oneOf: [{
           resourceQuery: /^\?vue/,
           use: ['pug-plain-loader']
         },
@@ -71,12 +72,16 @@ module.exports = {
     }, {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
+      exclude: /(img)/,
       options: {
-        name: '[name].[ext]'
+        name: '[name].[ext]',
+        outputPath: 'assets/fonts',
+        publicPath: '../assets/fonts/'
       }
     }, {
       test: /\.(png|jpg|gif|svg)$/,
       loader: 'file-loader',
+      exclude: /(fonts)/,
       options: {
         name: '[name].[ext]'
       }
@@ -86,30 +91,48 @@ module.exports = {
         'style-loader',
         {
           loader: MiniCssExtractPlugin.loader,
-    
+          options: {
+            publicPath: '/'
+          }
         },
         {
           loader: 'css-loader',
-          options: { sourceMap: true }
+          options: {
+            sourceMap: true
+          }
         }, {
           loader: 'postcss-loader',
-          options: { sourceMap: true, config: { path: `./postcss.config.js` } }
+          options: {
+            sourceMap: true,
+            config: {
+              path: `./postcss.config.js`
+            }
+          }
         }, {
           loader: 'sass-loader',
-          options: { sourceMap: true }
+          options: {
+            sourceMap: true
+          }
         }
       ]
     }, {
       test: /\.css$/,
       use: [
         'style-loader',
-        // MiniCssExtractPlugin.loader,
+        MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
-          options: { sourceMap: true }
+          options: {
+            sourceMap: true
+          }
         }, {
           loader: 'postcss-loader',
-          options: { sourceMap: true, config: { path: `./postcss.config.js` } }
+          options: {
+            sourceMap: true,
+            config: {
+              path: `./postcss.config.js`
+            }
+          }
         }
       ]
     }]
@@ -126,27 +149,32 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery'
     }),
-    // new VueLoaderPlugin(),
-    // new MiniCssExtractPlugin({
-    //   filename: 'css/[name].css',
-    // }),
-    new CopyWebpackPlugin([
-      { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/static`, to: '' },
+    new VueLoaderPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+    }),
+    new CopyWebpackPlugin([{
+        from: `${PATHS.src}/${PATHS.assets}img`,
+        to: `${PATHS.assets}img`
+      },
+      {
+        from: `${PATHS.src}/static`,
+        to: ''
+      },
     ]),
 
-     new HtmlWebpackPlugin({
-       template: './src/pages/ui-kit/ui-kit.pug',
-       filename: 'ui-kit.html',
-        inject: true,
-       collapseWhitespace: true,
-        
-     }),
-      // new HtmlWebpackPlugin({
-      //   template: './src/pages/form-elements/form-elements.pug',
-      //   filename: 'home.html',
-      //   inject: true,
-      //   collapseWhitespace: false
-      // }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/ui-kit/ui-kit.pug',
+      filename: 'ui-kit.html',
+      inject: true,
+      collapseWhitespace: true,
+
+    }),
+    // new HtmlWebpackPlugin({
+    //   template: './src/pages/form-elements/form-elements.pug',
+    //   filename: 'home.html',
+    //   inject: true,
+    //   collapseWhitespace: false
+    // }),
   ],
 }
