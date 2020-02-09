@@ -83,7 +83,9 @@ module.exports = {
       loader: 'file-loader',
       exclude: /(fonts)/,
       options: {
-        name: '[name].[ext]'
+        name: '[name].[ext]',
+        outputPath: 'assets/img',
+        publicPath: '../assets/img/'
       }
     }, {
       test: /\.scss$/,
@@ -153,10 +155,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
     }),
-    new CopyWebpackPlugin([{
-        from: `${PATHS.src}/${PATHS.assets}img`,
-        to: `${PATHS.assets}img`
-      },
+    new CopyWebpackPlugin([
       {
         from: `${PATHS.src}/static`,
         to: ''
