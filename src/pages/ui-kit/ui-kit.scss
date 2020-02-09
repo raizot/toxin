@@ -1,5 +1,5 @@
 @import '../../assets/scss/variables';
-@import '../../assets/scss/fonts';
+@import './fonts';
 @import '../../assets/scss/default';
 @import '../../components/color-type/color-type';
 @import '../../components/text-type/text-type';
@@ -46,4 +46,7 @@
     font-size: 0.75rem;
     line-height: 15px;
     text-transform: uppercase;
+}
+.short-container{
+    width: 266px;
 }

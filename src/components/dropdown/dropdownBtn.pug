@@ -1,7 +1,8 @@
-mixin Btn(btnName,inputClass)
+mixin Btn(resurs)
+    -let {btnName,inputClass,inputValue="0"} = resurs;
     .dropdown-content__line
         p=btnName
         .dropdown-content__box-button
             button.minus -
-            input(type="text" value="0" class=inputClass disabled)
+            input(type="text" value=inputValue class=inputClass disabled)
             button.plus +

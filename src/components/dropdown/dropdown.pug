@@ -1,7 +1,8 @@
-mixin dropdown-item(name)
+mixin dropdown-item(dropdownItems = {})
+    -let {name,btnClass}=dropdownItems
     .dropdown
-        button.dropbtn
-            p=name
+        button(class=btnClass)
+            p.btnText=name
             i.material-icons expand_more
         .dropdown-content
             block

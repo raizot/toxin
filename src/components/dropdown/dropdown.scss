@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    .dropbtn{
+    .dropdown__dropbtn {
          display: flex;
          flex-direction: row;
          justify-content:space-between;
          align-items: center;
-         width: 320px;
+         width: 100%;
          height: 44px;
          background: #FFFFFF;
          border: 1px solid $color__dark-shade50;

@@ -24,8 +24,7 @@ module.exports = {
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
-    path: PATHS.dist,
-    publicPath: ''
+    path: PATHS.dist
   },
   optimization: {
     splitChunks: {
@@ -87,9 +86,7 @@ module.exports = {
         'style-loader',
         {
           loader: MiniCssExtractPlugin.loader,
-          options: {
-               publicPath: '/'
-          }
+    
         },
         {
           loader: 'css-loader',
@@ -106,7 +103,7 @@ module.exports = {
       test: /\.css$/,
       use: [
         'style-loader',
-        MiniCssExtractPlugin.loader,
+        // MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
           options: { sourceMap: true }
@@ -129,13 +126,12 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery'
     }),
-    new VueLoaderPlugin(),
-    new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
-    }),
+    // new VueLoaderPlugin(),
+    // new MiniCssExtractPlugin({
+    //   filename: 'css/[name].css',
+    // }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
       { from: `${PATHS.src}/static`, to: '' },
     ]),
 

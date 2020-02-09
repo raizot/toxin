@@ -50,10 +50,11 @@ html(lang="en")
                     +input('email','This is pretty awesome','input__email  input__email-hover')           
                 .block-container
                     +block-container('Dropdown','Default')
-                    +dropdown-item("Сколько гостей")
-                        +Btn("Взрослые","adult")
-                        +Btn("Дети","child")
-                        +Btn("Младенцы","baby")
+                    +dropdown-item({btnClass:"dropdown__dropbtn",name:"Сколько гостей"})
+                        +Btn({ btnName:"Взрослые",inputClass:"adult",inputValue:"0"})
+                        +Btn({ btnName:"Дети",inputClass:"child",inputValue:"0"})
+                        +Btn({ btnName:"Младенцы",inputClass:"baby",inputValue:"0"})
+                        +Btn({ btnName:"Младенцы",inputClass:"baby",inputValue:"0"})
                         .form-elements__btn-container
                             button.clear очистить
                             button.submit применить
@@ -77,6 +78,20 @@ html(lang="en")
                             +input('email','Email','input__email input__email-arrow-right')
                             +dropdown-btn({iconClass:'material-icons arrow_forward-icon',icon:'arrow_forward',btnClass:'dropdown-btn dropdown-btn__arrow_forward',idIcon:'arrow_forward'})
                 .block-container
+                    +block-container('dropdown','Default')
+                    .short-container
+                        +dropdown-item({btnClass:"dropdown__dropbtn dropdown__dropbtn-short",name:''})
+                            +Btn({ btnName:"спальни",inputClass:"adult",inputValue:"2"})
+                            +Btn({ btnName:"кровати",inputClass:"child",inputValue:"2"})
+                            +Btn({ btnName:"ванные комнаты",inputClass:"baby",inputValue:"0"})
+                .block-container
+                    +block-container('dropdown','expanded')
+                    .short-container
+                        +dropdown-item({btnClass:"dropdown__dropbtn dropdown__dropbtn-short",name:''})
+                            +Btn({ btnName:"спальни",inputClass:"adult",inputValue:"2"})
+                            +Btn({ btnName:"кровати",inputClass:"child",inputValue:"2"})
+                            +Btn({ btnName:"ванные комнаты",inputClass:"baby",inputValue:"0"})
+                .block-container
                     +checkbox-list([{title:"Завтрак",id:"breakfast"},
                                     {title:"Письменный стол",id:"table",checked:true},
                                     {title:"Стул для кормления",id:"chair",checked:true},
@@ -92,8 +107,10 @@ html(lang="en")
                                     {title:"Шампунь",id:"shampoo1"},
                                     {title:"Телевизор",id:"tv2"},
                                     {title:"Шампунь",id:"shampoo2"}
-                                    ],"showList")
-                        
+                                    ],"showList"
+                                    )
+                button.btnTest#hider Кнопка
+                #text hhfke        
         section
             .form-elements__container
                 .block-container
