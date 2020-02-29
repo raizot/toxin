@@ -51,7 +51,7 @@ $(document).ready(function () {
     });
     //buttons
     $('.form-elements__btn-container .clear').click(function () {
-        $('.dropdown__dropbtn p').text('Сколько гостей');
+        $(this).closest('.dropdown').find('.btnText').text('Сколько гостей');
         let $inputs = $(this).closest('.dropdown').find('input');
         let $numberInputs = $inputs.map(function(indx, element){
             return parseInt($(element).val());
@@ -60,7 +60,6 @@ $(document).ready(function () {
             $numberInputs[i] = 0;
             $inputs.val('0');
         }
-        console.log($numberInputs[0]);
     });
     $('.form-elements__btn-container .submit').click(function () {
         $('.dropdown-content').removeClass('dropdown-content__show');
