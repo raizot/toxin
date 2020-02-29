@@ -18,17 +18,19 @@ $(document).ready(function () {
         cases = [2, 0, 1, 1, 1, 2];
         return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
     }  
-        $('button').click(function () {
+        $('.dropdown-content__box-button').find('button').click(function () {
             let child = $('.child').val();
             let adult = $('.adult').val();
             let baby = $('.baby').val();
-            var summ = parseInt(child) + parseInt(adult) + parseInt(baby);
-            $('.dropdown__dropbtn p').text(summ + ' ' + declOfNum(summ, ['гость', 'гостя', 'гостей']));
+            let summ = parseInt(child) + parseInt(adult) + parseInt(baby);
+            console.log($(this));
+            console.log($(this).closest('.dropdown').find('.btnText'));
             if(summ === 0){
-                $('.dropdown__dropbtn p').text('Сколько гостей');
-            }
+                $(this).closest('.dropdown').find('.btnText').text('Сколько гостей');
+            } else $(this).closest('.dropdown').find('.btnText').text(summ + ' ' + declOfNum(summ, ['гость', 'гостя', 'гостей']));
         });
     //resize input
+
     function resizeInput() {
         $(this).attr('size', $(this).val().length);
     }
@@ -40,8 +42,10 @@ $(document).ready(function () {
     
     //show-hide
     $('.dropdown__dropbtn').click(function () {
-        let content = $('.dropdown-content');
-        content.toggle();
+        if($(this).next('.dropdown-content').hasClass('dropdown-content__show')){
+            $(this).next('.dropdown-content').removeClass('dropdown-content__show');
+        } else $(this).next('.dropdown-content').addClass('dropdown-content__show');
+
     });
     //buttons
     $('.form-elements__btn-container .clear').click(function () {
@@ -52,6 +56,6 @@ $(document).ready(function () {
     
     });
     $('.form-elements__btn-container .submit').click(function () {
-        $('.dropdown-content').css("display","none");
+        $('.dropdown-content').removeClass('dropdown-content__show');
      });
 });

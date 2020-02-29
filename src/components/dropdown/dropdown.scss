@@ -1,89 +1,113 @@
 .dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  &__dropbtn {
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    .dropdown__dropbtn {
-         display: flex;
-         flex-direction: row;
-         justify-content:space-between;
-         align-items: center;
-         width: 100%;
-         height: 44px;
-         background: #FFFFFF;
-         border: 1px solid $color__dark-shade50;
-         border-radius: 2px;
-         padding-left: 15px;
-         p{
-             font-family: 'Montserrat Regular';
-             font-size: 14px;
-             color:$color__dark-shade75;
-         }
-    }
-}
-.minus,.plus{
-    font-family: 'Montserrat Regular';
-    font-size: 18px;
-    line-height: 22px;
-    color: $color__dark-shade50;
-    width: 30px;
-    height: 30px;
-    border: 1px solid $color__dark-shade25;
-    border-radius: 22px;
-    background:white;
-    color: $color__dark-shade50;
-}
-.dropdown-content{
-    padding: 13px 7px 13px 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 44px;
+    background: #FFFFFF;
     border: 1px solid $color__dark-shade50;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-    border-radius: 0 0 2px 2px;
-    display: none;
-    &__line{
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
-        margin-bottom: 7px;
-        p,input{
-            font-family: 'Montserrat Bold';
-            font-size: 12px;
-            line-height: 15px;
-            text-transform: uppercase;
-        }
+    border-radius: 2px;
+    padding-left: 15px;
+    
+    p {
+      font-family: 'Montserrat Regular';
+      font-size: 14px;
+      color: $color__dark-shade75;
     }
-    &__box-button {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
-        input{
-            border:none;
-            text-align:center;
-            width: 35px;
-            background-color: white;
-
-        }
-        .number{
-            margin: 0 12px 0 12px;
-        }
-    }
+  }
 }
-.form-elements__btn-container{
+.btnItems-container{
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  top: 30px;
+}
+.minus, .plus {
+  font-family: 'Montserrat Regular';
+  font-size: 18px;
+  line-height: 22px;
+  color: $color__dark-shade50;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $color__dark-shade25;
+  border-radius: 22px;
+  background: white;
+  color: $color__dark-shade50;
+}
+
+.dropdown-content {
+  padding: 13px 7px 13px 15px;
+  border: 1px solid $color__dark-shade50;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 0 0 2px 2px;
+   display: none;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  top: 43px;
+  z-index: 1;
+  &__show{
+    display: block;
+  }
+  &__line {
     display: flex;
     justify-content: space-between;
-    margin-top: 19px;
-    .clear,.submit{
-        border:none;
-        text-transform: uppercase;
-        background-color:transparent;
-        font-family: 'Montserrat Bold';
-        font-size: 12px;
+    align-items: center;
+    margin-bottom: 7px;
+
+    p, input {
+      font-family: 'Montserrat Bold';
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
     }
-    .clear{
-        color:$color__dark-shade50;
-        padding-left: 0px;
+
+  }
+  &__box-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    input {
+      border: none;
+      text-align: center;
+      width: 35px;
+      background-color: white;
+
     }
-    .submit {
-        color:$color__purple;
-        padding-right: 0px;
+
+    .number {
+      margin: 0 12px 0 12px;
     }
+  }
+}
+.form-elements__btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 19px;
+
+  .clear, .submit {
+    border: none;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-family: 'Montserrat Bold';
+    font-size: 12px;
+  }
+
+  .clear {
+    color: $color__dark-shade50;
+    padding-left: 0px;
+  }
+
+  .submit {
+    color: $color__purple;
+    padding-right: 0px;
+  }
 }
