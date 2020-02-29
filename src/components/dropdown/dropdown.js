@@ -17,13 +17,16 @@ $(document).ready(function () {
     function declOfNum(number, titles) {
         cases = [2, 0, 1, 1, 1, 2];
         return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
-    }  
+    }
         $('.dropdown-content__box-button').find('button').click(function () {
-            let child = $('.child').val();
-            let adult = $('.adult').val();
-            let baby = $('.baby').val();
-            let summ = parseInt(child) + parseInt(adult) + parseInt(baby);
-
+            let $inputs = $(this).closest('.dropdown').find('input');
+            let summ =  parseInt('0');
+            let $numberInputs = $inputs.map(function(indx, element){
+                return parseInt($(element).val());
+            });
+            for (i=0; i < $numberInputs.length;i++){
+                summ += $numberInputs[i];
+            }
             if(summ === 0){
                 $(this).closest('.dropdown').find('.btnText').text('Сколько гостей');
             } else $(this).closest('.dropdown').find('.btnText').text(summ + ' ' + declOfNum(summ, ['гость', 'гостя', 'гостей']));
@@ -38,7 +41,7 @@ $(document).ready(function () {
         .keyup(resizeInput)
         // resize on page load
         .each(resizeInput);
-    
+
     //show-hide
     $('.dropdown__dropbtn').click(function () {
         if($(this).next('.dropdown-content').hasClass('dropdown-content__show')){
@@ -49,10 +52,15 @@ $(document).ready(function () {
     //buttons
     $('.form-elements__btn-container .clear').click(function () {
         $('.dropdown__dropbtn p').text('Сколько гостей');
-        $('.child').val(0);
-        $('.adult').val(0);
-        $('.baby').val(0);
-    
+        let $inputs = $(this).closest('.dropdown').find('input');
+        let $numberInputs = $inputs.map(function(indx, element){
+            return parseInt($(element).val());
+        });
+        for (i=0; i < $numberInputs.length;i++){
+            $numberInputs[i] = 0;
+            $inputs.val('0');
+        }
+        console.log($numberInputs[0]);
     });
     $('.form-elements__btn-container .submit').click(function () {
         $('.dropdown-content').removeClass('dropdown-content__show');
