@@ -23,8 +23,7 @@ $(document).ready(function () {
             let adult = $('.adult').val();
             let baby = $('.baby').val();
             let summ = parseInt(child) + parseInt(adult) + parseInt(baby);
-            console.log($(this));
-            console.log($(this).closest('.dropdown').find('.btnText'));
+
             if(summ === 0){
                 $(this).closest('.dropdown').find('.btnText').text('Сколько гостей');
             } else $(this).closest('.dropdown').find('.btnText').text(summ + ' ' + declOfNum(summ, ['гость', 'гостя', 'гостей']));
