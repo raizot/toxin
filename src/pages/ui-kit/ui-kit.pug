@@ -50,7 +50,7 @@ html(lang="en")
                     +input('email','This is pretty awesome','input__email  input__email-hover')
                 .block-container
                     +block-container('Dropdown','Default')
-                    +dropdown-item({btnClass:"dropdown__dropbtn",name:"Сколько гостей"})
+                    +dropdown-item({btnClass:"dropdown__dropbtn dropdown-guests",name:"Сколько гостей"})
                         +Btn({ btnName:"Взрослые",inputClass:"adult",inputValue:"0"})
                         +Btn({ btnName:"Дети",inputClass:"child",inputValue:"0"})
                         +Btn({ btnName:"Младенцы",inputClass:"baby",inputValue:"0"})
@@ -60,7 +60,7 @@ html(lang="en")
 
                 .block-container
                     +block-container('Dropdown','Default')
-                    +dropdown-item({btnClass: "dropdown__dropbtn", name: "Сколько гостей"})
+                    +dropdown-item({btnClass: "dropdown__dropbtn dropdown-guests", name: "Сколько гостей"})
                         +Btn({btnName: "Взрослые", inputClass: "adult", inputValue: "0"})
                         +Btn({btnName: "Дети", inputClass: "child", inputValue: "0"})
                         +Btn({btnName: "Младенцы", inputClass: "baby", inputValue: "0"})
@@ -90,14 +90,14 @@ html(lang="en")
                 .block-container
                     +block-container('dropdown','Default')
                     .short-container
-                        +dropdown-item({btnClass:"dropdown__dropbtn dropdown__dropbtn-short",name:''})
+                        +dropdown-item({btnClass:"dropdown__dropbtn dropdown__dropbtn-short dropdown-services",name:''})
                             +Btn({ btnName:"спальни",inputClass:"adult",inputValue:"2"})
                             +Btn({ btnName:"кровати",inputClass:"child",inputValue:"2"})
                             +Btn({ btnName:"ванные комнаты",inputClass:"baby",inputValue:"0"})
                 .block-container
                     +block-container('dropdown','expanded')
                     .short-container
-                        +dropdown-item({btnClass:"dropdown__dropbtn dropdown__dropbtn-short",name:''})
+                        +dropdown-item({btnClass:"dropdown__dropbtn dropdown__dropbtn-short dropdown-services",name:''})
                             +Btn({ btnName:"спальни",inputClass:"adult",inputValue:"2"})
                             +Btn({ btnName:"кровати",inputClass:"child",inputValue:"2"})
                             +Btn({ btnName:"ванные комнаты",inputClass:"baby",inputValue:"0"})

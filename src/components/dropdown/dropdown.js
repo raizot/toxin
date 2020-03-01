@@ -20,16 +20,34 @@ $(document).ready(function () {
     }
         $('.dropdown-content__box-button').find('button').click(function () {
             let $inputs = $(this).closest('.dropdown').find('input');
+            let $content = $(this).closest('.dropdown').find('.dropdown-content__line');
+            let contentVal = $(this).closest('.dropdown-content__line').find('input').val();
+            let contentText = $(this).closest('.dropdown-content__line').find('p').html();
             let summ =  parseInt('0');
             let $numberInputs = $inputs.map(function(indx, element){
                 return parseInt($(element).val());
             });
-            for (i=0; i < $numberInputs.length;i++){
+            for (let i=0; i < $numberInputs.length;i++){
                 summ += $numberInputs[i];
             }
-            if(summ === 0){
+            if(summ === 0 && $(this).closest('.dropdown').find('.dropdown__dropbtn').hasClass('dropdown-guests')){
                 $(this).closest('.dropdown').find('.btnText').text('Сколько гостей');
-            } else $(this).closest('.dropdown').find('.btnText').text(summ + ' ' + declOfNum(summ, ['гость', 'гостя', 'гостей']));
+                return true;
+            }
+
+            if($(this).closest('.dropdown').find('.dropdown__dropbtn').hasClass('dropdown-guests')){
+                $(this).closest('.dropdown').find('.btnText').text(summ + ' ' + declOfNum(summ, ['гость', 'гостя', 'гостей']));
+            } else if($(this).closest('.dropdown').find('.dropdown__dropbtn').hasClass('dropdown-services')){
+                        let text = '';
+                        let textArr = [];
+
+                        let informationOfservice = $(this).closest('.dropdown').find('.btnText').text(text + (parseInt(contentVal)+' ' + contentText));
+                        textArr.push(contentVal);
+                        textArr.push(contentText);
+            }
+            console.log(contentText);
+            console.log(contentVal);
+            console.log(textArr);
         });
     //resize input
 
@@ -56,7 +74,7 @@ $(document).ready(function () {
         let $numberInputs = $inputs.map(function(indx, element){
             return parseInt($(element).val());
         });
-        for (i=0; i < $numberInputs.length;i++){
+        for (let i=0; i < $numberInputs.length;i++){
             $numberInputs[i] = 0;
             $inputs.val('0');
         }
