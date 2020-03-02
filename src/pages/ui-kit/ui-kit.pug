@@ -42,7 +42,7 @@ html(lang="en")
                     +text-example('This is a label or CTA text','text-type__example-h3')
                     +text-example('This is the body text which is used for most of the design, like paragraphs, lists, etc.','text-type__example-body')
         section.form-elements
-            .form-elements__container
+            .form-elements__container.form-elements__container-first
                 .block-container
                     +block-container('Text Field','Default')
                     +input('email','Email','input__email')
@@ -124,8 +124,18 @@ html(lang="en")
                     +info-hotel-room({icon:'insert_emoticon',title:'Комфорт',description:'Шумопоглощающие стены'})
                 .block-container
                     +info-hotel-room({icon:'location_city',title:'Удобство',description:'Окно в каждой из спален'})
+            .form-elements__container.form-elements__container-second
+                .block-container
+                    +block-container('Checkbox Buttons','')
+                    +checkbox-button({title: "Можно курить", id: "smoke"})
+                    +checkbox-button({title: "Можно с питомцами", id: "pet",checked:true})
+                    +checkbox-button({title: "Можно пригласить гостей (до 10 человек)", id: "smoke",checked:true})
+                .block-container
+                    +block-container('Radio Buttons','')
+
+
         section
-            .form-elements__container
+            .form-elements__container.form-elements__container-first
                 .block-container
                         +block-container('calculator','')
                         +calculator

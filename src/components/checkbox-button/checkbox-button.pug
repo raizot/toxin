@@ -1,4 +1,4 @@
-mixin checkbox-button(parameters)
+mixin checkbox-button(parameters={})
     -let {title,description,id,checked=false}= parameters;
         .input-box
             input(type="checkbox" class="checkbox__input" id=id checked=checked)

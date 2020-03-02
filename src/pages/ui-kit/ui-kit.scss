@@ -24,11 +24,24 @@
     padding-right: 11.9375rem;
     flex-wrap:wrap;
 }
-.form-elements__container {
-   display: inline-flex;
-   flex-direction: column;
-   width: 320px;
+.form-elements{
+  display: flex;
+  flex-direction: row;
+  &__container {
+    display: inline-flex;
+    flex-direction: column;
+    width: 320px;
+    margin-top: 143px;
+    margin-bottom: 132px;
+  }
+  &__container-first{
+    margin-left: 140px;
+  }
+  &__container-second{
+    margin-left: 126px;
+  }
 }
+
 .date-dropdown,.input{
     &__container,
     &__component {
