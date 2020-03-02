@@ -14,6 +14,7 @@
 @import '../../components/calculator/calculator';
 @import '../../components/checkbox-list/checkbox-list';
 @import '../../components/checkbox-button/checkbox-button';
+@import '../../components/info-hotel-room/info-hotel-room';
 
 .color-type {
     display: flex;
@@ -54,5 +55,9 @@
 .block-container{
   &__checkbox-list{
     margin-top: 158px;
+    margin-bottom: 40px;
+  }
+  &__info-hotel-room{
+    margin-bottom: 38px;
   }
 }

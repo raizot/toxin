@@ -120,8 +120,10 @@ html(lang="en")
                                     {title:"Шампунь",id:"shampoo2"}
                                     ],"showList"
                                     )
+                .block-container.block-container__info-hotel-room
+                    +info-hotel-room({icon:'insert_emoticon',title:'Комфорт',description:'Шумопоглощающие стены'})
                 .block-container
-                    +info-hotel-room
+                    +info-hotel-room({icon:'location_city',title:'Удобство',description:'Окно в каждой из спален'})
         section
             .form-elements__container
                 .block-container

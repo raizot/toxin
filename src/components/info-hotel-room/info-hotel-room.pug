@@ -1,7 +1,7 @@
 mixin info-hotel-room(stats={})
-    -let {iconClass} = stats
+    -let {iconClass,icon,title,description} = stats
     .info-hotel-room__container
-        .info-hotel-room__img 1
+        i.info-hotel-room__img.material-icons(class=iconClass)=icon
         .info-hotel-room__info-container
-            .info-hotel-room__title 2
-            .info-hotel-room__description 3
+            .info-hotel-room__title=title
+            .info-hotel-room__description=description

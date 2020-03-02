@@ -1,0 +1,26 @@
+.info-hotel-room{
+  &__container{
+  display: flex;
+  flex-direction: row;
+  }
+  &__info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    font-family: 'Montserrat Regular';
+    font-size: 14px;
+    color:$color__dark-shade75;
+  }
+  &__img{
+    font-size: 48px;
+    background: $gradient__primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+  }
+
+  &__title {
+    font-family: 'Montserrat Bold'
+  }
+}
