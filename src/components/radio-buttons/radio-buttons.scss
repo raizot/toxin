@@ -1,0 +1,43 @@
+.radio-label{
+  margin-right: 20px;
+}
+.radio-button{
+  &__radio {
+    display: none;
+  }
+  &__label{
+    position: relative;
+    padding-left: 30px;
+    display: inline-block;
+    font-family: 'Montserrat Regular';
+    font-size: 14px;
+    color:$color__dark-shade75;
+    &::before{
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      border:1px solid $color__purple ;
+      border-radius: 50%;
+      position: absolute;
+      top: -4px;
+      left: 0px;
+    }
+    &::after{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 1px;
+      left: 5px;
+      width: 10px;
+      height: 10px;
+      background: $gradient__primary;
+      opacity: 0;
+      transition: .1s;
+      border-radius: 50%;
+    }
+  }
+}
+.radio-button__radio:checked + .radio-button__label::after{
+  opacity: 1;
+}

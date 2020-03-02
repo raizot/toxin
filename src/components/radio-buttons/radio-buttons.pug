@@ -1,0 +1,5 @@
+mixin radio-button(radioItems = {})
+    -let {radioName,radioText,radioValue,checked}=radioItems
+    label.radio-label
+        input(class="radio-button__radio" type="radio" name=radioName value=radioValue checked=checked)
+        span(class="radio-button__label")=radioText

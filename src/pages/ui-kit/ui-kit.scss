@@ -15,6 +15,7 @@
 @import '../../components/checkbox-list/checkbox-list';
 @import '../../components/checkbox-button/checkbox-button';
 @import '../../components/info-hotel-room/info-hotel-room';
+@import '../../components/radio-buttons/radio-buttons';
 
 .color-type {
     display: flex;
@@ -72,5 +73,10 @@
   }
   &__info-hotel-room{
     margin-bottom: 38px;
+  }
+  &__radio-button{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
   }
 }

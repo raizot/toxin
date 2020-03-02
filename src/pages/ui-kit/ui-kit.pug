@@ -11,6 +11,7 @@ include ../../../src/components/calculator/calculator.pug
 include ../../../src/components/checkbox-list/checkbox-list.pug
 include ../../../src/components/checkbox-button/checkbox-button.pug
 include ../../../src/components/info-hotel-room/info-hotel-room.pug
+include ../../../src/components/radio-buttons/radio-buttons.pug
 
 doctype html
 html(lang="en")
@@ -106,15 +107,15 @@ html(lang="en")
                     +checkbox-list([{title:"Завтрак",id:"breakfast"},
                                     {title:"Письменный стол",id:"table",checked:true},
                                     {title:"Стул для кормления",id:"chair",checked:true},
-                                    {title:"Кроватка",id:"cot",checked:true},
+                                    {title:"Кроватка",id:"crib",checked:true},
                                     {title:"Телевизор",id:"tv"},
-                                    {title:"Шампунь",id:"shampoo1"},])
+                                    {title:"Шампунь",id:"shampoo"},])
                     +checkbox-list([
-                                    {title:"Завтрак",id:"breakfast"},
-                                    {title:"Письменный стол",id:"table",checked:true},
-                                    {title:"Стул для кормления",id:"chair",checked:true},
-                                    {title:"Кроватка",id:"cot",checked:true},
-                                    {title:"Телевизор",id:"tv"},
+                                    {title:"Завтрак",id:"breakfast1"},
+                                    {title:"Письменный стол",id:"table1",checked:true},
+                                    {title:"Стул для кормления",id:"chair1",checked:true},
+                                    {title:"Кроватка",id:"crib1",checked:true},
+                                    {title:"Телевизор",id:"tv1"},
                                     {title:"Шампунь",id:"shampoo1"},
                                     {title:"Телевизор",id:"tv2"},
                                     {title:"Шампунь",id:"shampoo2"}
@@ -129,9 +130,12 @@ html(lang="en")
                     +block-container('Checkbox Buttons','')
                     +checkbox-button({title: "Можно курить", id: "smoke"})
                     +checkbox-button({title: "Можно с питомцами", id: "pet",checked:true})
-                    +checkbox-button({title: "Можно пригласить гостей (до 10 человек)", id: "smoke",checked:true})
+                    +checkbox-button({title: "Можно пригласить гостей (до 10 человек)", id: "guests",checked:true})
                 .block-container
                     +block-container('Radio Buttons','')
+                    .block-container__radio-button
+                        +radio-button({radioName:'gender',radioText:'Мужчина',radioValue:'male',checked:'checked'})
+                        +radio-button({radioName:'gender',radioText:'Женщина',radioValue:'female'})
 
 
         section
