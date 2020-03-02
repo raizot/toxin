@@ -21,8 +21,9 @@ $(document).ready(function () {
         $('.dropdown-content__box-button').find('button').click(function () {
             let $inputs = $(this).closest('.dropdown').find('input');
             let $content = $(this).closest('.dropdown').find('.dropdown-content__line');
-            let contentVal = $(this).closest('.dropdown-content__line').find('input').val();
-            let contentText = $(this).closest('.dropdown-content__line').find('p').html();
+            let text = '';
+            let valArr = [];
+            let textArr = [];
             let summ =  parseInt('0');
             let $numberInputs = $inputs.map(function(indx, element){
                 return parseInt($(element).val());
@@ -37,18 +38,35 @@ $(document).ready(function () {
 
             if($(this).closest('.dropdown').find('.dropdown__dropbtn').hasClass('dropdown-guests')){
                 $(this).closest('.dropdown').find('.btnText').text(summ + ' ' + declOfNum(summ, ['гость', 'гостя', 'гостей']));
-            } else if($(this).closest('.dropdown').find('.dropdown__dropbtn').hasClass('dropdown-services')){
-                        let text = '';
-                        let textArr = [];
-
-                        let informationOfservice = $(this).closest('.dropdown').find('.btnText').text(text + (parseInt(contentVal)+' ' + contentText));
-                        textArr.push(contentVal);
-                        textArr.push(contentText);
-            }
-            console.log(contentText);
-            console.log(contentVal);
-            console.log(textArr);
+            } else if($(this).closest('.dropdown').hasClass('dropdown-services')){
+                        for(let i=0;i< $content.length;i++) {
+                            valArr.push($($content[i]).closest('.dropdown-content__line').find('input').val());
+                            textArr.push($($content[i]).closest('.dropdown-content__line').find('p').html());
+                            text += valArr[i]+' '+textArr[i];
+                            if( i !==  $content.length-1 ){
+                                text += ',';
+                            }
+                        }
+                        $(this).closest('.dropdown').find('.btnText').text(text);
+                    }
         });
+    //default val for input for services
+    let $content = $('.dropdown-services');
+    $content.each(function(indx,element){
+        let text = '';
+        let valArr = [];
+        let textArr = [];
+        let $lines =$(element).find('.dropdown-content__line');
+            for(let i=0; i< $lines.length;i++) {
+                valArr.push($($lines[i]).find('input').val());
+                textArr.push($($lines[i]).find('p').html());
+                text += valArr[i] + ' ' + textArr[i];
+                if ( i !== $lines.length - 1) {
+                    text += ',';
+                }
+            }
+            $(element).find('.btnText').text(text);
+    });
     //resize input
 
     function resizeInput() {

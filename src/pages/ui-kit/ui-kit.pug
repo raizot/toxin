@@ -10,6 +10,7 @@ include ../../../src/components/dropdown-btn/dropdown-btn.pug
 include ../../../src/components/calculator/calculator.pug
 include ../../../src/components/checkbox-list/checkbox-list.pug
 include ../../../src/components/checkbox-button/checkbox-button.pug
+include ../../../src/components/info-hotel-room/info-hotel-room.pug
 
 doctype html
 html(lang="en")
@@ -90,18 +91,18 @@ html(lang="en")
                 .block-container
                     +block-container('dropdown','Default')
                     .short-container
-                        +dropdown-item({btnClass:"dropdown__dropbtn dropdown__dropbtn-short dropdown-services",name:''})
-                            +Btn({ btnName:"спальни",inputClass:"adult",inputValue:"2"})
-                            +Btn({ btnName:"кровати",inputClass:"child",inputValue:"2"})
-                            +Btn({ btnName:"ванные комнаты",inputClass:"baby",inputValue:"0"})
+                        +dropdown-item({btnClass:"dropdown__dropbtn dropdown__dropbtn-short ",name:'',dropClass:"dropdown-services"})
+                            +Btn({ btnName:"спальни",inputClass:"adult",inputValue:"3"})
+                            +Btn({ btnName:"кровати",inputClass:"child",inputValue:"4"})
+                            +Btn({ btnName:"ванные комнаты",inputClass:"baby",inputValue:"3"})
                 .block-container
                     +block-container('dropdown','expanded')
                     .short-container
-                        +dropdown-item({btnClass:"dropdown__dropbtn dropdown__dropbtn-short dropdown-services",name:''})
-                            +Btn({ btnName:"спальни",inputClass:"adult",inputValue:"2"})
-                            +Btn({ btnName:"кровати",inputClass:"child",inputValue:"2"})
-                            +Btn({ btnName:"ванные комнаты",inputClass:"baby",inputValue:"0"})
-                .block-container
+                        +dropdown-item({btnClass:"dropdown__dropbtn dropdown__dropbtn-short",name:'',dropClass:"dropdown-services",show:'dropdown-content__show'})
+                            +Btn({ btnName:"спальни",inputClass:"1",inputValue:"2"})
+                            +Btn({ btnName:"кровати",inputClass:"2",inputValue:"2"})
+                            +Btn({ btnName:"ванные комнаты",inputClass:"3",inputValue:"0"})
+                .block-container.block-container__checkbox-list
                     +checkbox-list([{title:"Завтрак",id:"breakfast"},
                                     {title:"Письменный стол",id:"table",checked:true},
                                     {title:"Стул для кормления",id:"chair",checked:true},
@@ -119,8 +120,8 @@ html(lang="en")
                                     {title:"Шампунь",id:"shampoo2"}
                                     ],"showList"
                                     )
-                button.btnTest#hider Кнопка
-                #text hhfke
+                .block-container
+                    +info-hotel-room
         section
             .form-elements__container
                 .block-container

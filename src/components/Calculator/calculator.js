@@ -95,11 +95,18 @@ function clear(id) {
         };
 };
 //просто практика
-b= null;
-a = true;
-let a = `он сказал ${b} 'Привет'`  ;
-console.log(b);
-console.log(typeof b);
+// let str = 12345;
+// str= String(str);
+// let num = 1;
+// let arr=[];
+// for(i=str.length-1;i>=0;i--){
+//     arr.push(str[i]);
+// }
+// console.log(arr);
 
-
-
+let arr = ['a', 'b', 'c', 'd','c', 'd'];
+let str='';
+for(i=0;i<arr.length;i++){
+ str += arr[i]+',';
+}
+console.log(str);

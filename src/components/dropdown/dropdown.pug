@@ -1,8 +1,8 @@
 mixin dropdown-item(dropdownItems = {})
-    -let {name,btnClass}=dropdownItems
-    .dropdown
+    -let {name,btnClass,dropClass,show}=dropdownItems
+    .dropdown(class=dropClass)
         button(class=btnClass)
             p.btnText=name
             i.material-icons expand_more
-        .dropdown-content
+        .dropdown-content(class=show)
             block

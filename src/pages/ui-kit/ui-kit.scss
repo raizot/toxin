@@ -51,3 +51,8 @@
 .short-container{
     width: 266px;
 }
+.block-container{
+  &__checkbox-list{
+    margin-top: 158px;
+  }
+}
