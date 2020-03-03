@@ -4,7 +4,7 @@
 @import '../../components/color-type/color-type';
 @import '../../components/text-type/text-type';
 @import '../../components/input/input';
-@import '../../components/block-container/block-container';
+@import '../../components/block-description/block-description';
 @import '../../components/dropdown/dropdown';
 @import '../../components/date-mask/date-mask';
 @import '../../components/date-dropdown/date-dropdown';
@@ -16,6 +16,7 @@
 @import '../../components/checkbox-button/checkbox-button';
 @import '../../components/info-hotel-room/info-hotel-room';
 @import '../../components/radio-buttons/radio-buttons';
+@import '../../components/toggle/toggle';
 
 .color-type {
     display: flex;
@@ -78,5 +79,9 @@
     display: flex;
     flex-direction: row;
     margin-top: 8px;
+  }
+  &__toggle{
+    margin-top:8px;
+    margin-bottom: 2px;
   }
 }

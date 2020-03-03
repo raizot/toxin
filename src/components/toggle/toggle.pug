@@ -1,0 +1,5 @@
+mixin toggle(toggleItems = {})
+    -let {toggleText,toggleValue,checked}=toggleItems
+    label.toggle-label
+        input(class="toggle-button__toggle" type="checkbox" value=toggleValue checked=checked)
+        span(class="toggle-button__label")=toggleText
