@@ -76,7 +76,7 @@ module.exports = {
       options: {
         name: '[name].[ext]',
         outputPath: 'assets/fonts',
-        publicPath: '/../dist/assets/fonts/',
+        publicPath: '../assets/fonts/',
         sourceMap: true
       }
     }, {
@@ -84,9 +84,9 @@ module.exports = {
       loader: 'file-loader',
       exclude: /(fonts)/,
       options: {
-        // name: '[name].[ext]',
-        // outputPath: 'assets/img',
-        // publicPath: '../assets/img/'
+        name: '[name].[ext]',
+        outputPath: 'assets/img',
+        publicPath: '../assets/img/',
         sourceMap: true
       }
     }, {
