@@ -76,7 +76,7 @@ module.exports = {
       options: {
         name: '[name].[ext]',
         outputPath: 'assets/fonts',
-        publicPath: '/dist/assets/fonts/',
+        publicPath: '/fsd_toxin/dist/assets/fonts/',
         sourceMap: true
       }
     }, {
