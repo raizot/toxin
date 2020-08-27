@@ -73,12 +73,12 @@ module.exports = {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
       exclude: /(img)/,
-      options: {
-        name: '[name].[ext]',
-        outputPath: 'assets/fonts',
-        publicPath: '/fsd_toxin/dist/assets/fonts/',
-        sourceMap: true
-      }
+      // options: {
+      //   name: '[name].[ext]',
+      //   outputPath: 'assets/fonts',
+      //   publicPath: '/fsd_toxin/dist/assets/fonts/',
+      //   sourceMap: true
+      // }
     }, {
       test: /\.(png|jpg|gif|svg)$/,
       loader: 'file-loader',
