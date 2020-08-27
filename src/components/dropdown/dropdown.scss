@@ -1,8 +1,12 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
 .dropdown {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   position: relative;
+  width: 100%;
   &__dropbtn {
     display: flex;
     flex-direction: row;
@@ -11,10 +15,11 @@
     width: 100%;
     height: 44px;
     background: #FFFFFF;
-    border: 1px solid $color__dark-shade50;
-    border-radius: 2px;
+    border: 1px solid $color__dark-shade25;
+    border-radius: 4px;
     padding-left: 15px;
     text-overflow: clip;
+    color:$color__dark-shade50;
     .btnText {
       font-family: 'Montserrat Regular';
       font-size: 14px;

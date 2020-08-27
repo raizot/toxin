@@ -1,11 +1,18 @@
+
 .date-dropdown {
     width: 100%;
-    border-radius: 4px 0px 0px 4px ;
-    border-right: none;
+    border-radius: 4px;
     &::placeholder{
     color:$color__dark-shade75;
     }
+    &__first {
+        width: 100%;
+    }
     &__second{
         margin-left: 20px;
+        width: 100%;
+        @include for-phone-only {
+            margin: 5px 0 0 0 ;
+        }
     }
 }

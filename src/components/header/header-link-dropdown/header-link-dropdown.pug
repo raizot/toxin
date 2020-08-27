@@ -1,0 +1,4 @@
+mixin header-link-dropdown(dropOptions={})
+    -let {headerLinkHref,menuClass,text}=dropOptions
+    li.header-link-dropdown
+        a(href=headerLinkHref class=menuClass)=text   

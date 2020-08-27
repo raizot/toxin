@@ -1,0 +1,17 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+@import '../ui-kit/ui-kit.scss';
+.search-room{
+    min-height: 1426px;
+    display: flex;
+    flex-direction: row;
+     padding-top: 100px;
+    &__aside{
+        min-width: 266px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+.range__container{
+    margin-bottom:40px;
+}

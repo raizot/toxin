@@ -1,32 +1,49 @@
-.input__email{
-    border: 1px solid rgba(31, 32, 65, 0.25);
+.input-component{
+    border: 1px solid;
+    border-color: $color__dark-shade25;
     border-radius: 4px;
     width: 100%;
     height: 44px;
     padding-left: 15px;
     cursor: pointer;
+    font-size: 14px;
+    font-family: 'Montserrat Regular';
     &::placeholder{
-        color: rgba(31, 32, 65, 0.25);
+        color: $color__dark-shade25;
         font-size: 0.875rem;
         line-height: 18px;
         font-family: 'Montserrat Regular';
     }
-    &-hover:hover{
-        border: 1px solid rgba(31, 32, 65, 0.5);
+    &:hover{
+        border: 1px solid;
+        border-color: $color__dark-shade50;
         &::placeholder{
-            color: rgba(31, 32, 65, 0.75);
+            color: $color__dark-shade75;
         }
     }
-    &-hover:focus{
-        outline: none;
-        border: 1px solid rgba(31, 32, 65, 0.5);
-        &::placeholder {
-        color: rgba(31, 32, 65, 0.75);
+    &__hover{
+        border: 1px solid;
+        border-color: $color__dark-shade50;
+        &::placeholder{
+            color: $color__dark-shade75;
+        }
     }
+    &__arrow-right{
+       border-radius: 4px;
+        padding-right: 14px;
     }
-    &-arrow-right{
-    
-       border-radius: 4px 0px 0px 4px;
-       border-right: none;
+}
+.input{
+    &__label{
+        position: relative;
+    }
+    &__icon{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: $gradient__primary;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }

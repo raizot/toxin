@@ -1,0 +1,46 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+@import '../ui-kit/ui-kit.scss';
+section.home{
+    max-width: 100vw;
+    margin:0px;
+    max-height: 100vh;
+}
+.home{
+&-main {
+    width: 100%;
+    min-height: 900px;
+    background-image: url(/img/home/homeSlide-1.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    transition: 2s;
+    padding-left: calc(140/1440*100%);
+    padding-right: calc(140/1440*100%);
+    @include for-phone-only {
+        padding: 10px;
+    }
+}
+&__text-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 320px;
+}
+&__description{
+    max-width: 264px;
+    text-align: right;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color__dark-shade75;
+}
+}
+.home-main__find-apartment {
+    padding-top: 140px;
+    max-width: 380px;
+    @include for-phone-only {
+        padding-top: 240px;
+    }
+      
+}

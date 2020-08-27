@@ -1,3 +1,17 @@
-div
-    p РАБОТАЕТ
-    img(src="assets/img/user1.jpg", alt="")
+mixin header(headerOptions={})
+    -let {buttons=false,user=false,userText='Юлий Цезарь'}=headerOptions
+    header
+        img(src="/img/Logo.svg")
+        .header-content
+            ul.header__menu          
+                block
+            if(buttons==true)
+                .header__button-container
+                    .header__button
+                        +button({buttonContent: 'Войти',classType:'button-border button-slim'})
+                    .header__button        
+                        +button({buttonContent: 'зарегистрироваться',classType:'button-standard button-slim',})
+            if(user==true)
+                span.user-text=userText  
+        
+    

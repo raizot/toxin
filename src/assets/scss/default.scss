@@ -29,9 +29,9 @@ blockquote,
 dl,
 dd {
     margin: 0;
-    // font-family: 'Montserrat Regular';
-    // font-size: 24px;
-    // line-height: 30px;
+    font-family: 'Montserrat Regular';
+    font-size: 14px;
+    // line-height: 24px;
 }
 
 /* Set core body defaults */
@@ -74,9 +74,27 @@ select {
     outline: none;
 }
 
-section {
-    max-width: 1440px;
-    margin: 0 auto;
-    background-color: white;
-    margin-bottom: 30px;
+
+a{
+    text-decoration: none;
+    font-family: 'Montserrat Regular';
+    font-size: 0.875rem;
+    white-space: nowrap;
+    &:active {
+        font-family: 'Montserrat Bold';
+        color: $color__dark-shade100;
+    }
+
+    &:hover {
+        font-family: 'Montserrat Bold';
+        color: $color__dark-shade100;
+    }
+
+    &:visited {
+        color: $color__dark-shade100;
+    }
+
+    &:link {
+        color: $color__dark-shade100;
+    }
 }

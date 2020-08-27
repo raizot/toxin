@@ -1,3 +1,51 @@
-div
-    p РАБОТАЕТ
-    img(src="assets/img/user1@2x.jpg", alt="")
+mixin footer()
+    footer
+        .footer-logo
+            img(src="/img/Logo.svg")
+            p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+        ul.footer-item
+            li Навигация
+            li
+                a(href="#") О нас
+            li 
+                a(href="#") Новости
+            li 
+                a(href="#") Служба поддержки
+            li 
+                a(href="#") Услуги
+        ul.footer-item
+            li О нас
+            li 
+                a(href="#") О сервисе
+            li 
+                a(href="#") Наша команда
+            li 
+                a(href="#") Вакансии
+            li 
+                a(href="#") Инвесторы
+        ul.footer-item
+            li Служба поддержки
+            li 
+                a(href="#") Соглашения
+            li 
+                a(href="#") Сообщества
+            li 
+                a(href="#") Связь с нами
+        .footer-subscribe
+            h3 Подписка
+            p Получайте специальные предложения и новости сервиса
+            +input({
+                    type: 'email',
+                    placeholderValue: 'Email',
+                    className: 'input-component input-component__arrow-right'
+                    })
+    .footer-sotial
+        p Copyright © 2018 Toxin отель. Все права зачищены.
+        .sotial-link
+            a
+            span.fab.fa-twitter.fa-2x
+            a
+            span.fab.fa-facebook-square.fa-2x                 
+            a
+            span.fab.fa-instagram.fa-2x
+             

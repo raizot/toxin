@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>search-room</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <div class="container-header">
+      <header><img src="/img/Logo.svg">
+        <div class="header-content">
+          <ul class="header__menu">         
+            <li><a href="#1">О нас</a></li>
+            <li class="li__dropDown">
+              <div class="li-container"><a href="#2">Услуги</a><i class="material-icons">expand_more</i></div>
+              <ul class="dropdown-list">
+                <li class="header-link-dropdown"><a href="#1">Спа</a></li>
+                <li class="header-link-dropdown"><a href="#1">Бассейн</a></li>
+                <li class="header-link-dropdown"><a href="#1">Вечеринка</a></li>
+                <li class="header-link-dropdown"><a href="#1">Заказать еду в номер</a></li>
+              </ul>
+            </li>
+            <li><a href="#3">Вакансии</a></li>
+            <li><a href="#4">Новости</a></li>
+            <li class="li__dropDown">
+              <div class="li-container"><a href="#5">Соглашения</a><i class="material-icons">expand_more</i></div>
+              <ul class="dropdown-list">
+                <li class="header-link-dropdown"><a href="#1">Безопасность</a></li>
+                <li class="header-link-dropdown"><a href="#1">О нас</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="header__button-container">
+            <div class="header__button">
+              <button class="button button-border button-slim"><span class="button__text">Войти</span></button>
+            </div>
+            <div class="header__button">       
+              <button class="button button-standard button-slim"><span class="button__text">зарегистрироваться</span></button>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <section class="search-room">
+      <aside class="search-room__aside">
+        <div class="block-container">
+          <div class="block-container__description">
+            <p class="block-container__description-name">даты пребывания в отеле</p>
+            <p class="block-container__description-condition"></p>
+          </div>
+          <div class="date-mask__container">
+            <input class="date-mask date-dropdown datepicker-here single" type="text" data-mask="" placeholder="19 авг - 23 авг" data-range="true" multipleDates="2" maxlenth="6" data-multiple-dates-separator=" - "><i class="material-icons date-icon">expand_more</i>
+          </div>
+        </div>
+        <div class="block-container">
+          <div class="block-container__description">
+            <p class="block-container__description-name">гости</p>
+            <p class="block-container__description-condition"></p>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown__dropbtn dropdown-guests">
+              <p class="btnText">Сколько гостей</p><i class="material-icons">expand_more</i>
+            </button>
+            <div class="dropdown-content">
+              <div class="dropdown-content__line">
+                <p>Взрослые</p>
+                <div class="dropdown-content__box-button">
+                  <button class="minus">-</button>
+                  <input class="adult" type="text" value="0" disabled>
+                  <button class="plus">+</button>
+                </div>
+              </div>
+              <div class="dropdown-content__line">
+                <p>Дети</p>
+                <div class="dropdown-content__box-button">
+                  <button class="minus">-</button>
+                  <input class="child" type="text" value="0" disabled>
+                  <button class="plus">+</button>
+                </div>
+              </div>
+              <div class="dropdown-content__line">
+                <p>Младенцы</p>
+                <div class="dropdown-content__box-button">
+                  <button class="minus">-</button>
+                  <input class="baby" type="text" value="0" disabled>
+                  <button class="plus">+</button>
+                </div>
+              </div>
+              <div class="form-elements__btn-container">
+                <button class="clear">очистить</button>
+                <button class="submit">применить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="range__container">
+          <div class="block-container__description">
+            <p class="block-container__description-name">диапозон цены</p>
+            <p class="range__output"></p>
+          </div>
+          <input class="js-range-slider" type="text" name="my_range" value="">
+          <p class="range-slider__text">Стоимость за сутки пребывания в номере</p>
+        </div>
+        <div class="block-container__description">
+          <p class="block-container__description-name">диапозон цены</p>
+          <p class="range__output"></p>
+        </div>
+        <input class="js-range-slider" type="text" name="my_range" value="">
+        <p class="range-slider__text">Стоимость за сутки пребывания в номере</p>
+      </aside>
+      <div class="serch-rom__rooms"></div>
+      <div class="rate-buttons" data-rating="5" data-max-rating="5"></div>
+    </section>
+    <footer>
+      <div class="footer-logo"><img src="/img/Logo.svg">
+        <p>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+      </div>
+      <ul class="footer-item">
+        <li>Навигация</li>
+        <li><a href="#">О нас</a></li>
+        <li> <a href="#">Новости</a></li>
+        <li> <a href="#">Служба поддержки</a></li>
+        <li> <a href="#">Услуги</a></li>
+      </ul>
+      <ul class="footer-item">
+        <li>О нас</li>
+        <li> <a href="#">О сервисе</a></li>
+        <li> <a href="#">Наша команда</a></li>
+        <li> <a href="#">Вакансии</a></li>
+        <li> <a href="#">Инвесторы</a></li>
+      </ul>
+      <ul class="footer-item">
+        <li>Служба поддержки</li>
+        <li> <a href="#">Соглашения</a></li>
+        <li> <a href="#">Сообщества</a></li>
+        <li> <a href="#">Связь с нами</a></li>
+      </ul>
+      <div class="footer-subscribe">
+        <h3>Подписка</h3>
+        <p>Получайте специальные предложения и новости сервиса</p>
+        <label class="input__label">
+          <input class="input-component input-component__arrow-right" type="email" placeholder="Email">
+          <icon class="material-icons input__icon">arrow_forward</icon>
+        </label>
+      </div>
+    </footer>
+    <div class="footer-sotial">
+      <p>Copyright © 2018 Toxin отель. Все права зачищены.</p>
+      <div class="sotial-link"><a></a><span class="fab fa-twitter fa-2x"></span><a></a><span class="fab fa-facebook-square fa-2x">                </span><a></a><span class="fab fa-instagram fa-2x"></span></div>
+    </div>
+  <script type="text/javascript" src="assets/js/search-room.js"></script></body>
+</html>

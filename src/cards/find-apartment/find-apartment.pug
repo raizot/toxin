@@ -1,0 +1,30 @@
+include ../../../src/cards/cards-background
+mixin find-apartment
+    +cards-background
+        .heading Найдём номера под ваши пожелания
+        .cards__container
+            .find-apartment__elem.find-apartment__dates.datepicker__double
+                .date-dropdown__first
+                    +block-description('прибытие','')
+                    .date-dropdown__component
+                        +date-mask("date-mask date-dropdown datepicker-here start")
+                        
+                .date-dropdown__second
+                    +block-description('выезд','')
+                    .date-dropdown__component
+                        +date-mask("date-mask date-dropdown end")
+                        
+            .find-apartment__elem
+                    +block-description('Гости','')
+                    +dropdown-item({
+                        btnClass: "dropdown__dropbtn dropdown-guests",
+                        name: "Сколько гостей"
+                    })
+                        +Btn({btnName: "Взрослые", inputClass: "adult", inputValue: "0"})
+                        +Btn({btnName: "Дети", inputClass: "child", inputValue: "0"})
+                        +Btn({btnName: "Младенцы", inputClass: "baby", inputValue: "0"})
+                        .form-elements__btn-container
+                            button.clear очистить
+                            button.submit применить
+            .find-apartment__button
+                +button({buttonContent: 'Перейти к оплате', classType: 'button-arrow'})

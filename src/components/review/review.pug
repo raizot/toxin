@@ -1,0 +1,11 @@
+mixin review(reviewOptions={})
+    -let {img,likeValue,name,date,reviewText}=reviewOptions
+    div.review__container
+        div.review__main
+            img.review__img(src=img)
+            +like-button({likeValue:likeValue})
+        div.review__about-person
+            div.review__person-info
+                span.review__name=name
+                span.review__date=date+'дней назад'
+            p.review__text=reviewText

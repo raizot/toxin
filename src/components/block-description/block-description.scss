@@ -6,11 +6,13 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 8px;
+        margin-bottom: 5px;
         font-size: 0.75rem;
         line-height: 15px;
         text-transform: uppercase;
-
+       p{
+            font-size: 0.75rem;
+       }
         &-name {
             font-family: 'Montserrat Bold';
             color: #1F2041;

@@ -1,11 +1,10 @@
 include ../../../src/components/checkbox-button/checkbox-button.pug
-include ../../../src/components/dropdown-btn/dropdown-btn.pug
+
 
 mixin checkbox-list(parameters=[{}],id)
     .checkbox-list
         .checkbox-list__title-box.title
             span(class="checkbox-list__span") expandable checkbox list
-            +dropdown-btn({iconClass:'material-icons',icon:'expand_more',btnClass:'dropdown-btn dropdown-btn__arrow_forward  dropdown-btn__without-border'})
         ul(class='checkbox-list__list'  id=id)
             for val in parameters
                 li.checkbox-list__button

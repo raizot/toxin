@@ -1,0 +1,17 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+.find-apartment{
+  &__dates{
+    display: flex;
+    flex-direction: row;
+    @include for-phone-only {
+      flex-wrap: wrap;
+    }
+  }
+  &__elem{
+    margin-bottom: 20px;
+  }
+  &__button{
+    margin-top: 31px;
+  }
+}

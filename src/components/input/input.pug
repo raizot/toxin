@@ -1,2 +1,8 @@
-mixin input(type = "text",value,tag)   
-    input(type=type,placeholder=value,class=tag)
+mixin input(parametrs = {})
+    -let {type='text',placeholderValue,className} = parametrs;
+        if className == 'input-component input-component__arrow-right'
+            label.input__label
+                input(type=type,placeholder=placeholderValue,class=className)
+                icon.material-icons.input__icon arrow_forward
+        else
+            input(type=type,placeholder=placeholderValue,class=className)

@@ -1,5 +1,14 @@
-mixin date-mask(className,id,position)
-    input(type="text" id=id class=className data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="1" maxlenth="8"  data-position=position)
-    
-        
-            
+mixin date-mask(className,position)
+        -
+        if className.split(' ').includes('single')
+            .date-mask__container
+                input(type="text" class=className data-mask="" placeholder="19 авг - 23 авг" data-range="true" multipleDates="2" maxlenth="6"   data-position=position data-multiple-dates-separator=" - ")
+                i(class="material-icons date-icon") expand_more
+        else if className.split(' ').includes('start') || className.split(' ').includes('end')
+            .date-mask__container
+                input(type="text" class=className  data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8"   data-position=position)
+                i(class="material-icons date-icon") expand_more
+        else
+            input(type="text" id="mask-arrow" class=className  data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8"   data-position=position )
+               
+

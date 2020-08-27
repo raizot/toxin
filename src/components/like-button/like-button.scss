@@ -1,0 +1,37 @@
+.like-button{
+  display: flex;
+  flex-direction: row;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  font-size: 10px;
+  border: 1px solid $color__dark-shade25;
+  color:$color__dark-shade25;
+  cursor:pointer;
+  &__true{
+    border: double 1px transparent;
+    background-image: linear-gradient(white, white), $gradient__primary;
+    background-origin: border-box;
+    background-clip:content-box, border-box;
+    color:$color__purple;
+  }
+    &__icon {
+      margin-top: 5px;
+      font-size: 10px;
+      margin-left: 6px;
+      margin-right: 4px;
+    }
+
+    &__value {
+      border: none;
+      background-color: transparent;
+      font-size: 10px;
+      color: $color__dark-shade25;
+      margin-top:5px;
+      font-family: 'Montserrat Regular';
+    }
+    &__value-color{
+      color: $color__purple;
+    }
+  }
+

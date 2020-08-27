@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
-// const fs = require('fs');
-// const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const fs = require('fs');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -16,13 +16,13 @@ const PATHS = {
 };
 
 module.exports = {
-
   externals: {
     paths: PATHS
   },
   entry: {
     "ui-kit": `${PATHS.src}/pages/ui-kit/ui-kit.js`,
-
+    "home": `${PATHS.src}/pages/home/home.js`,
+    "search-room": `${PATHS.src}/pages/search-room/search-room.js`,
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
@@ -32,10 +32,10 @@ module.exports = {
     splitChunks: {
       cacheGroups: {
         vendor: {
-          name: 'vendors',
+          name: 'vendor',
           test: /node_modules/,
-          chunks: 'all',
-          enforce: true
+          // chunks: 'all',
+          // enforce: true,
         }
       }
     }
@@ -83,9 +83,10 @@ module.exports = {
       loader: 'file-loader',
       exclude: /(fonts)/,
       options: {
-        name: '[name].[ext]',
-        outputPath: 'assets/img',
-        publicPath: '../assets/img/'
+        // name: '[name].[ext]',
+        // outputPath: 'assets/img',
+        // publicPath: '../assets/img/'
+        sourceMap: true
       }
     }, {
       test: /\.scss$/,
@@ -160,20 +161,35 @@ module.exports = {
         from: `${PATHS.src}/static`,
         to: ''
       },
+       {
+         from: `${PATHS.src}/assets/img`,
+         to: `img`
+       }
     ]),
 
     new HtmlWebpackPlugin({
+      chunks: ['ui-kit'],
       template: './src/pages/ui-kit/ui-kit.pug',
       filename: 'ui-kit.html',
       inject: true,
       collapseWhitespace: true,
-
+      
     }),
-    // new HtmlWebpackPlugin({
-    //   template: './src/pages/form-elements/form-elements.pug',
-    //   filename: 'home.html',
-    //   inject: true,
-    //   collapseWhitespace: false
-    // }),
+    new HtmlWebpackPlugin({
+      chunks: ['home'],
+      template: './src/pages/home/home.pug',
+      filename: 'home.html',
+      inject: true,
+      collapseWhitespace: false,
+      
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['search-room'],
+      template: './src/pages/search-room/search-room.pug',
+      filename: 'search-room.html',
+      inject: true,
+      collapseWhitespace: false,
+      
+    }),
   ],
 }

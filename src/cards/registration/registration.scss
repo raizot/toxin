@@ -1,0 +1,19 @@
+.registration {
+  &__elem-container{
+    margin-bottom: 10px;
+  }
+  &__block-container{
+    margin-bottom: 20px;
+  }
+  &__log-in{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    margin-top: 30px;
+    justify-content: space-between;
+    &-text{
+      font-size: 14px;
+      font-family: 'Montserrat Regular';
+    }
+  }
+}

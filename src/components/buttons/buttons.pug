@@ -1,0 +1,21 @@
+mixin button(parameters={})
+    -
+        let {
+        classType,
+        buttonContent,
+        href='#~',
+        disabled=false
+        } = parameters;
+        // classType can be:
+        // 'button-standard'
+        // 'button-border'
+        // 'button-link', 'button-link__disabled'
+        // 'button-arrow'
+    if classType.split(' ').includes('button-link')
+        a(href=href class=`button ${classType}`)=buttonContent
+    else if classType.split(' ').includes('button-standard') || classType.split(' ').includes('button-border')
+        button(class=`button ${classType}` disabled=disabled )
+            span.button__text=buttonContent
+    else if classType.split(' ').includes('button-arrow')
+        button(class=`button ${classType}` disabled=disabled )=buttonContent
+            i.button-icon.material-icons arrow_forward

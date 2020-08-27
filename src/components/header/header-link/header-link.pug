@@ -1,0 +1,17 @@
+mixin header-link(headerOptions={})
+    -let {text,menuClass,dropDownList=false,headerLinkHref}=headerOptions
+    if(dropDownList == true)
+        li.li__dropDown
+            .li-container
+                a(href=headerLinkHref class=menuClass)=text
+                i.material-icons expand_more
+            ul.dropdown-list
+                block
+    else 
+        li
+            a(href=headerLinkHref class=menuClass)=text                
+    
+        
+
+        
+    

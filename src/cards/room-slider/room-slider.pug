@@ -1,0 +1,26 @@
+mixin room-slider(sliderOptions = {})
+    .room-slider__container
+        .room-slider
+            -
+                let {image=[],apartmentNumber,apartmentClass,numReview,rate,maxRate,cost} = sliderOptions;
+                    for(let i=0; i <= image.length-1;i++)
+
+            img(src=image[i], alt="")
+        .room-slider__room-info    
+            .room-slider__room-cost
+                div.info-row
+                    span.reserve-card__apartment-info №
+                    span.reserve-card__apartment-number.room-slider__apartment-number=apartmentNumber
+                    span.reserve-card__apartment-class=apartmentClass
+                div.reserve-card__apartment-cost-info
+                    span.bold-text=cost.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')
+                    span.small-text  в сутки
+            .room-slider__raiting
+                +rate-buttons(rate,maxRate)
+                div.info-row
+                    span.bold-text=numReview 
+                    span.small-text отзывов
+
+       
+        
+        

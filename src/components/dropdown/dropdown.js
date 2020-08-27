@@ -1,14 +1,14 @@
 $(document).ready(function () {
     $('.minus').click(function () {
-        var $input = $(this).parent().find('input');
-        var count = parseInt($input.val()) - 1;
+        let $input = $(this).parent().find('input');
+        let count = parseInt($input.val()) - 1;
         count = count < 0 ? 0 : count;
         $input.val(count);
         $input.change();
         return false;
     });
     $('.plus').click(function () {
-        var $input = $(this).parent().find('input');
+        let $input = $(this).parent().find('input');
         $input.val(parseInt($input.val()) + 1);
         $input.change();
         return false;
@@ -18,38 +18,55 @@ $(document).ready(function () {
         cases = [2, 0, 1, 1, 1, 2];
         return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
     }
-        $('.dropdown-content__box-button').find('button').click(function () {
-            let $inputs = $(this).closest('.dropdown').find('input');
-            let $content = $(this).closest('.dropdown').find('.dropdown-content__line');
-            let text = '';
-            let valArr = [];
-            let textArr = [];
-            let summ =  parseInt('0');
-            let $numberInputs = $inputs.map(function(indx, element){
-                return parseInt($(element).val());
-            });
-            for (let i=0; i < $numberInputs.length;i++){
-                summ += $numberInputs[i];
+    function numberOfInputs() {
+        let $inputs = $(this).closest('.dropdown').find('input');
+        let $content = $(this).closest('.dropdown').find('.dropdown-content__line');
+        let text = '';
+        let valArr = [];
+        let textArr = [];
+        let summ =  parseInt('0');
+        let $numberInputs = $inputs.map(function(indx, element){
+            return parseInt($(element).val());
+        });
+        for (let i=0; i < $numberInputs.length;i++){
+            summ += $numberInputs[i];
+        }
+        if(summ === 0 && $(this).closest('.dropdown').find('.dropdown__dropbtn').hasClass('dropdown-guests')){
+            $(this).closest('.dropdown').find('.btnText').text('Сколько гостей');
+            return true;
+        }
+
+        if($(this).closest('.dropdown').find('.dropdown__dropbtn').hasClass('dropdown-guests')){
+            $(this).closest('.dropdown').find('.btnText').text(summ + ' ' + declOfNum(summ, ['гость', 'гостя', 'гостей']));
+        } else if($(this).closest('.dropdown').hasClass('dropdown-services')){
+            for(let i=0;i< $content.length;i++) {
+                valArr.push($($content[i]).closest('.dropdown-content__line').find('input').val());
+                textArr.push($($content[i]).closest('.dropdown-content__line').find('p').html());
+                text += valArr[i]+' '+textArr[i];
+                if( i !==  $content.length-1 ){
+                    text += ',';
+                }
             }
-            if(summ === 0 && $(this).closest('.dropdown').find('.dropdown__dropbtn').hasClass('dropdown-guests')){
-                $(this).closest('.dropdown').find('.btnText').text('Сколько гостей');
-                return true;
+            $(this).closest('.dropdown').find('.btnText').text(text);
+        }
+    }
+    $('.dropdown-content__box-button').find('button').click(numberOfInputs);
+    window.addEventListener('load',function () {
+        let dropdownContent = document.querySelectorAll('.dropdown-guests');
+        for(let content of dropdownContent){
+            let inputs = content.parentElement.getElementsByTagName('input');
+            let btnText = content.querySelector('.btnText');
+            let i=0;
+
+            for(let input of inputs){
+                i=i+Number(input.value)
+            }
+            if(i>0){
+                btnText.innerHTML = (i + ' ' + declOfNum(i, ['гость', 'гостя', 'гостей']));
             }
 
-            if($(this).closest('.dropdown').find('.dropdown__dropbtn').hasClass('dropdown-guests')){
-                $(this).closest('.dropdown').find('.btnText').text(summ + ' ' + declOfNum(summ, ['гость', 'гостя', 'гостей']));
-            } else if($(this).closest('.dropdown').hasClass('dropdown-services')){
-                        for(let i=0;i< $content.length;i++) {
-                            valArr.push($($content[i]).closest('.dropdown-content__line').find('input').val());
-                            textArr.push($($content[i]).closest('.dropdown-content__line').find('p').html());
-                            text += valArr[i]+' '+textArr[i];
-                            if( i !==  $content.length-1 ){
-                                text += ',';
-                            }
-                        }
-                        $(this).closest('.dropdown').find('.btnText').text(text);
-                    }
-        });
+    }
+    });
     //default val for input for services
     let $content = $('.dropdown-services');
     $content.each(function(indx,element){

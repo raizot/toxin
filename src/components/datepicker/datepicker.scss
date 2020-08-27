@@ -2,12 +2,13 @@
     width: auto;
     height: auto;
     padding: 20px;
-    border: 0px;
+    border: 1px solid $color__dark-shade25;
     &--nav-title{
     font-family: 'Open Sans Bold';
     font-size: 19px;
     line-height: 24px;
     color: $color__dark-shade100;
+
         i{
             color: $color__dark-shade100;
             }
@@ -18,7 +19,6 @@
        margin: 0;
     }
     &--day-name {
-
         font-family: 'Montserrat Bold';
         color: $color__purple;
         font-size: 12px;
@@ -37,14 +37,108 @@
     &--cells{
         width: 280px;
     }
-    &--cell{
+    &--cell,.-range-to-,.-range-from-{
         width: 40px;
         height: 40px;
         align-content: center;
+        border-radius: 22px;
         &-day{
         font-family: 'Montserrat Regular';
         font-size: 12px;
+          &.-in-range-{
+            background: $gradient__primary25;
+          }
     }
-    
     }
+    &--pointer{
+        display: none;
+    }
+    &--nav{
+        border: none;
+    }
+    &-buttons{
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Montserrat Bold';
+      text-transform: uppercase;
+      padding: 0px;
+    }
+    &-button{
+      height: auto;
+      margin-top: 20px;
+      font-size: 12px;
+      &.clear{
+        cursor: pointer;
+        align-self:flex-start;
+        text-align:right;
+        color:$color__dark-shade50;
+      }
+      &.apply{
+        cursor: pointer;
+        align-self:end;
+        color:$color__purple;
+      }
+    }
+
 }
+.datepickers-container{
+    margin-top: 0px;
+}
+.datepicker--cell.-focus-,
+.datepicker--cell.-selected-,
+.datepicker--cell.-focus-.-selected-
+{
+  background: $gradient__primary;
+  color: #fff;
+  font-family: 'Montserrat Bold';
+}
+.datepicker--cell.-current-{
+  color: #fff;
+  background:$gradient__secondary;
+}
+
+.datepicker--cell.datepicker--cell-day.-range-to-{
+  border: none;
+  &::after {
+    content: '';
+    background: $gradient__primary;
+    opacity: 0.25;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    border-bottom-right-radius: 22px;
+    border-top-right-radius: 22px;
+  }
+}
+.datepicker--cell.datepicker--cell-day.-range-from-{
+  border: none;
+  &::after {
+    content: '';
+    background: $gradient__primary;
+    opacity: 0.25;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    border-bottom-left-radius: 22px;
+    border-top-left-radius: 22px;
+  }
+}
+.arrow-calendar__color{
+  color:$color__purple;
+}
+
+.show-datePicker{
+display: block;
+}
+
+
+
+
+
+

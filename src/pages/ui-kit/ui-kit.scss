@@ -1,4 +1,47 @@
+// @import '../assets/scss/variables';
+// @import '../assets/scss/mixins';
+// @import './fonts';
+// @import '../assets/scss/default';
+// @import '../components/color-type/color-type';
+// @import '../components/text-type/text-type';
+// @import '../components/input/input';
+// @import '../components/block-description/block-description';
+// @import '../components/dropdown/dropdown';
+// @import '../components/date-mask/date-mask';
+// @import '../components/date-dropdown/date-dropdown';
+
+// @import '../../node_modules/air-datepicker/dist/css/datepicker.min.css';
+// @import '../components/datepicker/datepicker';
+// @import '../components/calculator/calculator';
+// @import '../components/checkbox-list/checkbox-list';
+// @import '../components/checkbox-button/checkbox-button';
+// @import '../components/info-hotel-room/info-hotel-room';
+// @import '../components/radio-buttons/radio-buttons';
+// @import '../components/toggle/toggle';
+// @import '../components/like-button/like-button';
+// @import '../components/rate-button/rate-button';
+// @import '../components/review/review';
+// @import '../../node_modules/ion-rangeslider/css/ion.rangeSlider.css';
+// @import '../components/range-slider/range-slider';
+// @import '../components/buttons/buttons';
+// @import '../../node_modules/tui-pagination/dist/tui-pagination.min.css';
+// @import '../../node_modules/flaviusmatis-simplePagination.js-e32c66e/simplePagination.css';
+// @import '../components/pagination/pagination';
+// @import '../components/bullet-list/bullet-list';
+// @import '../cards/cards-background';
+// @import '../cards/find-apartment/find-apartment';
+// @import '../cards/registration/registration';
+// @import '../cards/reserve-card/reserve-card';
+// @import '../cards/log-in/log-in';
+// @import '../../node_modules/slick-carousel/slick/slick';
+// @import '../../node_modules/slick-carousel/slick/slick-theme.css';
+// @import '../cards/room-slider/room-slider';
+// @import '../components/header/header';
+// @import '../components/header/header-link-dropdown/header-link-dropdown';
+// @import '../components/footer/footer';
+// @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 @import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
 @import './fonts';
 @import '../../assets/scss/default';
 @import '../../components/color-type/color-type';
@@ -8,7 +51,7 @@
 @import '../../components/dropdown/dropdown';
 @import '../../components/date-mask/date-mask';
 @import '../../components/date-dropdown/date-dropdown';
-@import '../../components/dropdown-btn/dropdown-btn';
+
 @import '../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
 @import '../../components/datepicker/datepicker';
 @import '../../components/calculator/calculator';
@@ -17,7 +60,34 @@
 @import '../../components/info-hotel-room/info-hotel-room';
 @import '../../components/radio-buttons/radio-buttons';
 @import '../../components/toggle/toggle';
-
+@import '../../components/like-button/like-button';
+@import '../../components/rate-button/rate-button';
+@import '../../components/review/review';
+@import '../../../node_modules/ion-rangeslider/css/ion.rangeSlider.css';
+@import '../../components/range-slider/range-slider';
+@import '../../components/buttons/buttons';
+@import '../../../node_modules/tui-pagination/dist/tui-pagination.min.css';
+@import '../../../node_modules/flaviusmatis-simplePagination.js-e32c66e/simplePagination.css';
+@import '../../components/pagination/pagination';
+@import '../../components/bullet-list/bullet-list';
+@import '../../cards/cards-background';
+@import '../../cards/find-apartment/find-apartment';
+@import '../../cards/registration/registration';
+@import '../../cards/reserve-card/reserve-card';
+@import '../../cards/log-in/log-in';
+@import '../../../node_modules/slick-carousel/slick/slick';
+@import '../../../node_modules/slick-carousel/slick/slick-theme.css';
+@import '../../cards/room-slider/room-slider';
+@import '../../components/header/header';
+@import '../../components/header/header-link-dropdown/header-link-dropdown';
+@import '../../components/footer/footer';
+@import '../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+.ui-kit__section{
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: white;
+  margin-bottom: 30px;
+}
 .color-type {
     display: flex;
     flex-direction: row;
@@ -39,17 +109,43 @@
   &__container-first{
     margin-left: 140px;
   }
-  &__container-second{
+  &__container-second,&__container-forth{
     margin-left: 126px;
   }
-}
+  &__container-forth{
+    margin-top: 100px;
+  }
 
+}
+.cards{
+  display: flex;
+  flex-direction: row;
+  padding: 150px 139px 140px 140px;
+  background: #F4F4F6;
+  &__first-section{
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+  }
+  &__section{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+  }
+  &__wrap{
+    margin-bottom: 40px;
+  }
+  &__container{
+    width: 100%;
+  }
+}
 .date-dropdown,.input{
     &__container,
     &__component {
     display: flex;
     flex-direction: row;
     flex-wrap:nowrap;
+    width: 100%;
     }
 }
 .input{
@@ -66,8 +162,14 @@
 }
 .short-container{
     width: 266px;
+  &__datepicker{
+    display: flex;
+    justify-content: row;
+  }
 }
 .block-container{
+  margin-bottom: 20px;
+  width:100%;
   &__checkbox-list{
     margin-top: 158px;
     margin-bottom: 40px;
@@ -84,4 +186,104 @@
     margin-top:8px;
     margin-bottom: 2px;
   }
+  &__like-button {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+
+    .like-button {
+      &:nth-child(even) {
+        margin-left: 10px;
+      }
+    }
+  }
+  &__row{
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    .rate-buttons:nth-child(2){
+      margin-left: 20px;
+    }
+    .button-standard:nth-child(2){
+      margin-left: 20px;
+    }
+    .button-border:nth-child(2){
+      margin-left: 20px;
+    }
+    .button-link:nth-child(2){
+      margin-left: 20px;
+    }
+  }
+
+  &__rich-checkbox{
+    margin-top: 257.44px;
+  }
+  &__bullet-list{
+    margin-top: 257.44px;
+  }
+  &__pagination{
+    margin-bottom: 230px;
+  }
+  &__rate-button{
+    margin-bottom: 196px;
+  }
+}
+.square{
+  width: 100px;
+  height: 100px;
+  background-color: brown;
+}
+.black-square{
+  background-color: #1F2041;
+}
+.square-width{
+  width: 200px;
+}
+.square-border{
+  border: solid;
+  border-color: #6FCF97;
+}
+.row_container{
+  display: flex;
+  flex-direction: row;
+}
+.heading{
+  font-family: 'Open Sans Bold';
+  font-size: 24px;
+  margin-bottom: 20px;
+      @include for-phone-only {
+        font-size: 18 px;
+      }
+}
+.bold-text{
+  font-family: 'Montserrat Bold';
+  font-size: 14px;
+  color: $color__dark-shade50;
+  padding-bottom: 7px;
+}
+.small-text{
+  font-family: 'Montserrat Regular';
+  font-size: 12px;
+  color: $color__dark-shade50;
+  padding-bottom: 7px;
+}
+.header-footer{
+  padding: 140px 0px 140px 0px;
+  background-color: #F4F4F6;
+}
+footer,header{
+   display: flex;
+   flex-direction: row;
+ 
+   height: 100%;
+   width: 100%;
+   background-color: #ffffff;
+   box-shadow: $box-shadow;
+   flex-wrap: wrap;
+}
+.container-header {
+  position: fixed;
+  width: 100%;
+  max-width: inherit;
+  z-index: 3;
 }

@@ -1,0 +1,5 @@
+mixin like-button(likeItems = {})
+    -let {likeText,likeValue}=likeItems
+    div(class="like-button")
+        i.material-icons.like-button__icon favorite_border
+        span(class="like-button__value")=likeValue

@@ -1,0 +1,18 @@
+.bullet-list{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.bullet-list__indicator{
+  width: 10px;
+  height: 10px;
+  margin-right: 10.86px;
+  background: $color__dark-shade25;
+  clip-path: circle(50% at 50% 50%);
+}
+.bullet-list__text{
+  font-family: 'Montserrat Regular';
+  color:$color__dark-shade75;
+  font-size: 14px;
+}

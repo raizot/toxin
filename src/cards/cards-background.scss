@@ -1,0 +1,16 @@
+
+@import '../assets/scss/mixins';
+.cards-background{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding: 40px 30px 30px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background: #FFFFFF;
+      @include for-phone-only {
+        padding-left: 10px 10px;
+      }
+}

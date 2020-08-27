@@ -1,0 +1,127 @@
+.room-slider{
+  width: 100%;
+  position: relative;
+  &:hover{
+    .material-icons.slick-arrow.arrow-area {
+      display: inline-block !important; 
+    }
+  }
+  &__room-cost,
+  &__raiting{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__room-cost{
+    border-bottom: 1px solid $color__dark-shade10;
+    padding-bottom: 10px;
+  }
+  &__raiting{
+    margin-top: 8px;
+  }
+  &__room-info{
+    display: flex;
+    flex-direction: column;
+    height: 105.62px;
+    padding: 20px 18px 19px 18px;
+    border-radius: 0px 0px 4px 4px;
+    background-color: #ffffff;
+  }
+  &__container{
+    width: 270px;
+  }
+  &__apartment-number{
+    font-size: 19px;
+  }
+}
+ .room-slider.slick-slider.slick-dotted {
+   margin-bottom: 0px;
+ }
+.slick{
+  &-slide {
+    width: 100%;
+    height: 100%;
+    img {
+      height: auto;
+    }
+  }
+  &-list {
+    height: 151.38px;
+    border-radius:4px 4px 0 0;
+  }
+  &-dots{
+    position: absolute;
+    bottom:15px;
+    right: 11.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    li{
+      padding: 0px;
+      width: 7.5px;
+      height: 7.5px;
+      background-color: transparent;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      margin-left: 3.5px;
+      margin-right: 3.5px;
+      &:hover{
+        background-color: #ffffff;
+      }
+      
+    }
+  }
+}
+.slider{
+    &-next{
+      cursor: pointer;
+        position:absolute;
+        top:0;
+        right: 0;
+        z-index: 0;
+        color: #ffffff;
+        font-size: 24px;
+        height: 100%;
+        width: 42px;
+        text-align:center;
+        padding-top: 53.5px;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+         
+    }
+    &-prev {
+      width: auto;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 42px;
+      z-index: 1;
+      text-align:center;
+      padding-top: 53.5px;
+      color: #ffffff;
+      font-size: 24px;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+    }
+}
+.slick-dots li button:before{
+  display: none;
+}
+.slick-dots li button{
+  width: 100%;
+  &selection{
+    background-color: #ffffff;
+  }
+}
+.material-icons.slick-arrow.arrow-area {
+  display: none !important;
+}
+.slick-track{
+  height: 100%;
+  width: 100%;
+}
+.slick-dots .slick-active {
+  background-color: #ffffff;
+}

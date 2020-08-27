@@ -1,13 +1,28 @@
 .date-mask {
-    width: auto;
+    width: 100%;
     height: 44px;
     border:1px solid $color__dark-shade25;
     font-family: 'Montserrat Regular';
     font-size: 14px;
     padding-left: 15px;
+   
     border-radius: 4px;
     color:$color__dark-shade75;
+
+    inline: true;
     &::placeholder {
         color:$color__dark-shade25;
     }
+}
+.date-mask__container{
+    position: relative;
+    width: 100%;
+}
+.date-icon {
+    position: absolute;
+    color:$color__dark-shade50;
+    top:50%;
+    right: 0;
+    transform:translate(0%, -50%);
+    margin-right: 12px;
 }

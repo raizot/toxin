@@ -1,0 +1,15 @@
+.header-link-dropdown{
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 40px;
+    border-bottom: 1px solid $color__dark-shade25;
+    background-color: #ffffff;
+    padding:5px;
+    display: none;
+}
+.li__dropDown:hover {
+    .header-link-dropdown {
+    display: block;
+    }
+}
