@@ -76,7 +76,8 @@ module.exports = {
       options: {
         name: '[name].[ext]',
         outputPath: 'assets/fonts',
-        publicPath: '../assets/fonts/'
+        publicPath: '/dist/assets/fonts/',
+        sourceMap: true
       }
     }, {
       test: /\.(png|jpg|gif|svg)$/,
