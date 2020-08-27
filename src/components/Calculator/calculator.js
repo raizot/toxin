@@ -96,7 +96,6 @@
 // };
 //практика
 
-
 // let number1 = document.querySelectorAll('.number1');
 // let button1 = document.querySelectorAll('.button1');
 // let button2 = document.querySelectorAll('.button2');
@@ -118,111 +117,110 @@
 //         number1.innerHTML = 'число ' + num;
 //     })}
 
-
 //Генератор таблицы
-let table =document.querySelector('.table12');
-let input1 =document.querySelector('.input1');
-let input2 =document.querySelector('.input2');
+document.addEventListener("DOMContentLoaded", () => {
+  let table = document.querySelector(".table12");
+  let input1 = document.querySelector(".input1");
+  let input2 = document.querySelector(".input2");
 
-input1.addEventListener('input',function () {
-    let trs= document.querySelectorAll('.table12 tr');
-    for(let j=0;j<= trs.length-1; j++){
-        table.removeChild(trs[j]);
+  input1 !== null && input1.addEventListener("input", function() {
+    let trs = document.querySelectorAll(".table12 tr");
+    for (let j = 0; j <= trs.length - 1; j++) {
+      table.removeChild(trs[j]);
     }
-    for(let j=0; j<=input1.value-1;j++) {
-        let tr = document.createElement('tr');
-        for (let i = 0; i <= input2.value - 1; i++) {
-                let td = document.createElement('td');
-                tr.appendChild(td);
-        }
-        table.appendChild(tr);
+    for (let j = 0; j <= input1.value - 1; j++) {
+      let tr = document.createElement("tr");
+      for (let i = 0; i <= input2.value - 1; i++) {
+        let td = document.createElement("td");
+        tr.appendChild(td);
+      }
+      table.appendChild(tr);
     }
-});
-input2.addEventListener('input',function () {
-    let trs= document.querySelectorAll('.table12 tr');
-    for(let j=0;j<= trs.length-1; j++){
-        table.removeChild(trs[j]);
+  });
+  input2 !== null && input2.addEventListener("input", function() {
+    let trs = document.querySelectorAll(".table12 tr");
+    for (let j = 0; j <= trs.length - 1; j++) {
+      table.removeChild(trs[j]);
     }
-    for(let j=0; j<=input1.value-1;j++) {
-        let tr = document.createElement('tr');
-        for (let i = 0; i <= input2.value - 1; i++) {
-            let td = document.createElement('td');
-            tr.appendChild(td);
-        }
-        table.appendChild(tr);
+    for (let j = 0; j <= input1.value - 1; j++) {
+      let tr = document.createElement("tr");
+      for (let i = 0; i <= input2.value - 1; i++) {
+        let td = document.createElement("td");
+        tr.appendChild(td);
+      }
+      table.appendChild(tr);
     }
-    for (let i = 0; i<=input2.value-1; i++){
-        for (let tr of trs) {
-            let td = document.createElement('td');
-            tr.appendChild(td);
-        }
-}
-});
+    for (let i = 0; i <= input2.value - 1; i++) {
+      for (let tr of trs) {
+        let td = document.createElement("td");
+        tr.appendChild(td);
+      }
+    }
+  });
 
-function func1() {
-    let tds = table.querySelectorAll('td');
+  function func1() {
+    let tds = table.querySelectorAll("td");
     console.log(tds);
     for (let td of tds) {
-        td.addEventListener('click', function foo() {
-            let input = document.createElement('input');
-            input.value = td.innerHTML;
-            td.innerHTML = '';
-            td.appendChild(input);
-            input.addEventListener('blur', function() {
-                td.innerHTML = input.value;
-                td.addEventListener('click', foo);
-            });
-            td.removeEventListener('click', foo);
-        })
+      td.addEventListener("click", function foo() {
+        let input = document.createElement("input");
+        input.value = td.innerHTML;
+        td.innerHTML = "";
+        td.appendChild(input);
+        input.addEventListener("blur", function() {
+          td.innerHTML = input.value;
+          td.addEventListener("click", foo);
+        });
+        td.removeEventListener("click", foo);
+      });
     }
-}
-input1.addEventListener('click',func1);
-input2.addEventListener('click',func1);
-// TextRemove
-let buttonAddText = document.querySelector('.addText');
-buttonAddText.addEventListener('click',function () {
-    let removeText = document.querySelector('.removeText');
-    let newP =  document.createElement('p');
+  }
+  input1.addEventListener("click", func1);
+  input2.addEventListener("click", func1);
+  // TextRemove
+  let buttonAddText = document.querySelector(".addText");
+  buttonAddText.addEventListener("click", function() {
+    let removeText = document.querySelector(".removeText");
+    let newP = document.createElement("p");
     removeText.appendChild(newP);
     func5();
-});
-window.addEventListener('load',func5);
-function func5() {
-    let i=1;
-    let $removeTextP = document.querySelectorAll('.removeText p');
+  });
+  window.addEventListener("load", func5);
+  function func5() {
+    let i = 1;
+    let $removeTextP = document.querySelectorAll(".removeText p");
     for (let p of $removeTextP) {
-        let a = document.createElement('a');
-        let span = document.createElement('span');
-        a.href = '#~';
-        a.innerHTML = ' ' + 'remove';
-        a.addEventListener('click', function () {
-            this.parentElement.remove();
-        });
-        p.innerHTML = 'Text' + i++;
-        span.innerHTML = p.innerHTML;
-        p.innerHTML = '';
-        p.appendChild(span);
-        p.appendChild(a);
-        a.preventDefault;
+      let a = document.createElement("a");
+      let span = document.createElement("span");
+      a.href = "#~";
+      a.innerHTML = " " + "remove";
+      a.addEventListener("click", function() {
+        this.parentElement.remove();
+      });
+      p.innerHTML = "Text" + i++;
+      span.innerHTML = p.innerHTML;
+      p.innerHTML = "";
+      p.appendChild(span);
+      p.appendChild(a);
+      a.preventDefault;
     }
 
-    let $span = document.querySelectorAll('.removeText p span');
+    let $span = document.querySelectorAll(".removeText p span");
 
     for (let span of $span) {
-        span.addEventListener('click', function foo1() {
-            let input = document.createElement('input');
-            input.value = span.innerHTML;
-            span.innerHTML = '';
-            input.addEventListener('blur', function () {
-                span.innerHTML = this.value;
-                span.addEventListener('click', foo1);
-            });
-            span.appendChild(input);
-            span.removeEventListener('click', foo1);
-        })
+      span.addEventListener("click", function foo1() {
+        let input = document.createElement("input");
+        input.value = span.innerHTML;
+        span.innerHTML = "";
+        input.addEventListener("blur", function() {
+          span.innerHTML = this.value;
+          span.addEventListener("click", foo1);
+        });
+        span.appendChild(input);
+        span.removeEventListener("click", foo1);
+      });
     }
+  }
 
-}
-
-console.log(document.cookie);
-
+  console.log(document.cookie);
+});

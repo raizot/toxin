@@ -64,20 +64,7 @@ html(lang="en")
                            button.submit применить
             .range__container
                 +range-slider({name:'диапозон цены',description:true})
-                +range-slider({name:'диапозон цены',description:true})                 
-            .serch-rom__rooms
-                +rate-buttons('5','5')
-                +room-slider({
-                    image:['img/room888/room888.jpg',
-                            'img/room888/room888-4.jpg',
-                            'img/room888/room888-2.jpg',
-                            'img/room888/room888-5.jpg',
-                            'img/room888/room888-3.jpg',],
-                            apartmentNumber:'888',
-                            apartmentClass:'люкс',
-                            cost:'9990',
-                            numReview:'145 ',
-                            rate:('5'),
-                            maxRate:('5')
-                })            
+            +range-slider({name:'диапозон цены',description:true})                 
+         .serch-rom__rooms
+         +rate-buttons('5','5')            
         +footer            

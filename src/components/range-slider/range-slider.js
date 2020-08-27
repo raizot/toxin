@@ -1,3 +1,4 @@
+console.log('bebebe')
 $(".js-range-slider").ionRangeSlider({
     skin:'additional-span',
     type: "double",
