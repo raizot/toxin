@@ -49,6 +49,7 @@ html(lang="en")
                     +header-link-dropdown({text:'Безопасность', headerLinkHref:'#1'})
                     +header-link-dropdown({text:'О нас', headerLinkHref:'#1'})
         section.search-room
+<<<<<<< HEAD
             aside.search-room__aside
                 .block-container
                    +block-description('даты пребывания в отеле','')
@@ -250,5 +251,23 @@ html(lang="en")
                     })
                 .search-room__pagination    
                     +pagination('1')    
+         aside.search-room__aside
+            .block-container
+                +block-description('даты пребывания в отеле','')
+                +date-mask("date-mask date-dropdown datepicker-here single")
+            .block-container
+                +block-description('гости','')
+                   +dropdown-item({btnClass:"dropdown__dropbtn dropdown-guests",name:"Сколько гостей"})
+                       +Btn({ btnName:"Взрослые",inputClass:"adult",inputValue:"0"})
+                       +Btn({ btnName:"Дети",inputClass:"child",inputValue:"0"})
+                       +Btn({ btnName:"Младенцы",inputClass:"baby",inputValue:"0"})
+                       .form-elements__btn-container
+                           button.clear очистить
+                           button.submit применить
+            .range__container
+                +range-slider({name:'диапозон цены',description:true})
+            +range-slider({name:'диапозон цены',description:true})                 
+         .serch-rom__rooms
+         +rate-buttons('5','5')            
 
         +footer            
