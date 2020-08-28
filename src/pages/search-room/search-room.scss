@@ -2,14 +2,74 @@
 @import '../../assets/scss/mixins';
 @import '../ui-kit/ui-kit.scss';
 .search-room{
+    display: flex;
+    justify-content:center;
+     flex-wrap: wrap;
     min-height: 1426px;
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
-     padding-top: 100px;
+    padding-top: 100px;
+    background-color: #ffffff;
+    @include for-desktop{
+        padding-top: 100px;
+    }
+    @include for-tablet-landscape {
+        padding-top: 100px;
+    }
+    @include for-tablet-portrait {
+        padding-top: 150px;
+    }
+    @include for-phone-only {
+        padding-top: 200px;
+    }
     &__aside{
-        min-width: 266px;
+        max-width: 266px;
+        height: 100%;
         display: flex;
         flex-direction: column;
+        background-color: #ffffff;
+    }
+    &__rooms-title{
+        font-family: 'Open Sans Bold';
+        font-size: 24px;
+        margin-bottom: 20.5px;
+    }
+    &__rooms{
+        display: flex;
+        flex-direction: column;
+        max-width: 834px;
+        margin-left: 60px;
+
+        @include for-tablet-landscape {
+            margin-left: 10px;
+        }
+
+        @include for-tablet-portrait {
+            margin-left: 10px;
+        }
+
+        @include for-phone-only {
+            margin-left: 10px;
+            justify-content: center;
+        }
+    }
+    &__rooms-items{
+        display: grid;
+        gap: 20px 12px;
+        grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
+        margin-bottom: 40.5px;
+        @include for-phone-only {
+            grid-template-columns: repeat(auto-fit, minmax(270px, 100%));
+            align-self:center;
+        }
+        @include for-tablet-portrait {
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        }
+    }
+    &__pagination{
+        align-self: center;
     }
 }
 .range__container{

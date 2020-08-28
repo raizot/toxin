@@ -14,7 +14,7 @@
     flex-direction: row;
     justify-content: space-between;
         i{
-            padding: 10px 0px;
+            padding: 10px 6px 0px 0px;
             color:$color__dark-shade50;
             transition: 200ms;
         }
@@ -37,6 +37,4 @@ ul > li.checkbox-list__button{
     transition: 200ms;
     transform: rotate(180deg);
 }
-#showList{
 
-}

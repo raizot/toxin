@@ -6,13 +6,13 @@ header{
        @include for-phone-only {
         padding: 15px 10px;
        }
-       @include for-tablet-portrait-up {
+       @include for-tablet-portrait {
          padding: 15px 10px;
        }
-       @include for-tablet-landscape-up {
+       @include for-tablet-landscape {
          padding: 15px 10px;
        }
-       @include for-desktop-up {
+       @include for-desktop {
          padding: 15px 140px;
        }
       }
@@ -26,7 +26,7 @@ ul.header__menu{
     justify-content:space-between;
   }
 
-  @include for-tablet-portrait-up {
+  @include for-tablet-portrait {
     width: 100%;
     justify-content:space-between;
   }
@@ -90,7 +90,7 @@ li{
           margin-left: 0px;
         }
 
-        @include for-tablet-portrait-up {
+        @include for-tablet-portrait {
           margin-left: 8px;
         }
   }

@@ -126,13 +126,13 @@ html(lang="en")
                             +Btn({ btnName:"кровати",inputClass:"2",inputValue:"2"})
                             +Btn({ btnName:"ванные комнаты",inputClass:"3",inputValue:"0"})
                 .block-container.block-container__checkbox-list
-                    +checkbox-list([{title:"Завтрак",id:"breakfast"},
+                    +checkbox-list({parameters:[{title:"Завтрак",id:"breakfast"},
                                     {title:"Письменный стол",id:"table",checked:true},
                                     {title:"Стул для кормления",id:"chair",checked:true},
                                     {title:"Кроватка",id:"crib",checked:true},
                                     {title:"Телевизор",id:"tv"},
-                                    {title:"Шампунь",id:"shampoo"},])
-                    +checkbox-list([
+                                    {title:"Шампунь",id:"shampoo"},]})
+                    +checkbox-list({parameters:[
                                     {title:"Завтрак",id:"breakfast1"},
                                     {title:"Письменный стол",id:"table1",checked:true},
                                     {title:"Стул для кормления",id:"chair1",checked:true},
@@ -141,7 +141,7 @@ html(lang="en")
                                     {title:"Шампунь",id:"shampoo1"},
                                     {title:"Телевизор",id:"tv2"},
                                     {title:"Шампунь",id:"shampoo2"}
-                                    ],"showList"
+                                    ]}
                                     )
                 .block-container.block-container__info-hotel-room
                     +info-hotel-room({icon:'insert_emoticon',title:'Комфорт',description:'Шумопоглощающие стены'})
@@ -252,7 +252,7 @@ html(lang="en")
                     addServices:'300'})
                 .cards__wrap
                     +log-in
-            .cards__section
+            .cards__section-last
                 .cards__wrap
                     div.datepicker-here.date-dropdown
                 .cards__wrap

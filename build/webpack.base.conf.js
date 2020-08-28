@@ -73,12 +73,11 @@ module.exports = {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
       exclude: /(img)/,
-      // options: {
-      //   name: '[name].[ext]',
-      //   outputPath: 'assets/fonts',
-      //   publicPath: '/fsd_toxin/dist/assets/fonts/',
-      //   sourceMap: true
-      // }
+      options: {
+        name: '[name].[ext]',
+      outputPath: 'assets/fonts',
+        publicPath: '../assets/fonts/'
+      }
     }, {
       test: /\.(png|jpg|gif|svg)$/,
       loader: 'file-loader',
@@ -177,7 +176,7 @@ module.exports = {
       
     }),
     new HtmlWebpackPlugin({
-      chunks: ['home'],
+      chunks: ['ui-kit', 'home'],
       template: './src/pages/home/home.pug',
       filename: 'home.html',
       inject: true,
@@ -185,7 +184,7 @@ module.exports = {
       
     }),
     new HtmlWebpackPlugin({
-      chunks: ['search-room'],
+      chunks: ['ui-kit', 'search-room'],
       template: './src/pages/search-room/search-room.pug',
       filename: 'search-room.html',
       inject: true,

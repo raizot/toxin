@@ -1,5 +1,6 @@
 .room-slider{
   width: 100%;
+  height: auto;
   position: relative;
   &:hover{
     .material-icons.slick-arrow.arrow-area {
@@ -29,7 +30,13 @@
     background-color: #ffffff;
   }
   &__container{
-    width: 270px;
+    width: 100%;
+    min-width: 270px;
+    height: auto;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+     @include for-phone-only {
+       max-width: 170px;
+     }
   }
   &__apartment-number{
     font-size: 19px;
@@ -37,6 +44,7 @@
 }
  .room-slider.slick-slider.slick-dotted {
    margin-bottom: 0px;
+   height: auto;
  }
 .slick{
   &-slide {
@@ -47,7 +55,7 @@
     }
   }
   &-list {
-    height: 151.38px;
+    max-height: 151px;
     border-radius:4px 4px 0 0;
   }
   &-dots{

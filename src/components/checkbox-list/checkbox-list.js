@@ -6,7 +6,7 @@ $('#showList').show();
 btnList.on('click',function showList() {
     $(this).next('.checkbox-list__list').toggle(400);
     
-    $(this).find('button > .material-icons').toggleClass('transform');
+    $(this).find('.material-icons').toggleClass('transform');
     
 });
 

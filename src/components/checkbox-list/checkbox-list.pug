@@ -1,11 +1,13 @@
 include ../../../src/components/checkbox-button/checkbox-button.pug
 
 
-mixin checkbox-list(parameters=[{}],id)
+mixin checkbox-list(listParametrs={})
+    -let {listTitle="expandable checkbox list",parameters=[{}],id}=listParametrs
     .checkbox-list
         .checkbox-list__title-box.title
-            span(class="checkbox-list__span") expandable checkbox list
-        ul(class='checkbox-list__list'  id=id)
+            span(class="checkbox-list__span")=listTitle
+            i.material-icons expand_more
+        ul(class='checkbox-list__list' id=id)
             for val in parameters
                 li.checkbox-list__button
                     +checkbox-button(val)

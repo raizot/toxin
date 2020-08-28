@@ -1,15 +1,22 @@
 .header-link-dropdown{
-    display: flex;
-    align-items: center;
     width: auto;
     height: 40px;
     border-bottom: 1px solid $color__dark-shade25;
-    background-color: #ffffff;
     padding:5px;
-    display: none;
+    
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 .li__dropDown:hover {
     .header-link-dropdown {
-    display: block;
+    display: flex;
+    align-items: center;
     }
+}
+.dropdown-list{
+    border: 1px solid $color__dark-shade25;
+        background-color: #ffffff;
+}
+ul.header__menu li.header-link-dropdown{
+    margin-right: 0;
+    display: none;
 }

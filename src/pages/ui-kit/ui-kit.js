@@ -18,5 +18,6 @@ import '../../cards/room-slider/room-slider'
 
 //SCSS imports
 import './ui-kit.scss'
+import '../../assets/fonts/fonts.scss'
 
 
