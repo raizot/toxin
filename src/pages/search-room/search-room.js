@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 import 'jquery/dist/jquery.min'
 import '../../components/dropdown/dropdown'
 import '../../components/date-mask/date-mask'
@@ -19,7 +17,7 @@ import '../../components/pagination/pagination'
 import 'slick-carousel/slick/slick.min'
 import '../../cards/room-slider/room-slider'
 import '../../components/range-slider/range-slider'
->>>>>>> a3eb25791180b41e1e7bfe17df659553ba7ec521
+
 //SCSS imports
 import './search-room.scss'
 import '../../assets/fonts/fonts.scss'
