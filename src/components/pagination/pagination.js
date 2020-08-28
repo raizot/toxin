@@ -13,6 +13,7 @@ $(function() {
 
     });
 });
+console.log($('.my-pagination').pagination())
 let myPagination = document.querySelectorAll('.my-pagination');
 window.addEventListener('load',function () {
     for(let pagination of myPagination){

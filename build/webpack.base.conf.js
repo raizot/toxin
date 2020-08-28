@@ -75,11 +75,9 @@ module.exports = {
       exclude: /(img)/,
       options: {
         name: '[name].[ext]',
-<<<<<<< HEAD
       outputPath: 'assets/fonts',
-=======
         outputPath: 'assets/fonts',
->>>>>>> a3eb25791180b41e1e7bfe17df659553ba7ec521
+
         publicPath: '../assets/fonts/'
       }
     }, {

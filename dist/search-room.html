@@ -103,15 +103,381 @@
           <input class="js-range-slider" type="text" name="my_range" value="">
           <p class="range-slider__text">Стоимость за сутки пребывания в номере</p>
         </div>
-        <div class="block-container__description">
-          <p class="block-container__description-name">диапозон цены</p>
-          <p class="range__output"></p>
+        <div class="block-container">
+          <div class="block-container__description">
+            <p class="block-container__description-name">Checkbox Buttons</p>
+            <p class="block-container__description-condition"></p>
+          </div>
+          <div class="input-box">
+            <input class="checkbox__input" type="checkbox" id="smoke">
+            <div class="input-box__description">
+              <label class="title defaultTitle" for="smoke">Можно курить</label>
+            </div>
+          </div>
+          <div class="input-box">
+            <input class="checkbox__input" type="checkbox" id="pet" checked>
+            <div class="input-box__description">
+              <label class="title defaultTitle" for="pet">Можно с питомцами</label>
+            </div>
+          </div>
+          <div class="input-box">
+            <input class="checkbox__input" type="checkbox" id="guests" checked>
+            <div class="input-box__description">
+              <label class="title defaultTitle" for="guests">Можно пригласить гостей (до 10 человек)</label>
+            </div>
+          </div>
         </div>
-        <input class="js-range-slider" type="text" name="my_range" value="">
-        <p class="range-slider__text">Стоимость за сутки пребывания в номере</p>
+        <div class="block-container">
+          <div class="block-container__description">
+            <p class="block-container__description-name">Доступность</p>
+            <p class="block-container__description-condition"></p>
+          </div>
+          <div class="input-box">
+            <input class="checkbox__input" type="checkbox" id="wideHall">
+            <div class="input-box__description">
+              <label class="title" for="wideHall">Широкий коридор</label>
+              <p class="description">Ширина коридоров в номере не менее 91 см.</p>
+            </div>
+          </div>
+          <div class="input-box">
+            <input class="checkbox__input" type="checkbox" id="assistant">
+            <div class="input-box__description">
+              <label class="title" for="assistant">Помощник для инвалидов</label>
+              <p class="description">На 1 этаже вас встретит специалист  и проводит до номера.</p>
+            </div>
+          </div>
+        </div>
+        <div class="block-container">
+          <div class="block-container__description">
+            <p class="block-container__description-name">удобства номера</p>
+            <p class="block-container__description-condition"></p>
+          </div>
+          <div class="dropdown dropdown-services">
+            <button class="dropdown__dropbtn dropdown__dropbtn-short ">
+              <p class="btnText"></p><i class="material-icons">expand_more</i>
+            </button>
+            <div class="dropdown-content">
+              <div class="dropdown-content__line">
+                <p>спальни</p>
+                <div class="dropdown-content__box-button">
+                  <button class="minus">-</button>
+                  <input class="3" type="text" value="2" disabled>
+                  <button class="plus">+</button>
+                </div>
+              </div>
+              <div class="dropdown-content__line">
+                <p>кровати</p>
+                <div class="dropdown-content__box-button">
+                  <button class="minus">-</button>
+                  <input class="4" type="text" value="2" disabled>
+                  <button class="plus">+</button>
+                </div>
+              </div>
+              <div class="dropdown-content__line">
+                <p>ванные комнаты</p>
+                <div class="dropdown-content__box-button">
+                  <button class="minus">-</button>
+                  <input class="3" type="text" value="3" disabled>
+                  <button class="plus">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-container">
+          <div class="checkbox-list">
+            <div class="checkbox-list__title-box title"><span class="checkbox-list__span">дополнительные удобства</span><i class="material-icons">expand_more</i></div>
+            <ul class="checkbox-list__list">
+              <li class="checkbox-list__button">
+                <div class="input-box">
+                  <input class="checkbox__input" type="checkbox" id="breakfast1">
+                  <div class="input-box__description">
+                    <label class="title defaultTitle" for="breakfast1">Завтрак</label>
+                  </div>
+                </div>
+              </li>
+              <li class="checkbox-list__button">
+                <div class="input-box">
+                  <input class="checkbox__input" type="checkbox" id="table1" checked>
+                  <div class="input-box__description">
+                    <label class="title defaultTitle" for="table1">Письменный стол</label>
+                  </div>
+                </div>
+              </li>
+              <li class="checkbox-list__button">
+                <div class="input-box">
+                  <input class="checkbox__input" type="checkbox" id="chair1" checked>
+                  <div class="input-box__description">
+                    <label class="title defaultTitle" for="chair1">Стул для кормления</label>
+                  </div>
+                </div>
+              </li>
+              <li class="checkbox-list__button">
+                <div class="input-box">
+                  <input class="checkbox__input" type="checkbox" id="crib1" checked>
+                  <div class="input-box__description">
+                    <label class="title defaultTitle" for="crib1">Кроватка</label>
+                  </div>
+                </div>
+              </li>
+              <li class="checkbox-list__button">
+                <div class="input-box">
+                  <input class="checkbox__input" type="checkbox" id="tv1">
+                  <div class="input-box__description">
+                    <label class="title defaultTitle" for="tv1">Телевизор</label>
+                  </div>
+                </div>
+              </li>
+              <li class="checkbox-list__button">
+                <div class="input-box">
+                  <input class="checkbox__input" type="checkbox" id="shampoo1">
+                  <div class="input-box__description">
+                    <label class="title defaultTitle" for="shampoo1">Шампунь</label>
+                  </div>
+                </div>
+              </li>
+              <li class="checkbox-list__button">
+                <div class="input-box">
+                  <input class="checkbox__input" type="checkbox" id="tv2">
+                  <div class="input-box__description">
+                    <label class="title defaultTitle" for="tv2">Телевизор</label>
+                  </div>
+                </div>
+              </li>
+              <li class="checkbox-list__button">
+                <div class="input-box">
+                  <input class="checkbox__input" type="checkbox" id="shampoo2">
+                  <div class="input-box__description">
+                    <label class="title defaultTitle" for="shampoo2">Шампунь</label>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </aside>
-      <div class="serch-rom__rooms"></div>
-      <div class="rate-buttons" data-rating="5" data-max-rating="5"></div>
+      <div class="search-room__rooms">
+        <h1 class="search-room__rooms-title">Номера, которые мы для вас подобрали</h1>
+        <div class="search-room__rooms-items">
+          <div class="room-slider__container">
+            <div class="room-slider"><img src="img/room888/room888.jpg" alt="">
+  <img src="img/room888/room888-4.jpg" alt="">
+  <img src="img/room888/room888-2.jpg" alt="">
+  <img src="img/room888/room888-5.jpg" alt="">
+  <img src="img/room888/room888-3.jpg" alt="">
+            </div>
+            <div class="room-slider__room-info">   
+              <div class="room-slider__room-cost">
+                <div class="info-row"><span class="reserve-card__apartment-info">№</span><span class="reserve-card__apartment-number room-slider__apartment-number">888</span><span class="reserve-card__apartment-class">люкс</span></div>
+                <div class="reserve-card__apartment-cost-info"><span class="bold-text">9 990</span><span class="small-text"> в сутки</span></div>
+              </div>
+              <div class="room-slider__raiting">
+                <div class="rate-buttons" data-rating="5" data-max-rating="5"></div>
+                <div class="info-row"><span class="bold-text">145 </span><span class="small-text">отзывов</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="room-slider__container">
+            <div class="room-slider"><img src="img/room888/room888-5.jpg" alt="">
+  <img src="img/room888/room888.jpg" alt="">
+  <img src="img/room888/room888-4.jpg" alt="">
+  <img src="img/room888/room888-2.jpg" alt="">
+  <img src="img/room888/room888-3.jpg" alt="">
+            </div>
+            <div class="room-slider__room-info">   
+              <div class="room-slider__room-cost">
+                <div class="info-row"><span class="reserve-card__apartment-info">№</span><span class="reserve-card__apartment-number room-slider__apartment-number">840</span><span class="reserve-card__apartment-class">люкс</span></div>
+                <div class="reserve-card__apartment-cost-info"><span class="bold-text">9 990</span><span class="small-text"> в сутки</span></div>
+              </div>
+              <div class="room-slider__raiting">
+                <div class="rate-buttons" data-rating="4" data-max-rating="5"></div>
+                <div class="info-row"><span class="bold-text">65 </span><span class="small-text">отзывов</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="room-slider__container">
+            <div class="room-slider"><img src="img/room888/room888-3.jpg" alt="">
+  <img src="img/room888/room888-4.jpg" alt="">
+  <img src="img/room888/room888-2.jpg" alt="">
+  <img src="img/room888/room888-5.jpg" alt="">
+  <img src="img/room888/room888-3.jpg" alt="">
+            </div>
+            <div class="room-slider__room-info">   
+              <div class="room-slider__room-cost">
+                <div class="info-row"><span class="reserve-card__apartment-info">№</span><span class="reserve-card__apartment-number room-slider__apartment-number">980</span><span class="reserve-card__apartment-class">эконом</span></div>
+                <div class="reserve-card__apartment-cost-info"><span class="bold-text">9 990</span><span class="small-text"> в сутки</span></div>
+              </div>
+              <div class="room-slider__raiting">
+                <div class="rate-buttons" data-rating="5" data-max-rating="5"></div>
+                <div class="info-row"><span class="bold-text">25 </span><span class="small-text">отзывов</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="room-slider__container">
+            <div class="room-slider"><img src="img/room888/room888-4.jpg" alt="">
+  <img src="img/room888/room888-4.jpg" alt="">
+  <img src="img/room888/room888-2.jpg" alt="">
+  <img src="img/room888/room888-5.jpg" alt="">
+  <img src="img/room888/room888-3.jpg" alt="">
+            </div>
+            <div class="room-slider__room-info">   
+              <div class="room-slider__room-cost">
+                <div class="info-row"><span class="reserve-card__apartment-info">№</span><span class="reserve-card__apartment-number room-slider__apartment-number">888</span><span class="reserve-card__apartment-class">люкс</span></div>
+                <div class="reserve-card__apartment-cost-info"><span class="bold-text">9 990</span><span class="small-text"> в сутки</span></div>
+              </div>
+              <div class="room-slider__raiting">
+                <div class="rate-buttons" data-rating="2" data-max-rating="5"></div>
+                <div class="info-row"><span class="bold-text">145 </span><span class="small-text">отзывов</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="room-slider__container">
+            <div class="room-slider"><img src="img/room888/room888-5.jpg" alt="">
+  <img src="img/room888/room888-4.jpg" alt="">
+  <img src="img/room888/room888-2.jpg" alt="">
+  <img src="img/room888/room888-5.jpg" alt="">
+  <img src="img/room888/room888-3.jpg" alt="">
+            </div>
+            <div class="room-slider__room-info">   
+              <div class="room-slider__room-cost">
+                <div class="info-row"><span class="reserve-card__apartment-info">№</span><span class="reserve-card__apartment-number room-slider__apartment-number">888</span><span class="reserve-card__apartment-class">люкс</span></div>
+                <div class="reserve-card__apartment-cost-info"><span class="bold-text">9 990</span><span class="small-text"> в сутки</span></div>
+              </div>
+              <div class="room-slider__raiting">
+                <div class="rate-buttons" data-rating="3" data-max-rating="5"></div>
+                <div class="info-row"><span class="bold-text">145 </span><span class="small-text">отзывов</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="room-slider__container">
+            <div class="room-slider"><img src="img/room888/room888-2.jpg" alt="">
+  <img src="img/room888/room888-4.jpg" alt="">
+  <img src="img/room888/room888-2.jpg" alt="">
+  <img src="img/room888/room888-5.jpg" alt="">
+  <img src="img/room888/room888-3.jpg" alt="">
+            </div>
+            <div class="room-slider__room-info">   
+              <div class="room-slider__room-cost">
+                <div class="info-row"><span class="reserve-card__apartment-info">№</span><span class="reserve-card__apartment-number room-slider__apartment-number">888</span><span class="reserve-card__apartment-class">люкс</span></div>
+                <div class="reserve-card__apartment-cost-info"><span class="bold-text">9 990</span><span class="small-text"> в сутки</span></div>
+              </div>
+              <div class="room-slider__raiting">
+                <div class="rate-buttons" data-rating="4" data-max-rating="5"></div>
+                <div class="info-row"><span class="bold-text">145 </span><span class="small-text">отзывов</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="room-slider__container">
+            <div class="room-slider"><img src="img/room888/room888-3.jpg" alt="">
+  <img src="img/room888/room888-4.jpg" alt="">
+  <img src="img/room888/room888-2.jpg" alt="">
+  <img src="img/room888/room888-5.jpg" alt="">
+  <img src="img/room888/room888-3.jpg" alt="">
+            </div>
+            <div class="room-slider__room-info">   
+              <div class="room-slider__room-cost">
+                <div class="info-row"><span class="reserve-card__apartment-info">№</span><span class="reserve-card__apartment-number room-slider__apartment-number">888</span><span class="reserve-card__apartment-class">люкс</span></div>
+                <div class="reserve-card__apartment-cost-info"><span class="bold-text">9 990</span><span class="small-text"> в сутки</span></div>
+              </div>
+              <div class="room-slider__raiting">
+                <div class="rate-buttons" data-rating="5" data-max-rating="5"></div>
+                <div class="info-row"><span class="bold-text">145 </span><span class="small-text">отзывов</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="room-slider__container">
+            <div class="room-slider"><img src="img/room888/room888-4.jpg" alt="">
+  <img src="img/room888/room888-4.jpg" alt="">
+  <img src="img/room888/room888-2.jpg" alt="">
+            </div>
+            <div class="room-slider__room-info">   
+              <div class="room-slider__room-cost">
+                <div class="info-row"><span class="reserve-card__apartment-info">№</span><span class="reserve-card__apartment-number room-slider__apartment-number">888</span><span class="reserve-card__apartment-class">люкс</span></div>
+                <div class="reserve-card__apartment-cost-info"><span class="bold-text">9 990</span><span class="small-text"> в сутки</span></div>
+              </div>
+              <div class="room-slider__raiting">
+                <div class="rate-buttons" data-rating="2" data-max-rating="5"></div>
+                <div class="info-row"><span class="bold-text">145 </span><span class="small-text">отзывов</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="room-slider__container">
+            <div class="room-slider"><img src="img/room888/room888.jpg" alt="">
+  <img src="img/room888/room888-4.jpg" alt="">
+  <img src="img/room888/room888-2.jpg" alt="">
+  <img src="img/room888/room888-5.jpg" alt="">
+  <img src="img/room888/room888-3.jpg" alt="">
+            </div>
+            <div class="room-slider__room-info">   
+              <div class="room-slider__room-cost">
+                <div class="info-row"><span class="reserve-card__apartment-info">№</span><span class="reserve-card__apartment-number room-slider__apartment-number">888</span><span class="reserve-card__apartment-class">люкс</span></div>
+                <div class="reserve-card__apartment-cost-info"><span class="bold-text">9 990</span><span class="small-text"> в сутки</span></div>
+              </div>
+              <div class="room-slider__raiting">
+                <div class="rate-buttons" data-rating="2" data-max-rating="5"></div>
+                <div class="info-row"><span class="bold-text">145 </span><span class="small-text">отзывов</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="room-slider__container">
+            <div class="room-slider"><img src="img/room888/room888-4.jpg" alt="">
+  <img src="img/room888/room888-4.jpg" alt="">
+  <img src="img/room888/room888-2.jpg" alt="">
+  <img src="img/room888/room888-5.jpg" alt="">
+  <img src="img/room888/room888-3.jpg" alt="">
+            </div>
+            <div class="room-slider__room-info">   
+              <div class="room-slider__room-cost">
+                <div class="info-row"><span class="reserve-card__apartment-info">№</span><span class="reserve-card__apartment-number room-slider__apartment-number">888</span><span class="reserve-card__apartment-class">люкс</span></div>
+                <div class="reserve-card__apartment-cost-info"><span class="bold-text">9 990</span><span class="small-text"> в сутки</span></div>
+              </div>
+              <div class="room-slider__raiting">
+                <div class="rate-buttons" data-rating="3" data-max-rating="5"></div>
+                <div class="info-row"><span class="bold-text">145 </span><span class="small-text">отзывов</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="room-slider__container">
+            <div class="room-slider"><img src="img/room888/room888-5.jpg" alt="">
+  <img src="img/room888/room888-4.jpg" alt="">
+  <img src="img/room888/room888-2.jpg" alt="">
+  <img src="img/room888/room888-5.jpg" alt="">
+  <img src="img/room888/room888-3.jpg" alt="">
+            </div>
+            <div class="room-slider__room-info">   
+              <div class="room-slider__room-cost">
+                <div class="info-row"><span class="reserve-card__apartment-info">№</span><span class="reserve-card__apartment-number room-slider__apartment-number">888</span><span class="reserve-card__apartment-class">люкс</span></div>
+                <div class="reserve-card__apartment-cost-info"><span class="bold-text">9 990</span><span class="small-text"> в сутки</span></div>
+              </div>
+              <div class="room-slider__raiting">
+                <div class="rate-buttons" data-rating="5" data-max-rating="5"></div>
+                <div class="info-row"><span class="bold-text">145 </span><span class="small-text">отзывов</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="room-slider__container">
+            <div class="room-slider"><img src="img/room888/room888-2.jpg" alt="">
+  <img src="img/room888/room888-4.jpg" alt="">
+  <img src="img/room888/room888-5.jpg" alt="">
+  <img src="img/room888/room888-3.jpg" alt="">
+            </div>
+            <div class="room-slider__room-info">   
+              <div class="room-slider__room-cost">
+                <div class="info-row"><span class="reserve-card__apartment-info">№</span><span class="reserve-card__apartment-number room-slider__apartment-number">888</span><span class="reserve-card__apartment-class">люкс</span></div>
+                <div class="reserve-card__apartment-cost-info"><span class="bold-text">9 990</span><span class="small-text"> в сутки</span></div>
+              </div>
+              <div class="room-slider__raiting">
+                <div class="rate-buttons" data-rating="5" data-max-rating="5"></div>
+                <div class="info-row"><span class="bold-text">145 </span><span class="small-text">отзывов</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="search-room__pagination">   
+          <div class="my-pagination" data-value="1"></div>
+          <p class="pagination-description"><span class="pagination-description__number-range">1-12</span> из <span class="pagination-description__all-items">100+</span> вариантов аренды</p>
+        </div>
+      </div>
     </section>
     <footer>
       <div class="footer-logo"><img src="/img/Logo.svg">
