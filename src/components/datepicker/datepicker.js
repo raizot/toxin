@@ -11,7 +11,6 @@ let datepickerDouble = $(".datepicker__double");
 
 // Show double datepicker 
 let inpputEnd = datepickerDouble.find('.date-dropdown.end');
-console.log(inpputEnd);
 for(let input of inpputEnd){
 input.addEventListener('click', function () {
     $(this).parents('.datepicker__double')

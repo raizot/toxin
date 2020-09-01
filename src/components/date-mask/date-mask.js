@@ -1,4 +1,4 @@
 $(document).ready(function () {
-$('input[type=text] .date-mask').mask('ДД.ММ.ГГГГ');
+$('.date-mask').mask('00.00.0000');
  });
 

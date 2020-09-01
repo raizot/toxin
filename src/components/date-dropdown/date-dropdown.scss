@@ -6,13 +6,18 @@
     color:$color__dark-shade75;
     }
     &__first {
-        width: 100%;
+        max-width:150px;
+         width: 100%;
+        @include for-phone-only {
+            max-width: 100%;
+        }
     }
     &__second{
-        margin-left: 20px;
+        max-width:150px;
         width: 100%;
         @include for-phone-only {
-            margin: 5px 0 0 0 ;
+
+            max-width:100%;
         }
     }
 }

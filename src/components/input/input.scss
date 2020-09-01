@@ -11,9 +11,10 @@
     &::placeholder{
         color: $color__dark-shade25;
         font-size: 0.875rem;
-        line-height: 18px;
+        line-height: 23px;
         font-family: 'Montserrat Regular';
     }
+
     &:hover{
         border: 1px solid;
         border-color: $color__dark-shade50;

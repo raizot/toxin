@@ -1,0 +1,227 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+@import '../ui-kit/ui-kit.scss';
+.room-details{
+    min-height: 1494px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 70px;
+    @include for-desktop {}
+
+    @include for-tablet-landscape {
+        
+    }
+
+    @include for-tablet-portrait {
+        padding-top: 130px;
+    }
+
+    @include for-phone-only {
+        padding-top: 164px;
+    }
+    &__img{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        &-single {
+            width: 68.125%;
+            img{
+            width: 100%;
+            height: 100%;
+            }
+        }
+        &-double{
+        width: 31.875%;
+        height: 100%;
+        max-height: 485px;
+        }
+    }
+    &__photo{
+        width: 100%;
+        max-height: 242.5px;
+        height: 100%;
+        
+    }
+    &__items{
+        display: flex;
+        flex-direction: row;
+        padding: 70px 140px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include for-desktop {}
+
+        @include for-tablet-landscape {
+            padding: 30px 80px;
+        }
+
+        @include for-tablet-portrait {
+            padding: 30px 80px;
+        }
+
+        @include for-phone-only {
+            padding: 10px 20px;
+        }
+    }
+    &__basic-info{
+        display: flex;
+        flex-direction: column;
+        min-width: 300px;
+        max-width: 712px;
+        
+    }
+
+    &__card{
+        width: 380px;
+        min-width: 355px;
+    }
+}
+
+.basic-info{
+    &__about{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 672px;
+      &-room{
+          display: flex;
+          flex-direction: column;
+          margin-right: auto;
+          &__title{
+              margin-bottom: 20px;
+              font-family: 'Open Sans Bold';
+              font-size: 1.1875rem;
+          }
+      }
+    }
+
+    &__reviews{
+        display: flex;
+        flex-direction: column;
+        
+        &-container{
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+        }
+        &-title-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &__number-reviews{
+        font-size: 0.875rem;
+        color:$color__dark-shade50;
+    }
+    &__more{
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        flex-wrap: wrap;
+        max-width: 703px;
+        &-rules{
+            display: flex;
+            flex-direction: column;
+            min-width: 218px;
+            max-width: 263px;
+            margin-right: auto;
+        }
+        &-cancel{
+            display: flex;
+            flex-direction: column;
+            // margin-left: 70px;
+            min-width: 218px;
+            &-text{
+                max-width: 341px;
+                font-family: 'Montserrat Regular';
+                font-size: 0.875rem;
+                color:$color__dark-shade75;
+                line-height: 24px;
+            }
+        }
+    }
+    &__pie{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        &-description{
+            margin-left: 30px;
+        }
+    }
+}
+.about-room{
+    margin-bottom: 20px;
+}
+.rules{
+    margin-left: 22px;
+}
+.pie{
+    &-container{
+        width: 124px;
+        height: 124px;
+        position: relative;
+        color:$color__purple;
+    }
+    &-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+    &-num{
+    font-family: 'Quicksand Bold';
+    font-size: 1.5rem;
+    }
+    &-text{
+        font-family: 'Montserrat Bold';
+        font-size: 16px;
+        line-height: 15px;
+    }
+}
+.pie-list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.pie-list__indicator {
+    min-width: 10px;
+    min-height: 10px;
+    margin-right: 5px;
+    background: $color__dark-shade25;
+    border-radius: 50%;
+    &-1 {background: #FFCF9C; }
+    &-2 {background: #6FCF97;}
+    &-3 {background: #BC9CFF;}
+    &-4 {background: '';}
+}
+
+.pie-list__text {
+    font-family: 'Montserrat Regular';
+    color: $color__dark-shade75;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+@include for-desktop {
+    
+}
+
+@include for-tablet-landscape {
+    
+}
+
+@include for-tablet-portrait {
+    
+}
+
+@include for-phone-only {
+   
+}

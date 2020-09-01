@@ -1,18 +1,20 @@
 .bullet-list{
   display: flex;
   flex-direction:row;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 10px;
 }
 .bullet-list__indicator{
-  width: 10px;
-  height: 10px;
+  min-width: 10px;
+  min-height: 10px;
   margin-right: 10.86px;
+  margin-top: 5px;
   background: $color__dark-shade25;
-  clip-path: circle(50% at 50% 50%);
+  border-radius: 50%;
 }
 .bullet-list__text{
   font-family: 'Montserrat Regular';
   color:$color__dark-shade75;
   font-size: 14px;
+  line-height: 24px;
 }

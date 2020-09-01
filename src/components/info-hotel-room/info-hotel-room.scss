@@ -2,6 +2,8 @@
   &__container{
   display: flex;
   flex-direction: row;
+  padding-bottom: 17px;
+  border-bottom: 1px solid $color__dark-shade10;
   }
   &__info-container{
     display: flex;

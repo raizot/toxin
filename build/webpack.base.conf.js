@@ -23,6 +23,7 @@ module.exports = {
     "ui-kit": `${PATHS.src}/pages/ui-kit/ui-kit.js`,
     "home": `${PATHS.src}/pages/home/home.js`,
     "search-room": `${PATHS.src}/pages/search-room/search-room.js`,
+    "room-details": `${PATHS.src}/pages/room-details/room-details.js`,
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
@@ -41,7 +42,8 @@ module.exports = {
     }
   },
   module: {
-    rules: [{
+    rules: [
+      {
       test: /\.pug$/,
       oneOf: [{
           resourceQuery: /^\?vue/,
@@ -75,7 +77,7 @@ module.exports = {
       exclude: /(img)/,
       options: {
         name: '[name].[ext]',
-      outputPath: 'assets/fonts',
+        outputPath: 'assets/fonts',
         publicPath: '../assets/fonts/'
       }
     }, {
@@ -88,7 +90,17 @@ module.exports = {
         publicPath: '../assets/img/',
         sourceMap: true
       }
-    }, {
+    },
+    {
+      test: /\.svg$/i,
+      use: [{
+        loader: 'url-loader',
+        options: {
+          encoding: 'utf8',
+        },
+      }, ],
+    },
+     {
       test: /\.scss$/,
       use: [
         'style-loader',
@@ -190,6 +202,14 @@ module.exports = {
       inject: true,
       collapseWhitespace: false,
       
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['ui-kit', 'room-details'],
+      template: './src/pages/room-details/room-details.pug',
+      filename: 'room-details.html',
+      inject: true,
+      collapseWhitespace: false,
+
     }),
   ],
 }

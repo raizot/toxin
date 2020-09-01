@@ -1,0 +1,128 @@
+include ../../components/input/input.pug
+include ../../components/block-description/block-description
+include ../../components/dropdown/dropdown.pug
+include ../../components/dropdown/dropdownBtn.pug
+include ../../components/date-mask/date-mask.pug
+include ../../components/calculator/calculator.pug
+include ../../components/checkbox-list/checkbox-list.pug
+include ../../components/checkbox-button/checkbox-button.pug
+include ../../components/info-hotel-room/info-hotel-room.pug
+include ../../components/radio-buttons/radio-buttons.pug
+include ../../components/toggle/toggle.pug
+include ../../components/like-button/like-button.pug
+include ../../components/rate-button/rate-button.pug
+include ../../components/review/review.pug
+include ../../components/range-slider/range-slider
+include ../../components/buttons/buttons
+include ../../components/pagination/pagination
+include ../../components/bullet-list/bullet-list
+include ../../cards/find-apartment/find-apartment
+include ../../cards/registration/registration
+include ../../cards/reserve-card/reserve-card
+include ../../cards/log-in/log-in
+include ../../cards/room-slider/room-slider
+include ../../components/header/header
+include ../../components/header/header-link/header-link
+include ../../components/header/header-link-dropdown/header-link-dropdown
+include ../../components/footer/footer
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title search-room
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+
+    body
+        .container-header
+            +header({buttons:true,user: false})
+                +header-link({text:'О нас', headerLinkHref:'#1'})
+                +header-link({text:'Услуги',headerLinkHref:'#2', dropDownList: true})
+                    +header-link-dropdown({text:'Спа', headerLinkHref:'#1'})
+                    +header-link-dropdown({text:'Бассейн', headerLinkHref:'#1'})
+                    +header-link-dropdown({text:'Вечеринка', headerLinkHref:'#1'})
+                    +header-link-dropdown({text:'Заказать еду в номер', headerLinkHref:'#1'})
+                +header-link({text:'Вакансии',headerLinkHref:'#3'})
+                +header-link({text:'Новости',headerLinkHref:'#4'})
+                +header-link({text:'Соглашения',headerLinkHref:'#5',dropDownList: true})
+                    +header-link-dropdown({text:'Безопасность', headerLinkHref:'#1'})
+                    +header-link-dropdown({text:'О нас', headerLinkHref:'#1'})
+        section.room-details
+            .room-details__img
+                .room-details__img-single
+                    img(src="img/room888/room888x2.jpg", alt="")
+                .room-details__img-double
+                    img(src="img/room888/room888-2.jpg", alt="").room-details__photo
+                    img(src="img/room888/room888-3.jpg", alt="").room-details__photo       
+            .room-details__items
+                .room-details__basic-info
+                    .basic-info__about
+                        .basic-info__about-room
+                            h2.basic-info__about-room__title Сведения о номере
+                            .about-room
+                                +info-hotel-room({icon:'insert_emoticon',title:'Комфорт',description:'Шумопоглощающие стены'})
+                            .about-room    
+                                +info-hotel-room({icon:'location_city',title:'Удобство',description:'Окно в каждой из спален'})
+                            .about-room    
+                                +info-hotel-room({icon:'whatshot',title:'Уют',description:'Номер оснащён камином'})
+                        .basic-info__impressions
+                            h2.basic-info__about-room__title Впечатления от номера
+                            .basic-info__pie
+                                .pie-container
+                                    canvas(class='pie' id='pie' width="124px" height="124px" data-great='65' data-allright='130' data-dissapointed='65')
+                                    span.pie-info
+                                        span.pie-num
+                                        span.pie-text голосов
+                                .basic-info__pie-description
+                                    div.pie-list
+                                        div.pie-list__indicator.pie-list__indicator-1
+                                        span.pielist__text Великолепно
+                                    div.pie-list
+                                        div.pie-list__indicator.pie-list__indicator-2
+                                        span.pielist__text Хорошо
+                                    div.pie-list
+                                        div.pie-list__indicator.pie-list__indicator-3
+                                        span.pielist__text Удовлетворительно
+                                    div.pie-list
+                                        div.pie-list__indicator.pie-list__indicator-4
+                                        span.pielist__text Разочарован            
+                    .basic-info__reviews-container
+                        .basic-info__reviews-title-container
+                            h2.basic-info__about-room__title Отзывы посетителей номера
+                            span.basic-info__number-reviews 2 отзыва
+                        .basic-info__reviews
+                            +review({
+                                img:'img/man.jpg',
+                                likeValue:'12',
+                                name:'Мурад Сарафанов',
+                                date:'5 ',
+                                reviewText:'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал  комплименты повару — никто не жаловался из соседей.'
+                                })
+                            +review({
+                                img:'img/girl.jpg',
+                                likeValue:'2',
+                                name:'Патрисия Стёклышкова',
+                                date:'7 ',
+                                reviewText:'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
+                                })
+                        .basic-info__more
+                            .basic-info__more-rules
+                                h2.basic-info__about-room__title.rules Правила
+                                +bullet-list('Нельзя с питомцами')
+                                +bullet-list('Без вечеринок и мероприятий')
+                                +bullet-list('Время прибытия — после 13:00,\n' +
+                                'а выезд до 12:00')
+                            .basic-info__more-cancel
+                                 h2.basic-info__about-room__title Отмена
+                                 p.basic-info__more-cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.                     
+                .room-details__card
+                    +reserve-card({
+                    apartmentNumber:'888',
+                    apartmentClass:'люкс',
+                    cost:'9990',
+                    discount:'0',
+                    addServices:'300'})
+
+            
+        +footer            

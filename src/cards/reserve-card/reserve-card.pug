@@ -46,4 +46,4 @@ mixin reserve-card(reserveCard={})
             .total__text Итого
             .total__result=String((Number(cost)*4)+Number(discount)+Number(addServices)+Number()).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')+'₽'
         .reserve-card__line
-            +button({buttonContent: 'Перейти к оплате',classType:'button-arrow'})
+            +button({buttonContent: 'Забронировать',classType:'button-arrow'})

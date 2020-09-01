@@ -4,7 +4,6 @@ let rateButtons=document.querySelectorAll('.rate-buttons');
 for(let i =0; i<= rateButtons.length-1; i++){
     let maxRating = rateButtons[i].dataset.maxRating;
     let rating = rateButtons[i].dataset.rating;
-    console.log(rating);
     for(let k = 0; k<= rating-1; k++){
         let createButtons = document.createElement('i');
         createButtons.classList.add('material-icons');
