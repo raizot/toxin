@@ -16,7 +16,6 @@
         max-width:150px;
         width: 100%;
         @include for-phone-only {
-
             max-width:100%;
         }
     }
