@@ -3,16 +3,11 @@ mixin find-apartment
     +cards-background
         .heading Найдём номера под ваши пожелания
         .cards__container
-            .find-apartment__elem.find-apartment__dates.datepicker__double
-                .date-dropdown__first
-                    +block-description('прибытие','')
-                    .date-dropdown__component
-                        +date-mask("date-mask date-dropdown datepicker-here start")
-                        
-                .date-dropdown__second
-                    +block-description('выезд','')
-                    .date-dropdown__component
-                        +date-mask("date-mask date-dropdown end")
+            .find-apartment__elem
+                +date-dropdown({
+                descriptionFirst:'Прибытие',
+                descriptionSecond:'Выезд'
+                })
                         
             .find-apartment__elem
                     +block-description('Гости','')

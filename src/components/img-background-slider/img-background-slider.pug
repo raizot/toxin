@@ -1,0 +1,5 @@
+mixin img-background-slider(sliderOptions={})
+
+    -let {howManyPictures="2",folder,prefixImg, filesExtention='jpg'}=sliderOptions
+        div.slider-background-main(data-max-img=howManyPictures, data-folder=folder, data-prefix-img=prefixImg data-files-extention = filesExtention)
+            block

@@ -139,26 +139,28 @@
           </div>
           <input class="date-mask" type="text" id="mask-arrow" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8">
         </div>
-        <div class="block-container date-dropdown__container datepicker__double">
-          <div class="date-dropdown__first">
-            <div class="block-container__description">
-              <p class="block-container__description-name">date dropdown</p>
-              <p class="block-container__description-condition"></p>
-            </div>
-            <div class="date-dropdown__component">
-              <div class="date-mask__container">
-                <input class="date-mask date-dropdown datepicker-here start" type="text" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8"><i class="material-icons date-icon">expand_more</i>
+        <div class="block-container">   
+          <div class="date-dropdown__double">
+            <div class="date-dropdown__first">
+              <div class="block-container__description">
+                <p class="block-container__description-name">date Dropdown</p>
+                <p class="block-container__description-condition"></p>
+              </div>
+              <div class="date-dropdown__component">
+                <div class="date-mask__container">
+                  <input class="date-mask date-dropdown datepicker-here start" type="text" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8"><i class="material-icons date-icon">expand_more</i>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="date-dropdown__second">
-            <div class="block-container__description">
-              <p class="block-container__description-name">date dropdown</p>
-              <p class="block-container__description-condition"></p>
-            </div>
-            <div class="date-dropdown__component">
-              <div class="date-mask__container">
-                <input class="date-mask date-dropdown end" type="text" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8"><i class="material-icons date-icon">expand_more</i>
+            <div class="date-dropdown__second">
+              <div class="block-container__description">
+                <p class="block-container__description-name">date Dropdown</p>
+                <p class="block-container__description-condition"></p>
+              </div>
+              <div class="date-dropdown__component">
+                <div class="date-mask__container">
+                  <input class="date-mask date-dropdown end" type="text" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8"><i class="material-icons date-icon">expand_more</i>
+                </div>
               </div>
             </div>
           </div>
@@ -655,26 +657,28 @@
           <div class="cards-background">
             <div class="heading">Найдём номера под ваши пожелания</div>
             <div class="cards__container">
-              <div class="find-apartment__elem find-apartment__dates datepicker__double">
-                <div class="date-dropdown__first">
-                  <div class="block-container__description">
-                    <p class="block-container__description-name">прибытие</p>
-                    <p class="block-container__description-condition"></p>
-                  </div>
-                  <div class="date-dropdown__component">
-                    <div class="date-mask__container">
-                      <input class="date-mask date-dropdown datepicker-here start" type="text" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8"><i class="material-icons date-icon">expand_more</i>
+              <div class="find-apartment__elem">
+                <div class="date-dropdown__double">
+                  <div class="date-dropdown__first">
+                    <div class="block-container__description">
+                      <p class="block-container__description-name">Прибытие</p>
+                      <p class="block-container__description-condition"></p>
+                    </div>
+                    <div class="date-dropdown__component">
+                      <div class="date-mask__container">
+                        <input class="date-mask date-dropdown datepicker-here start" type="text" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8"><i class="material-icons date-icon">expand_more</i>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="date-dropdown__second">
-                  <div class="block-container__description">
-                    <p class="block-container__description-name">выезд</p>
-                    <p class="block-container__description-condition"></p>
-                  </div>
-                  <div class="date-dropdown__component">
-                    <div class="date-mask__container">
-                      <input class="date-mask date-dropdown end" type="text" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8"><i class="material-icons date-icon">expand_more</i>
+                  <div class="date-dropdown__second">
+                    <div class="block-container__description">
+                      <p class="block-container__description-name">Выезд</p>
+                      <p class="block-container__description-condition"></p>
+                    </div>
+                    <div class="date-dropdown__component">
+                      <div class="date-mask__container">
+                        <input class="date-mask date-dropdown end" type="text" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8"><i class="material-icons date-icon">expand_more</i>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -729,168 +733,176 @@
         <div class="cards__wrap">
           <div class="cards-background">
             <div class="heading">Регистрация аккаунта</div>
-            <div class="cards__container">
-              <div class="registration__block-container">
-                <div class="registration__elem-container">
-                  <input class="input-component" type="text" placeholder="Имя">
-                </div>
-                <div class="registration__elem-container">
-                  <input class="input-component" type="text" placeholder="Фамилия">
-                </div>
-                <div class="registration__elem-container">
-                  <div class="block-container__radio-button">
-                    <label class="radio-label">
-                      <input class="radio-button__radio" type="radio" name="gender" value="male" checked="checked"><span class="radio-button__label">Мужчина</span>
-                    </label>
-                    <label class="radio-label">
-                      <input class="radio-button__radio" type="radio" name="gender" value="female"><span class="radio-button__label">Женщина</span>
-                    </label>
+            <form action="">
+              <div class="cards__container">
+                <div class="registration__block-container">
+                  <div class="registration__elem-container">
+                    <input class="input-component" type="text" placeholder="Имя">
+                  </div>
+                  <div class="registration__elem-container">
+                    <input class="input-component" type="text" placeholder="Фамилия">
+                  </div>
+                  <div class="registration__elem-container">
+                    <div class="block-container__radio-button">
+                      <label class="radio-label">
+                        <input class="radio-button__radio" type="radio" name="gender" value="male" checked="checked"><span class="radio-button__label">Мужчина</span>
+                      </label>
+                      <label class="radio-label">
+                        <input class="radio-button__radio" type="radio" name="gender" value="female"><span class="radio-button__label">Женщина</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="registration__block-container">
-              <div class="block-container__description">
-                <p class="block-container__description-name">дата рождения</p>
-                <p class="block-container__description-condition"></p>
+              <div class="registration__block-container">
+                <div class="block-container__description">
+                  <p class="block-container__description-name">дата рождения</p>
+                  <p class="block-container__description-condition"></p>
+                </div>
+                <input class="date-mask" type="text" id="mask-arrow" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8">
               </div>
-              <input class="date-mask" type="text" id="mask-arrow" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8">
-            </div>
-            <div class="registration__block-container">
-              <div class="block-container__description">
-                <p class="block-container__description-name">данные для входа в сервис</p>
-                <p class="block-container__description-condition"></p>
-              </div> 
-              <div class="registration__elem-container">
-                <input class="input-component" type="text" placeholder="Email">
+              <div class="registration__block-container">
+                <div class="block-container__description">
+                  <p class="block-container__description-name">данные для входа в сервис</p>
+                  <p class="block-container__description-condition"></p>
+                </div> 
+                <div class="registration__elem-container">
+                  <input class="input-component" type="text" placeholder="Email">
+                </div>
+                <div class="registration__elem-container">
+                  <input class="input-component" type="password" placeholder="Пароль">
+                </div>
+                <div class="registration__elem-container">
+                  <label class="toggle-label">
+                    <input class="toggle-button__toggle" type="checkbox"><span class="toggle-button__label">Получать спецпредложения</span>
+                  </label>
+                </div>
               </div>
-              <div class="registration__elem-container">
-                <input class="input-component" type="password" placeholder="Пароль">
+              <div class="registration__block-container">
+                <button class="button button-arrow">Перейти к оплате<i class="button-icon material-icons">arrow_forward</i></button>
               </div>
-              <div class="registration__elem-container">
-                <label class="toggle-label">
-                  <input class="toggle-button__toggle" type="checkbox"><span class="toggle-button__label">Получать спецпредложения</span>
-                </label>
+              <div class="registration__log-in">
+                <p class="registration__log-in-text">Уже есть аккаунт на Toxin</p>
+                <button class="button button-border"><span class="button__text">Click Me</span></button>
               </div>
-            </div>
-            <div class="registration__block-container">
-              <button class="button button-arrow">Перейти к оплате<i class="button-icon material-icons">arrow_forward</i></button>
-            </div>
-            <div class="registration__log-in">
-              <p class="registration__log-in-text">Уже есть аккаунт на Toxin</p>
-              <button class="button button-border"><span class="button__text">Click Me</span></button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
       <div class="cards__section">
         <div class="cards__wrap">
           <div class="cards-background">
-            <div class="reserve-card__head">
-              <div class="info-row"><span class="reserve-card__apartment-info">№</span><span class="reserve-card__apartment-number">888</span><span class="reserve-card__apartment-class">люкс</span></div>
-              <div class="reserve-card__apartment-cost-info"><span class="bold-text">9 990₽ </span><span class="small-text">в сутки</span></div>
-            </div>
-            <div class="reserve-card__line datepicker__double">
-              <div class="date-dropdown__first">
+            <form action="URL">
+              <div class="reserve-card__head">
+                <div class="info-row"><span class="reserve-card__apartment-info">№</span><span class="reserve-card__apartment-number">888</span><span class="reserve-card__apartment-class">люкс</span></div>
+                <div class="reserve-card__apartment-cost-info"><span class="bold-text">9 990₽ </span><span class="small-text">в сутки</span></div>
+              </div>
+              <div class="reserve-card__line-column">           
+                <div class="date-dropdown__double">
+                  <div class="date-dropdown__first">
+                    <div class="block-container__description">
+                      <p class="block-container__description-name">Прибытие</p>
+                      <p class="block-container__description-condition"></p>
+                    </div>
+                    <div class="date-dropdown__component">
+                      <div class="date-mask__container">
+                        <input class="date-mask date-dropdown datepicker-here start" type="text" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8"><i class="material-icons date-icon">expand_more</i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="date-dropdown__second">
+                    <div class="block-container__description">
+                      <p class="block-container__description-name">Выезд</p>
+                      <p class="block-container__description-condition"></p>
+                    </div>
+                    <div class="date-dropdown__component">
+                      <div class="date-mask__container">
+                        <input class="date-mask date-dropdown end" type="text" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8"><i class="material-icons date-icon">expand_more</i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reserve-card__line-column">
                 <div class="block-container__description">
-                  <p class="block-container__description-name">прибытие</p>
+                  <p class="block-container__description-name">гости</p>
                   <p class="block-container__description-condition"></p>
                 </div>
-                <div class="date-dropdown__component">
-                  <div class="date-mask__container">
-                    <input class="date-mask date-dropdown datepicker-here start" type="text" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8"><i class="material-icons date-icon">expand_more</i>
-                  </div>
-                </div>
-              </div>
-              <div class="date-dropdown__second">
-                <div class="block-container__description">
-                  <p class="block-container__description-name">выезд</p>
-                  <p class="block-container__description-condition"></p>
-                </div>
-                <div class="date-dropdown__component">
-                  <div class="date-mask__container">
-                    <input class="date-mask date-dropdown end" type="text" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8"><i class="material-icons date-icon">expand_more</i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="reserve-card__line-column">
-              <div class="block-container__description">
-                <p class="block-container__description-name">гости</p>
-                <p class="block-container__description-condition"></p>
-              </div>
-              <div class="dropdown">
-                <button class="dropdown__dropbtn dropdown-guests">
-                  <p class="btnText">Сколько гостей</p><i class="material-icons">expand_more</i>
-                </button>
-                <div class="dropdown-content">
-                  <div class="dropdown-content__line">
-                    <p>Взрослые</p>
-                    <div class="dropdown-content__box-button">
-                      <button class="minus">-</button>
-                      <input class="adult" type="text" value="2" disabled>
-                      <button class="plus">+</button>
+                <div class="dropdown">
+                  <button class="dropdown__dropbtn dropdown-guests">
+                    <p class="btnText">Сколько гостей</p><i class="material-icons">expand_more</i>
+                  </button>
+                  <div class="dropdown-content">
+                    <div class="dropdown-content__line">
+                      <p>Взрослые</p>
+                      <div class="dropdown-content__box-button">
+                        <button class="minus">-</button>
+                        <input class="adult" type="text" value="2" disabled>
+                        <button class="plus">+</button>
+                      </div>
+                    </div>
+                    <div class="dropdown-content__line">
+                      <p>Дети</p>
+                      <div class="dropdown-content__box-button">
+                        <button class="minus">-</button>
+                        <input class="child" type="text" value="1" disabled>
+                        <button class="plus">+</button>
+                      </div>
+                    </div>
+                    <div class="dropdown-content__line">
+                      <p>Младенцы</p>
+                      <div class="dropdown-content__box-button">
+                        <button class="minus">-</button>
+                        <input class="baby" type="text" value="0" disabled>
+                        <button class="plus">+</button>
+                      </div>
+                    </div>
+                    <div class="form-elements__btn-container">
+                      <button class="clear">очистить</button>
+                      <button class="submit">применить</button>
                     </div>
                   </div>
-                  <div class="dropdown-content__line">
-                    <p>Дети</p>
-                    <div class="dropdown-content__box-button">
-                      <button class="minus">-</button>
-                      <input class="child" type="text" value="1" disabled>
-                      <button class="plus">+</button>
-                    </div>
-                  </div>
-                  <div class="dropdown-content__line">
-                    <p>Младенцы</p>
-                    <div class="dropdown-content__box-button">
-                      <button class="minus">-</button>
-                      <input class="baby" type="text" value="0" disabled>
-                      <button class="plus">+</button>
-                    </div>
-                  </div>
-                  <div class="form-elements__btn-container">
-                    <button class="clear">очистить</button>
-                    <button class="submit">применить</button>
-                  </div>
                 </div>
               </div>
-            </div>
-            <div class="reserve-card__cost-info"><span class="cost-info">9 990х 4 суток</span><span class="cost-info__cost">39 960₽</span></div>
-            <div class="reserve-card__cost-info">
-              <div class="cost-info__container"><span class="cost-info">Сбор за услуги: скидка 2 179₽</span>
-                <div class="cost-info__description">!</div>
-              </div><span class="cost-info__cost">0₽</span>
-            </div>
-            <div class="reserve-card__cost-info">
-              <div class="cost-info__container"><span class="cost-info">Сбор за дополнительные услуги</span>
-                <div class="cost-info__description">!</div>
-              </div><span class="cost-info__cost">300₽</span>
-            </div>
-            <div class="reserve-card__line">
-              <div class="total__text">Итого</div>
-              <div class="total__result">40 260₽</div>
-            </div>
-            <div class="reserve-card__line">
-              <button class="button button-arrow">Забронировать<i class="button-icon material-icons">arrow_forward</i></button>
-            </div>
+              <div class="reserve-card__cost-info"><span class="cost-info">9 990х 4 суток</span><span class="cost-info__cost">39 960₽</span></div>
+              <div class="reserve-card__cost-info">
+                <div class="cost-info__container"><span class="cost-info">Сбор за услуги: скидка 2 179₽</span>
+                  <div class="cost-info__description">!</div>
+                </div><span class="cost-info__cost">0₽</span>
+              </div>
+              <div class="reserve-card__cost-info">
+                <div class="cost-info__container"><span class="cost-info">Сбор за дополнительные услуги</span>
+                  <div class="cost-info__description">!</div>
+                </div><span class="cost-info__cost">300₽</span>
+              </div>
+              <div class="reserve-card__line">
+                <div class="total__text">Итого</div>
+                <div class="total__result">40 260₽</div>
+              </div>
+              <div class="reserve-card__line">
+                <button class="button button-arrow">Забронировать<i class="button-icon material-icons">arrow_forward</i></button>
+              </div>
+            </form>
           </div>
         </div>
         <div class="cards__wrap">
           <div class="cards-background">
             <div class="heading">Войти</div>
-            <div class="log-in__elem-container">
-              <input class="input-component" type="text" placeholder="Email">
-            </div>
-            <div class="log-in__elem-container">
-              <input class="input-component" type="password" placeholder="Пароль">
-            </div>
-            <div class="log-in__block-container">
-              <button class="button button-arrow">Перейти к оплате<i class="button-icon material-icons">arrow_forward</i></button>
-            </div>
-            <div class="log-in__log-in">
-              <p class="registration__log-in-text">Уже есть аккаунт на Toxin</p>
-              <button class="button button-border"><span class="button__text">Click Me</span></button>
-            </div>
+            <form action="">
+              <div class="log-in__elem-container">
+                <input class="input-component" type="text" placeholder="Email">
+              </div>
+              <div class="log-in__elem-container">
+                <input class="input-component" type="password" placeholder="Пароль">
+              </div>
+              <div class="log-in__block-container">
+                <button class="button button-arrow">Перейти к оплате<i class="button-icon material-icons">arrow_forward</i></button>
+              </div>
+              <div class="log-in__log-in">
+                <p class="registration__log-in-text">Уже есть аккаунт на Toxin</p>
+                <button class="button button-border"><span class="button__text">Click Me</span></button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

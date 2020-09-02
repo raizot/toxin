@@ -1,0 +1,62 @@
+include ../../components/input/input.pug
+include ../../components/block-description/block-description
+include ../../components/dropdown/dropdown.pug
+include ../../components/dropdown/dropdownBtn.pug
+include ../../components/date-mask/date-mask.pug
+include ../../components/calculator/calculator.pug
+include ../../components/checkbox-list/checkbox-list.pug
+include ../../components/checkbox-button/checkbox-button.pug
+include ../../components/info-hotel-room/info-hotel-room.pug
+include ../../components/radio-buttons/radio-buttons.pug
+include ../../components/toggle/toggle.pug
+include ../../components/like-button/like-button.pug
+include ../../components/rate-button/rate-button.pug
+include ../../components/review/review.pug
+include ../../components/range-slider/range-slider
+include ../../components/buttons/buttons
+include ../../components/pagination/pagination
+include ../../components/bullet-list/bullet-list
+include ../../cards/find-apartment/find-apartment
+include ../../cards/registration/registration
+include ../../cards/reserve-card/reserve-card
+include ../../cards/log-in/log-in
+include ../../cards/room-slider/room-slider
+include ../../components/header/header
+include ../../components/header/header-link/header-link
+include ../../components/header/header-link-dropdown/header-link-dropdown
+include ../../components/footer/footer
+include ../../components/date-dropdown/date-dropdown
+include ../../components/img-background-slider/img-background-slider
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title log-in
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+
+    body
+        section.log-in
+            .container-header
+                +header({buttons:true,user: false})
+                    +header-link({text:'О нас', headerLinkHref:'#1'})
+                    +header-link({text:'Услуги',headerLinkHref:'#2', dropDownList: true})
+                        +header-link-dropdown({text:'Спа', headerLinkHref:'#1'})
+                        +header-link-dropdown({text:'Бассейн', headerLinkHref:'#1'})
+                        +header-link-dropdown({text:'Вечеринка', headerLinkHref:'#1'})
+                        +header-link-dropdown({text:'Заказать еду в номер', headerLinkHref:'#1'})
+                    +header-link({text:'Вакансии',headerLinkHref:'#3'})
+                    +header-link({text:'Новости',headerLinkHref:'#4'})
+                    +header-link({text:'Соглашения',headerLinkHref:'#5',dropDownList: true})
+                        +header-link-dropdown({text:'Безопасность', headerLinkHref:'#1'})
+                        +header-link-dropdown({text:'О нас', headerLinkHref:'#1'})
+            +img-background-slider({howManyPictures:"2",
+                                    folder:'registration',
+                                    prefixImg:'registration',
+                                    filesExtention:'png'})
+                .log-in__card-container
+                    +log-in
+                   
+            +footer

@@ -4,7 +4,9 @@ mixin button(parameters={})
         classType,
         buttonContent,
         href='#~',
-        disabled=false
+        disabled=false,
+        //- hrefRegistration='./registration.html',
+        //- hrefSignIn='./sign-in.html'
         } = parameters;
         // classType can be:
         // 'button-standard'
@@ -14,8 +16,8 @@ mixin button(parameters={})
     if classType.split(' ').includes('button-link')
         a(href=href class=`button ${classType}`)=buttonContent
     else if classType.split(' ').includes('button-standard') || classType.split(' ').includes('button-border')
-        button(class=`button ${classType}` disabled=disabled )
+        button(onclick=`document.location='${href}'` class=`button ${classType}` disabled=disabled )
             span.button__text=buttonContent
     else if classType.split(' ').includes('button-arrow')
-        button(class=`button ${classType}` disabled=disabled )=buttonContent
+        button(type='submit' class=`button ${classType}` disabled=disabled)=buttonContent
             i.button-icon.material-icons arrow_forward

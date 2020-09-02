@@ -1,45 +1,46 @@
 mixin registration
     +cards-background
         .heading Регистрация аккаунта
-        .cards__container
-            .registration__block-container
-                .registration__elem-container
-                    +input({
-                        type: 'text',
-                        placeholderValue: 'Имя',
-                        className: 'input-component'
-                    })
-                .registration__elem-container
-                    +input({
-                        type: 'text',
-                        placeholderValue: 'Фамилия',
-                        className: 'input-component'
-                    })
-                .registration__elem-container
-                   .block-container__radio-button
-                        +radio-button({radioName:'gender',radioText:'Мужчина',radioValue:'male',checked:'checked'})
-                        +radio-button({radioName:'gender',radioText:'Женщина',radioValue:'female'})
-        .registration__block-container
-            +block-description('дата рождения','')
-            +date-mask("date-mask")
-        .registration__block-container
-            +block-description('данные для входа в сервис','') 
-            .registration__elem-container
-                +input({
-                        type: 'text',
-                        placeholderValue: 'Email',
-                        className: 'input-component'
-                    })
-            .registration__elem-container
-                +input({
-                            type: 'password',
-                            placeholderValue: 'Пароль',
+        form(action="")
+            .cards__container
+                .registration__block-container
+                    .registration__elem-container
+                        +input({
+                            type: 'text',
+                            placeholderValue: 'Имя',
                             className: 'input-component'
                         })
-            .registration__elem-container
-                +toggle({toggleText:"Получать спецпредложения"})
-        .registration__block-container
-            +button({buttonContent: 'Перейти к оплате',classType:'button-arrow'})
+                    .registration__elem-container
+                        +input({
+                            type: 'text',
+                            placeholderValue: 'Фамилия',
+                            className: 'input-component'
+                        })
+                    .registration__elem-container
+                       .block-container__radio-button
+                            +radio-button({radioName:'gender',radioText:'Мужчина',radioValue:'male',checked:'checked'})
+                            +radio-button({radioName:'gender',radioText:'Женщина',radioValue:'female'})
+            .registration__block-container
+                +block-description('дата рождения','')
+                +date-mask("date-mask")
+            .registration__block-container
+                +block-description('данные для входа в сервис','') 
+                .registration__elem-container
+                    +input({
+                            type: 'text',
+                            placeholderValue: 'Email',
+                            className: 'input-component'
+                        })
+                .registration__elem-container
+                    +input({
+                                type: 'password',
+                                placeholderValue: 'Пароль',
+                                className: 'input-component'
+                            })
+                .registration__elem-container
+                    +toggle({toggleText:"Получать спецпредложения"})
+            .registration__block-container
+                +button({buttonContent: 'Перейти к оплате',classType:'button-arrow'})
         .registration__log-in
             p.registration__log-in-text Уже есть аккаунт на Toxin
-            +button({buttonContent: 'Click Me',classType:'button-border',})
+            +button({buttonContent: 'Войти',classType:'button-border', href:'./sign-in.html'})

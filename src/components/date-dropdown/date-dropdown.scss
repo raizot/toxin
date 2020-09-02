@@ -5,6 +5,12 @@
     &::placeholder{
     color:$color__dark-shade75;
     }
+    &__double{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
     &__first {
         max-width:150px;
          width: 100%;

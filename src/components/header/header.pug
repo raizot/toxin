@@ -1,16 +1,17 @@
 mixin header(headerOptions={})
-    -let {buttons=false,user=false,userText='Юлий Цезарь'}=headerOptions
+    -let {buttons=false,user=false,userText='Юлий Цезарь',hrefRegistration='./registration.html',hrefSignIn='./sign-in.html'}=headerOptions
     header
-        img(src="img/Logo.svg")
+        a(href="./home.html")
+            img(src="img/Logo.svg")
         .header-content
             ul.header__menu          
                 block
             if(buttons==true)
                 .header__button-container
                     .header__button
-                        +button({buttonContent: 'Войти',classType:'button-border button-slim'})
+                        +button({buttonContent: 'Войти',classType:'button-border button-slim',href:hrefSignIn})
                     .header__button        
-                        +button({buttonContent: 'зарегистрироваться',classType:'button-standard button-slim',})
+                        +button({buttonContent: 'зарегистрироваться',classType:'button-standard button-slim',href:hrefRegistration})
             if(user==true)
                 span.user-text=userText  
         

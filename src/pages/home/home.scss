@@ -7,21 +7,6 @@ section.home{
     max-height: 100vh;
 }
 .home{
-&-main {
-    width: 100%;
-    min-height: 900px;
-    background-image: url(/img/home/homeSlide-1.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    z-index: 1;
-    transition: 2s;
-    padding-left: calc(140/1440*100%);
-    padding-right: calc(140/1440*100%);
-    @include for-phone-only {
-        padding: 10px;
-    }
-}
 &__text-container{
     display: flex;
     flex-direction: row;
@@ -34,6 +19,7 @@ section.home{
     font-size: 14px;
     line-height: 24px;
     color: $color__dark-shade75;
+    
 }
 }
 .home-main__find-apartment {
@@ -43,4 +29,22 @@ section.home{
         padding-top: 240px;
     }
       
+}
+.slider-background{
+&-main {
+    width: 100%;
+    min-height: 900px;
+    background-image: url(../../assets/img/home/homeSlide-1.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    transition: 2s;
+    padding-left: calc(140/1440*100%);
+    padding-right: calc(140/1440*100%);
+
+    @include for-phone-only {
+        padding: 10px;
+    }
+}
 }

@@ -1,20 +1,22 @@
 mixin log-in
     +cards-background
         .heading Войти
-        .log-in__elem-container
-            +input({
-                    type: 'text',
-                    placeholderValue: 'Email',
-                    className: 'input-component'
-                })
-        .log-in__elem-container
-            +input({
-                        type: 'password',
-                        placeholderValue: 'Пароль',
+        form(action="")
+            .log-in__elem-container
+                +input({
+                        type: 'text',
+                        placeholderValue: 'Email',
                         className: 'input-component'
                     })
-        .log-in__block-container
-            +button({buttonContent: 'Перейти к оплате',classType:'button-arrow'})
+            .log-in__elem-container
+                +input({
+                            type: 'password',
+                            placeholderValue: 'Пароль',
+                            className: 'input-component'
+                        })
+            .log-in__block-container
+                +button({buttonContent: 'Перейти к оплате',classType:'button-arrow'})
         .log-in__log-in
-            p.registration__log-in-text Уже есть аккаунт на Toxin
-            +button({buttonContent: 'Click Me',classType:'button-border',})
+            p.registration__log-in-text Нет аккаунта на Toxin?
+            .button-container
+                +button({buttonContent: 'Создать',classType:'button-border', href:'./registration.html'})

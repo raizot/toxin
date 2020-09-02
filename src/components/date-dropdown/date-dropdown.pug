@@ -1,0 +1,11 @@
+mixin date-dropdown(dateDropdownOptions={})
+    -let {descriptionFirst='1',descriptionSecond='2'}=dateDropdownOptions
+        .date-dropdown__double
+            .date-dropdown__first
+                +block-description(descriptionFirst,'')
+                .date-dropdown__component
+                    +date-mask("date-mask date-dropdown datepicker-here start")
+            .date-dropdown__second
+                +block-description(descriptionSecond,'')
+                .date-dropdown__component
+                    +date-mask("date-mask date-dropdown end")

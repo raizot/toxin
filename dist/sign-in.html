@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>registration</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="css/ui-kit.css" rel="stylesheet"><link href="css/sign-in.css" rel="stylesheet"></head>
+  <body>
+    <section class="registration">
+      <div class="container-header">
+        <header><img src="img/Logo.svg">
+          <div class="header-content">
+            <ul class="header__menu">         
+              <li><a href="#1">О нас</a></li>
+              <li class="li__dropDown">
+                <div class="li-container"><a href="#2">Услуги</a><i class="material-icons">expand_more</i></div>
+                <ul class="dropdown-list">
+                  <li class="header-link-dropdown"><a href="#1">Спа</a></li>
+                  <li class="header-link-dropdown"><a href="#1">Бассейн</a></li>
+                  <li class="header-link-dropdown"><a href="#1">Вечеринка</a></li>
+                  <li class="header-link-dropdown"><a href="#1">Заказать еду в номер</a></li>
+                </ul>
+              </li>
+              <li><a href="#3">Вакансии</a></li>
+              <li><a href="#4">Новости</a></li>
+              <li class="li__dropDown">
+                <div class="li-container"><a href="#5">Соглашения</a><i class="material-icons">expand_more</i></div>
+                <ul class="dropdown-list">
+                  <li class="header-link-dropdown"><a href="#1">Безопасность</a></li>
+                  <li class="header-link-dropdown"><a href="#1">О нас</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="header__button-container">
+              <div class="header__button">
+                <button class="button button-border button-slim"><span class="button__text">Войти</span></button>
+              </div>
+              <div class="header__button">       
+                <button class="button button-standard button-slim"><span class="button__text">зарегистрироваться</span></button>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="slider-background-main" data-max-img="2" data-folder="registration" data-prefix-img="registration" data-files-extention="png">
+        <div class="registration__card-container">
+          <div class="cards-background">
+            <div class="heading">Регистрация аккаунта</div>
+            <form action="">
+              <div class="cards__container">
+                <div class="registration__block-container">
+                  <div class="registration__elem-container">
+                    <input class="input-component" type="text" placeholder="Имя">
+                  </div>
+                  <div class="registration__elem-container">
+                    <input class="input-component" type="text" placeholder="Фамилия">
+                  </div>
+                  <div class="registration__elem-container">
+                    <div class="block-container__radio-button">
+                      <label class="radio-label">
+                        <input class="radio-button__radio" type="radio" name="gender" value="male" checked="checked"><span class="radio-button__label">Мужчина</span>
+                      </label>
+                      <label class="radio-label">
+                        <input class="radio-button__radio" type="radio" name="gender" value="female"><span class="radio-button__label">Женщина</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="registration__block-container">
+                <div class="block-container__description">
+                  <p class="block-container__description-name">дата рождения</p>
+                  <p class="block-container__description-condition"></p>
+                </div>
+                <input class="date-mask" type="text" id="mask-arrow" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8">
+              </div>
+              <div class="registration__block-container">
+                <div class="block-container__description">
+                  <p class="block-container__description-name">данные для входа в сервис</p>
+                  <p class="block-container__description-condition"></p>
+                </div> 
+                <div class="registration__elem-container">
+                  <input class="input-component" type="text" placeholder="Email">
+                </div>
+                <div class="registration__elem-container">
+                  <input class="input-component" type="password" placeholder="Пароль">
+                </div>
+                <div class="registration__elem-container">
+                  <label class="toggle-label">
+                    <input class="toggle-button__toggle" type="checkbox"><span class="toggle-button__label">Получать спецпредложения</span>
+                  </label>
+                </div>
+              </div>
+              <div class="registration__block-container">
+                <button class="button button-arrow">Перейти к оплате<i class="button-icon material-icons">arrow_forward</i></button>
+              </div>
+              <div class="registration__log-in">
+                <p class="registration__log-in-text">Уже есть аккаунт на Toxin</p>
+                <button class="button button-border"><span class="button__text">Click Me</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-logo"><img src="img/Logo.svg">
+          <p>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+        </div>
+        <ul class="footer-item">
+          <li>Навигация</li>
+          <li><a href="#">О нас</a></li>
+          <li> <a href="#">Новости</a></li>
+          <li> <a href="#">Служба поддержки</a></li>
+          <li> <a href="#">Услуги</a></li>
+        </ul>
+        <ul class="footer-item">
+          <li>О нас</li>
+          <li> <a href="#">О сервисе</a></li>
+          <li> <a href="#">Наша команда</a></li>
+          <li> <a href="#">Вакансии</a></li>
+          <li> <a href="#">Инвесторы</a></li>
+        </ul>
+        <ul class="footer-item">
+          <li>Служба поддержки</li>
+          <li> <a href="#">Соглашения</a></li>
+          <li> <a href="#">Сообщества</a></li>
+          <li> <a href="#">Связь с нами</a></li>
+        </ul>
+        <div class="footer-subscribe">
+          <h3>Подписка</h3>
+          <p>Получайте специальные предложения и новости сервиса</p>
+          <label class="input__label">
+            <input class="input-component input-component__arrow-right" type="email" placeholder="Email">
+            <icon class="material-icons input__icon">arrow_forward</icon>
+          </label>
+        </div>
+      </footer>
+      <div class="footer-sotial">
+        <p>Copyright © 2018 Toxin отель. Все права зачищены.</p>
+        <div class="sotial-link"><a></a><span class="fab fa-twitter fa-2x"></span><a></a><span class="fab fa-facebook-square fa-2x">                </span><a></a><span class="fab fa-instagram fa-2x"></span></div>
+      </div>
+    </section>
+  <script type="text/javascript" src="assets/js/ui-kit.js"></script><script type="text/javascript" src="assets/js/sign-in.js"></script></body>
+</html>

@@ -25,7 +25,8 @@ include ../../components/header/header
 include ../../components/header/header-link/header-link
 include ../../components/header/header-link-dropdown/header-link-dropdown
 include ../../components/footer/footer
-
+include ../../components/date-dropdown/date-dropdown
+include ../../components/img-background-slider/img-background-slider
 
 doctype html
 html(lang="en")
@@ -51,7 +52,10 @@ html(lang="en")
                     +header-link({text:'Соглашения',headerLinkHref:'#5',dropDownList: true})
                         +header-link-dropdown({text:'Безопасность', headerLinkHref:'#1'})
                         +header-link-dropdown({text:'О нас', headerLinkHref:'#1'})
-            div.home-main
+            +img-background-slider({howManyPictures:"3",
+                                    folder:'home',
+                                    prefixImg:'homeSlide',
+                                    filesExtention:'jpg'})
                 .home-main__find-apartment
                    +find-apartment
                 .home__text-container

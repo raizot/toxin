@@ -38,6 +38,7 @@
 @import '../../components/header/header-link-dropdown/header-link-dropdown';
 @import '../../components/footer/footer';
 @import '../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+@import '../../components/img-background-slider/img-background-slider';
 .ui-kit__section{
   max-width: 1440px;
   margin: 0 auto;
@@ -78,19 +79,23 @@
   flex-direction: row;
   padding: 150px 139px 140px 140px;
   background: #F4F4F6;
+   justify-content: space-between;
+   flex-wrap: wrap;
   &__first-section{
     display: flex;
     flex-direction: column;
     max-width: 380px;
+    width: 100%;
   }
   &__section{
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
-    max-width: 380px;
+    // margin-left: 40px;
+    min-width: 380px;
+     
     &-last{
       max-width: 320px;
-      margin-left: 40px;
+      // margin-left: 40px;
     }
   }
   &__wrap{

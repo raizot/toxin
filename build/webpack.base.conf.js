@@ -24,10 +24,16 @@ module.exports = {
     "home": `${PATHS.src}/pages/home/home.js`,
     "search-room": `${PATHS.src}/pages/search-room/search-room.js`,
     "room-details": `${PATHS.src}/pages/room-details/room-details.js`,
+    "registration": `${PATHS.src}/pages/registration/registration.js`,
+    "sign-in": `${PATHS.src}/pages/sign-in/sign-in.js`,
+
   },
+ 
   output: {
     filename: `${PATHS.assets}js/[name].js`,
     path: PATHS.dist
+    // or
+    // path: PATHS.dist
   },
   optimization: {
     splitChunks: {
@@ -81,24 +87,16 @@ module.exports = {
         publicPath: '../assets/fonts/'
       }
     }, {
-      test: /\.(png|jpg|gif|svg)$/,
-      loader: 'file-loader',
-      exclude: /(fonts)/,
-      options: {
-        name: '[name].[ext]',
-        outputPath: 'assets/img',
-        publicPath: '../assets/img/',
-        sourceMap: true
-      }
-    },
-    {
-      test: /\.svg$/i,
-      use: [{
-        loader: 'url-loader',
-        options: {
-          encoding: 'utf8',
-        },
-      }, ],
+        test: /\.(png|jpg|gif|svg)$/,  
+          loader: 'file-loader',
+            exclude: /(fonts)/,
+            options: {
+           name: '[name].[ext]',
+           outputPath: 'assets/img',
+           publicPath: '../assets/img/',
+           sourceMap: true
+          }
+    
     },
      {
       test: /\.scss$/,
@@ -107,7 +105,7 @@ module.exports = {
         {
           loader: MiniCssExtractPlugin.loader,
           options: {
-            publicPath: '/'
+            publicPath: './'
           }
         },
         {
@@ -123,7 +121,14 @@ module.exports = {
               path: `./postcss.config.js`
             }
           }
-        }, {
+        },
+        // {
+        //   loader: 'url-loader',
+        //   options:{
+        //     path:`../assets/img/`
+        //   }
+        // },
+        {
           loader: 'sass-loader',
           options: {
             sourceMap: true
@@ -207,6 +212,22 @@ module.exports = {
       chunks: ['ui-kit', 'room-details'],
       template: './src/pages/room-details/room-details.pug',
       filename: 'room-details.html',
+      inject: true,
+      collapseWhitespace: false,
+
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['ui-kit', 'registration'],
+      template: './src/pages/registration/registration.pug',
+      filename: 'registration.html',
+      inject: true,
+      collapseWhitespace: false,
+
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['ui-kit', 'sign-in'],
+      template: './src/pages/sign-in/sign-in.pug',
+      filename: 'sign-in.html',
       inject: true,
       collapseWhitespace: false,
 
