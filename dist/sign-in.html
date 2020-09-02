@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>registration</title>
+    <title>log-in</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href="css/ui-kit.css" rel="stylesheet"><link href="css/sign-in.css" rel="stylesheet"></head>
   <body>
-    <section class="registration">
+    <section class="log-in">
       <div class="container-header">
-        <header><img src="img/Logo.svg">
+        <header><a href="./home.html"><img src="img/Logo.svg"></a>
           <div class="header-content">
             <ul class="header__menu">         
               <li><a href="#1">О нас</a></li>
@@ -35,72 +35,36 @@
             </ul>
             <div class="header__button-container">
               <div class="header__button">
-                <button class="button button-border button-slim"><span class="button__text">Войти</span></button>
+                <button class="button button-border button-slim" onclick="document.location='./sign-in.html'"><span class="button__text">Войти</span></button>
               </div>
               <div class="header__button">       
-                <button class="button button-standard button-slim"><span class="button__text">зарегистрироваться</span></button>
+                <button class="button button-standard button-slim" onclick="document.location='./registration.html'"><span class="button__text">зарегистрироваться</span></button>
               </div>
             </div>
           </div>
         </header>
       </div>
       <div class="slider-background-main" data-max-img="2" data-folder="registration" data-prefix-img="registration" data-files-extention="png">
-        <div class="registration__card-container">
+        <div class="log-in__card-container">
           <div class="cards-background">
-            <div class="heading">Регистрация аккаунта</div>
+            <div class="heading">Войти</div>
             <form action="">
-              <div class="cards__container">
-                <div class="registration__block-container">
-                  <div class="registration__elem-container">
-                    <input class="input-component" type="text" placeholder="Имя">
-                  </div>
-                  <div class="registration__elem-container">
-                    <input class="input-component" type="text" placeholder="Фамилия">
-                  </div>
-                  <div class="registration__elem-container">
-                    <div class="block-container__radio-button">
-                      <label class="radio-label">
-                        <input class="radio-button__radio" type="radio" name="gender" value="male" checked="checked"><span class="radio-button__label">Мужчина</span>
-                      </label>
-                      <label class="radio-label">
-                        <input class="radio-button__radio" type="radio" name="gender" value="female"><span class="radio-button__label">Женщина</span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
+              <div class="log-in__elem-container">
+                <input class="input-component" type="text" placeholder="Email">
               </div>
-              <div class="registration__block-container">
-                <div class="block-container__description">
-                  <p class="block-container__description-name">дата рождения</p>
-                  <p class="block-container__description-condition"></p>
-                </div>
-                <input class="date-mask" type="text" id="mask-arrow" data-mask="00.00.0000" placeholder="ДД.ММ.ГГГГ" data-range="true" multipleDates="2" maxlenth="8">
+              <div class="log-in__elem-container">
+                <input class="input-component" type="password" placeholder="Пароль">
               </div>
-              <div class="registration__block-container">
-                <div class="block-container__description">
-                  <p class="block-container__description-name">данные для входа в сервис</p>
-                  <p class="block-container__description-condition"></p>
-                </div> 
-                <div class="registration__elem-container">
-                  <input class="input-component" type="text" placeholder="Email">
-                </div>
-                <div class="registration__elem-container">
-                  <input class="input-component" type="password" placeholder="Пароль">
-                </div>
-                <div class="registration__elem-container">
-                  <label class="toggle-label">
-                    <input class="toggle-button__toggle" type="checkbox"><span class="toggle-button__label">Получать спецпредложения</span>
-                  </label>
-                </div>
-              </div>
-              <div class="registration__block-container">
-                <button class="button button-arrow">Перейти к оплате<i class="button-icon material-icons">arrow_forward</i></button>
-              </div>
-              <div class="registration__log-in">
-                <p class="registration__log-in-text">Уже есть аккаунт на Toxin</p>
-                <button class="button button-border"><span class="button__text">Click Me</span></button>
+              <div class="log-in__block-container">
+                <button class="button button-arrow" type="submit">Перейти к оплате<i class="button-icon material-icons">arrow_forward</i></button>
               </div>
             </form>
+            <div class="log-in__log-in">
+              <p class="registration__log-in-text">Нет аккаунта на Toxin?</p>
+              <div class="button-container">
+                <button class="button button-border" onclick="document.location='./registration.html'"><span class="button__text">Создать</span></button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -138,8 +102,8 @@
         </div>
       </footer>
       <div class="footer-sotial">
-        <p>Copyright © 2018 Toxin отель. Все права зачищены.</p>
-        <div class="sotial-link"><a></a><span class="fab fa-twitter fa-2x"></span><a></a><span class="fab fa-facebook-square fa-2x">                </span><a></a><span class="fab fa-instagram fa-2x"></span></div>
+        <p>Copyright © 2018 Toxin отель. Все права защищены.</p>
+        <div class="sotial-link"><a href="http://twitter.com"><span class="fab fa-twitter fa-2x"></span></a><a href="http://facebook.com"><span class="fab fa-facebook-square fa-2x">                </span></a><a href="http://instagram.com"><span class="fab fa-instagram fa-2x"></span></a></div>
       </div>
     </section>
   <script type="text/javascript" src="assets/js/ui-kit.js"></script><script type="text/javascript" src="assets/js/sign-in.js"></script></body>

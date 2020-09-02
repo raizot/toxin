@@ -559,17 +559,17 @@
               <p class="block-container__description-condition"></p>
             </div>
             <div class="block-container__row">
-              <button class="button button-standard"><span class="button__text">Click Me</span></button>
-              <button class="button button-standard" disabled><span class="button__text">Click Me</span></button>
+              <button class="button button-standard" onclick="document.location='#~'"><span class="button__text">Click Me</span></button>
+              <button class="button button-standard" onclick="document.location='#~'" disabled><span class="button__text">Click Me</span></button>
             </div>
             <div class="block-container__row">
-              <button class="button button-border"><span class="button__text">Click Me</span></button>
-              <button class="button button-border" disabled><span class="button__text">Click Me</span></button>
+              <button class="button button-border" onclick="document.location='#~'"><span class="button__text">Click Me</span></button>
+              <button class="button button-border" onclick="document.location='#~'" disabled><span class="button__text">Click Me</span></button>
             </div>
             <div class="block-container__row"><a class="button button-link" href="#~">Click Me</a><a class="button button-link button-link__disabled" href="#~">Click Me</a>
             </div>
             <div class="block-container__row">
-              <button class="button button-arrow">Перейти к оплате<i class="button-icon material-icons">arrow_forward</i></button>
+              <button class="button button-arrow" type="submit">Перейти к оплате<i class="button-icon material-icons">arrow_forward</i></button>
             </div>
           </div>
           <div class="block-container__pagination">
@@ -725,7 +725,7 @@
                 </div>
               </div>
               <div class="find-apartment__button">
-                <button class="button button-arrow">Перейти к оплате<i class="button-icon material-icons">arrow_forward</i></button>
+                <button class="button button-arrow" type="submit">Перейти к оплате<i class="button-icon material-icons">arrow_forward</i></button>
               </div>
             </div>
           </div>
@@ -779,13 +779,13 @@
                 </div>
               </div>
               <div class="registration__block-container">
-                <button class="button button-arrow">Перейти к оплате<i class="button-icon material-icons">arrow_forward</i></button>
-              </div>
-              <div class="registration__log-in">
-                <p class="registration__log-in-text">Уже есть аккаунт на Toxin</p>
-                <button class="button button-border"><span class="button__text">Click Me</span></button>
+                <button class="button button-arrow" type="submit">Перейти к оплате<i class="button-icon material-icons">arrow_forward</i></button>
               </div>
             </form>
+            <div class="registration__log-in">
+              <p class="registration__log-in-text">Уже есть аккаунт на Toxin</p>
+              <button class="button button-border" onclick="document.location='./sign-in.html'"><span class="button__text">Войти</span></button>
+            </div>
           </div>
         </div>
       </div>
@@ -880,7 +880,7 @@
                 <div class="total__result">40 260₽</div>
               </div>
               <div class="reserve-card__line">
-                <button class="button button-arrow">Забронировать<i class="button-icon material-icons">arrow_forward</i></button>
+                <button class="button button-arrow" type="submit">Забронировать<i class="button-icon material-icons">arrow_forward</i></button>
               </div>
             </form>
           </div>
@@ -896,13 +896,15 @@
                 <input class="input-component" type="password" placeholder="Пароль">
               </div>
               <div class="log-in__block-container">
-                <button class="button button-arrow">Перейти к оплате<i class="button-icon material-icons">arrow_forward</i></button>
-              </div>
-              <div class="log-in__log-in">
-                <p class="registration__log-in-text">Уже есть аккаунт на Toxin</p>
-                <button class="button button-border"><span class="button__text">Click Me</span></button>
+                <button class="button button-arrow" type="submit">Перейти к оплате<i class="button-icon material-icons">arrow_forward</i></button>
               </div>
             </form>
+            <div class="log-in__log-in">
+              <p class="registration__log-in-text">Нет аккаунта на Toxin?</p>
+              <div class="button-container">
+                <button class="button button-border" onclick="document.location='./registration.html'"><span class="button__text">Создать</span></button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -951,7 +953,7 @@
     </section>
     <section class="header-footer ui-kit__section">
       <div class="cards__wrap">
-        <header><img src="img/Logo.svg">
+        <header><a href="./home.html"><img src="img/Logo.svg"></a>
           <div class="header-content">
             <ul class="header__menu">         
               <li><a href="#1">О нас</a></li>
@@ -976,17 +978,17 @@
             </ul>
             <div class="header__button-container">
               <div class="header__button">
-                <button class="button button-border button-slim"><span class="button__text">Войти</span></button>
+                <button class="button button-border button-slim" onclick="document.location='./sign-in.html'"><span class="button__text">Войти</span></button>
               </div>
               <div class="header__button">       
-                <button class="button button-standard button-slim"><span class="button__text">зарегистрироваться</span></button>
+                <button class="button button-standard button-slim" onclick="document.location='./registration.html'"><span class="button__text">зарегистрироваться</span></button>
               </div>
             </div>
           </div>
         </header>
       </div>
       <div class="cards__wrap">                                   
-        <header><img src="img/Logo.svg">
+        <header><a href="./home.html"><img src="img/Logo.svg"></a>
           <div class="header-content">
             <ul class="header__menu">         
               <li><a href="#1">О нас</a></li>
@@ -1047,8 +1049,8 @@
           </div>
         </footer>
         <div class="footer-sotial">
-          <p>Copyright © 2018 Toxin отель. Все права зачищены.</p>
-          <div class="sotial-link"><a></a><span class="fab fa-twitter fa-2x"></span><a></a><span class="fab fa-facebook-square fa-2x">                </span><a></a><span class="fab fa-instagram fa-2x"></span></div>
+          <p>Copyright © 2018 Toxin отель. Все права защищены.</p>
+          <div class="sotial-link"><a href="http://twitter.com"><span class="fab fa-twitter fa-2x"></span></a><a href="http://facebook.com"><span class="fab fa-facebook-square fa-2x">                </span></a><a href="http://instagram.com"><span class="fab fa-instagram fa-2x"></span></a></div>
         </div>
       </div>
     </section>
