@@ -17,3 +17,20 @@
   <li>jQuery плагины(и их стилизация)</li>
   <li>Canvas</li>
 </ul>
+## Цели проекта:
+<ul>
+  <li>Исследовать компонентную архитектуру, где каждый блок можно переиспользовать</li>
+  <li>Получить опыт работы с препроцессорами</li>
+  <li>Получить базовые знания БЭМ</li>
+  <li>Изучить отзывчивую вёрстку</li>
+  <li>Препобрести базовые навыки работы с JavaScript</li>
+  <li>Получить знания системы сбороки проектов WebPack</li>
+  <li>Преобрести навык искать, подключать и настраивать JavaScript-библиотеки и jQuery-плагины в частности</li>
+</ul>
+## Используемые плагины в проекте:
+<ul>
+  <li><a href="http://t1m0n.name/air-datepicker/docs/">Air-datepicker</a></li>
+  <li><a href="http://ionden.com/a/plugins/ion.rangeSlider/">Ion.RangeSlider</a></li>
+  <li><a href="https://flaviusmatis.github.io/simplePagination.js/">SimplePagination.js</a></li>
+  <li><a href="https://kenwheeler.github.io/slick/">Slick slider</a></li>
+</ul>
