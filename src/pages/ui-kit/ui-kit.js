@@ -15,7 +15,7 @@ import 'flaviusmatis-simplePagination.js-e32c66e/jquery.simplePagination'
 import '../../components/pagination/pagination'
 import 'slick-carousel/slick/slick.min'
 import '../../cards/room-slider/room-slider'
-import '../../components/img-background-slider/img-background-slider'
+
 //SCSS imports
 import './ui-kit.scss'
 import '../../assets/fonts/fonts.scss'

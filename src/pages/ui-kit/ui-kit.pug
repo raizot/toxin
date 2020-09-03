@@ -143,85 +143,86 @@ html(lang="en")
                     +info-hotel-room({icon:'insert_emoticon',title:'Комфорт',description:'Шумопоглощающие стены'})
                 .block-container
                     +info-hotel-room({icon:'location_city',title:'Удобство',description:'Окно в каждой из спален'})
-            .row__container
-                .form-elements__container.form-elements__container-second
-                    .block-container
-                        +block-description('Checkbox Buttons','')
-                        +checkbox-button({title: "Можно курить", id: "smoke"})
-                        +checkbox-button({title: "Можно с питомцами", id: "pet",checked:true})
-                        +checkbox-button({title: "Можно пригласить гостей (до 10 человек)", id: "guests",checked:true})
-                    .block-container
-                        +block-description('Radio Buttons','')
-                        .block-container__radio-button
-                            +radio-button({radioName:'gender',radioText:'Мужчина',radioValue:'male',checked:'checked'})
-                            +radio-button({radioName:'gender',radioText:'Женщина',radioValue:'female'})
-                    .block-container
-                        +block-description('Toggle','')
-                        .block-container__toggle
-                            +toggle({toggleText:"Получать спецпредложения",checked:'checked'})
-                        .block-container__toggle
-                            +toggle({toggleText:"Получать спецпредложения"})
-                    .block-container
-                        +block-description('like button','')
-                        .block-container__like-button
-                            +like-button({ likeValue:'2'})
-                            +like-button({likeValue:'12'})
-                    .block-container__rate-button
-                        +block-description('rate button','')
-                        .block-container__row
-                            +rate-buttons('4','5')
-                            +rate-buttons('5','5')
-                    .block-container
-                        +block-description('Dropdown','Default')
-                        +dropdown-item({btnClass: "dropdown__dropbtn dropdown-guests", name: "Сколько гостей",show:'dropdown-content__show'})
-                            +Btn({btnName: "Взрослые", inputClass: "adult", inputValue: "0"})
-                            +Btn({btnName: "Дети", inputClass: "child", inputValue: "0"})
-                            +Btn({btnName: "Младенцы", inputClass: "baby", inputValue: "0"})
-                            .form-elements__btn-container
-                                button.clear очистить
-                                button.submit применить
-                    .block-container.block-container__rich-checkbox
-                        +block-description('Checkbox Buttons','')
-                        +checkbox-button({title: "Широкий коридор",description:'Ширина коридоров в номере не менее 91 см.', id: "wideHall"})
-                        +checkbox-button({title: "Помощник для инвалидов",description:'На 1 этаже вас встретит специалист  и проводит до номера.', id: "assistant"})
-                .form-elements__container.form-elements__container-second
-                    .range__container
-                        +range-slider({name:'Range Slider'})   
-                    .block-container
-                        +block-description('Buttons','')
-                        .block-container__row
-                            +button({buttonContent:'Click Me',classType:'button-standard',})
-                            +button({buttonContent:'Click Me',classType:'button-standard',disabled:true})
-                        .block-container__row
-                            +button({buttonContent: 'Click Me',classType:'button-border',})
-                            +button({buttonContent: 'Click Me',classType:'button-border', disabled: true})
-                        .block-container__row
-                            +button({buttonContent: 'Click Me',classType:'button-link', })
-                            +button({buttonContent: 'Click Me',classType:'button-link button-link__disabled'})
-                        .block-container__row
-                            +button({buttonContent: 'Перейти к оплате',classType:'button-arrow'})
-                    .block-container__pagination
-                        +block-description('Pagination','')
-                        +pagination('1')
-                    .block-container
-                        +block-description('Dropdown','Default')
-                        +dropdown-item({
-                            btnClass: "dropdown__dropbtn dropdown-guests",
-                            name: "Сколько гостей",
-                            show: 'dropdown-content__show'
-                        })
-                            +Btn({btnName: "Взрослые", inputClass: "adult", inputValue: "2"})
-                            +Btn({btnName: "Дети", inputClass: "child", inputValue: "1"})
-                            +Btn({btnName: "Младенцы", inputClass: "baby", inputValue: "0"})
-                            .form-elements__btn-container
-                                button.clear очистить
-                                button.submit применить
-                    .block-container__bullet-list
-                        +block-description('Bullet-list','')
-                        +bullet-list('Нельзя с питомцами')
-                        +bullet-list('Без вечеринок и мероприятий')
-                        +bullet-list('Время прибытия — после 13:00,\n' +
-                        'а выезд до 12:00')
+            .column__container        
+                .row__container
+                    .form-elements__container.form-elements__container-second
+                        .block-container
+                            +block-description('Checkbox Buttons','')
+                            +checkbox-button({title: "Можно курить", id: "smoke"})
+                            +checkbox-button({title: "Можно с питомцами", id: "pet",checked:true})
+                            +checkbox-button({title: "Можно пригласить гостей (до 10 человек)", id: "guests",checked:true})
+                        .block-container
+                            +block-description('Radio Buttons','')
+                            .block-container__radio-button
+                                +radio-button({radioName:'gender',radioText:'Мужчина',radioValue:'male',checked:'checked'})
+                                +radio-button({radioName:'gender',radioText:'Женщина',radioValue:'female'})
+                        .block-container
+                            +block-description('Toggle','')
+                            .block-container__toggle
+                                +toggle({toggleText:"Получать спецпредложения",checked:'checked'})
+                            .block-container__toggle
+                                +toggle({toggleText:"Получать спецпредложения"})
+                        .block-container
+                            +block-description('like button','')
+                            .block-container__like-button
+                                +like-button({ likeValue:'2'})
+                                +like-button({likeValue:'12'})
+                        .block-container__rate-button
+                            +block-description('rate button','')
+                            .block-container__row
+                                +rate-buttons('4','5')
+                                +rate-buttons('5','5')
+                        .block-container
+                            +block-description('Dropdown','Default')
+                            +dropdown-item({btnClass: "dropdown__dropbtn dropdown-guests", name: "Сколько гостей",show:'dropdown-content__show'})
+                                +Btn({btnName: "Взрослые", inputClass: "adult", inputValue: "0"})
+                                +Btn({btnName: "Дети", inputClass: "child", inputValue: "0"})
+                                +Btn({btnName: "Младенцы", inputClass: "baby", inputValue: "0"})
+                                .form-elements__btn-container
+                                    button.clear очистить
+                                    button.submit применить
+                        .block-container.block-container__rich-checkbox
+                            +block-description('Checkbox Buttons','')
+                            +checkbox-button({title: "Широкий коридор",description:'Ширина коридоров в номере не менее 91 см.', id: "wideHall"})
+                            +checkbox-button({title: "Помощник для инвалидов",description:'На 1 этаже вас встретит специалист  и проводит до номера.', id: "assistant"})
+                    .form-elements__container.form-elements__container-second
+                        .range__container
+                            +range-slider({name:'Range Slider'})   
+                        .block-container
+                            +block-description('Buttons','')
+                            .block-container__row
+                                +button({buttonContent:'Click Me',classType:'button-standard',})
+                                +button({buttonContent:'Click Me',classType:'button-standard',disabled:true})
+                            .block-container__row
+                                +button({buttonContent: 'Click Me',classType:'button-border',})
+                                +button({buttonContent: 'Click Me',classType:'button-border', disabled: true})
+                            .block-container__row
+                                +button({buttonContent: 'Click Me',classType:'button-link', })
+                                +button({buttonContent: 'Click Me',classType:'button-link button-link__disabled'})
+                            .block-container__row
+                                +button({buttonContent: 'Перейти к оплате',classType:'button-arrow'})
+                        .block-container__pagination
+                            +block-description('Pagination','')
+                            +pagination('1')
+                        .block-container
+                            +block-description('Dropdown','Default')
+                            +dropdown-item({
+                                btnClass: "dropdown__dropbtn dropdown-guests",
+                                name: "Сколько гостей",
+                                show: 'dropdown-content__show'
+                            })
+                                +Btn({btnName: "Взрослые", inputClass: "adult", inputValue: "2"})
+                                +Btn({btnName: "Дети", inputClass: "child", inputValue: "1"})
+                                +Btn({btnName: "Младенцы", inputClass: "baby", inputValue: "0"})
+                                .form-elements__btn-container
+                                    button.clear очистить
+                                    button.submit применить
+                        .block-container__bullet-list
+                            +block-description('Bullet-list','')
+                            +bullet-list('Нельзя с питомцами')
+                            +bullet-list('Без вечеринок и мероприятий')
+                            +bullet-list('Время прибытия — после 13:00,\n' +
+                            'а выезд до 12:00')
                 .form-elements__container-forth
                     +review({
                         img:'img/man.jpg',
@@ -276,7 +277,7 @@ html(lang="en")
                                 rate:('4'),
                                 maxRate:('5')
                     })
-        section.header-footer.ui-kit__section
+        section.header-footer
             .cards__wrap
                 +header({buttons:true,user: false})
                     +header-link({text:'О нас', headerLinkHref:'#1'})            

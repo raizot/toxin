@@ -8,10 +8,6 @@ let maxImg = imageContainer.dataset.maxImg;
 let folder = imageContainer.dataset.folder;
 let prefixImg = imageContainer.dataset.prefixImg;
 let filesExtention = imageContainer.dataset.filesExtention;
-console.log(maxImg);
-console.log(folder);
-console.log(prefixImg);
-console.log(filesExtention);
 
 let i=1;
 function styleSlider(){

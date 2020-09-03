@@ -44,6 +44,21 @@
   margin: 0 auto;
   background-color: white;
   margin-bottom: 30px;
+  display: flex;
+  padding: 140px 141px 140px 141px;
+  @include for-desktop {}
+
+  @include for-tablet-landscape {
+    padding: 140px 5px 140px 5px;
+  }
+
+  @include for-tablet-portrait {
+    padding: 140px 5px 140px 5px;
+  }
+
+  @include for-phone-only {
+    padding: 140px 5px 140px 5px;
+  }
 }
 .color-type {
     display: flex;
@@ -56,21 +71,18 @@
 .form-elements{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   &__container {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    width: 320px;
+    max-width: 320px;
+    width: 100%;
     margin-top: 143px;
     margin-bottom: 132px;
   }
   &__container-first{
-    margin-left: 140px;
-  }
-  &__container-second,&__container-forth{
-    margin-left: 126px;
-  }
-  &__container-forth{
-    margin-top: 100px;
+    margin-right: 126px;
+
   }
 
 }
@@ -90,12 +102,11 @@
   &__section{
     display: flex;
     flex-direction: column;
-    // margin-left: 40px;
     min-width: 380px;
      
     &-last{
       max-width: 320px;
-      // margin-left: 40px;
+  
     }
   }
   &__wrap{
@@ -166,6 +177,7 @@
   &__row{
     display: flex;
     flex-direction: row;
+    width: 100%;
     margin-top: 16px;
     .rate-buttons:nth-child(2){
       margin-left: 20px;
@@ -209,9 +221,16 @@
   border: solid;
   border-color: #6FCF97;
 }
-.row_container{
+.row__container{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.column__container{
+  max-width: 712px;
+  width: 100%;
 }
 .heading{
   font-family: 'Open Sans Bold';

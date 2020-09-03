@@ -6,14 +6,14 @@ $('.start').datepicker({
 
     dateFormat:'dd.mm.yyyy'
 });
-let datepickerDouble = $(".datepicker__double");
+let datepickerDouble = $(".date-dropdown__double");
 
 
 // Show double datepicker 
 let inpputEnd = datepickerDouble.find('.date-dropdown.end');
 for(let input of inpputEnd){
 input.addEventListener('click', function () {
-    $(this).parents('.datepicker__double')
+    $(this).parents('.date-dropdown__double')
             .find('.start')
             .data('datepicker')
             .show();

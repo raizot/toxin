@@ -26,6 +26,7 @@ module.exports = {
     "room-details": `${PATHS.src}/pages/room-details/room-details.js`,
     "registration": `${PATHS.src}/pages/registration/registration.js`,
     "sign-in": `${PATHS.src}/pages/sign-in/sign-in.js`,
+    "about-project": `${PATHS.src}/pages/about-project/about-project.js`,
 
   },
  
@@ -232,5 +233,13 @@ module.exports = {
       collapseWhitespace: false,
 
     }),
+      new HtmlWebpackPlugin({
+        chunks: ['about-project'],
+        template: './src/pages/about-project/about-project.pug',
+        filename: 'about-project.html',
+        inject: true,
+        collapseWhitespace: false,
+
+      }),
   ],
 }
