@@ -1,4 +1,4 @@
-# HotelTOXIN
+# Hotel TOXIN
   Учебный проект
 ## Pages
 <a href='https://george-izot.github.io/toxin/dist/home.html'> Home</a><br>
