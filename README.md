@@ -1,3 +1,5 @@
+# HotelTOXIN
+  Учебный проект
 ## Pages
 <a href='https://george-izot.github.io/toxin/dist/home.html'> Home</a><br>
 <a href='https://george-izot.github.io/toxin/dist/search-room.html'> Search-room</a><br>
