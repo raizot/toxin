@@ -1,8 +1,7 @@
 # Hotel TOXIN
   Учебный проект
 ## Pages
-https://raizot.github.io/toxin/dist/about-project.html
-<a href='https://raizot.github.io/toxin/dist/about-project.html'>About project</a><br
+<a href='https://raizot.github.io/toxin/dist/about-project.html'>About project</a><br>
 <a href='https://raizot.github.io/toxin/dist/home.html'> Home</a><br>
 <a href='https://raizot.github.io/toxin/dist/search-room.html'> Search-room</a><br>
 <a href='https://raizot.github.io/toxin/dist/room-details.html'> Room-details</a><br>
